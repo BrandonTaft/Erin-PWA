@@ -26,7 +26,7 @@ function Profile(props) {
                 <div className='profile-name yellow'>
                     <p>
                         Hello {wizardName}<br></br>
-                        Your  high score is <span className='score'>{myScore}</span>
+                        Your  high score is <span className='score done-score'>{myScore}</span>
                     </p>
                 </div>
                 <div className="welcome p-10" >
