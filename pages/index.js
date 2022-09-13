@@ -72,15 +72,15 @@ function Login(props) {
                 <a href="/register" className="btn log-btn">Register</a>
             </div>
             <div className="icon-container">
-                <a id="google-btn" className="passport-btn" href="https://damp-spire-28696.herokuapp.com/auth/google">
+                <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
                     <Image src='/icons/google.png' alt="Login With Google" height={40} width={40} />
                     <div className='btn-text'>Login With Google</div>
                 </a>
-                <a id="facebook-btn" className="passport-btn" href="https://damp-spire-28696.herokuapp.com/auth/facebook">
+                <a id="facebook-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/facebook">
                     <Image src='/icons/facebook.png' alt="Login With Facebook" height={40} width={40} />
                     <div className='btn-text'>Login With Facebook</div>
                 </a>
-                <a id="github-btn" className="passport-btn" href="https://damp-spire-28696.herokuapp.com/auth/github">
+                <a id="github-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/github">
                     <Image src='/icons/github.png' alt="Login With Github" height={40} width={40} quality={100} />
                     <div className='btn-text'>Login With Github</div>
                 </a>
