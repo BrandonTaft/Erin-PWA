@@ -15,40 +15,41 @@ function Login(props) {
     };
 
     const handleLoginButton = () => {
+        // Validation here, but complete validation done on server side
         if (credentials.username === '') {
             setMessage("You must enter a username")
         } else if (credentials.password === '') {
             setMessage("You must enter a password")
         } else {
-       //Submit credentials state to server for authentication
-        fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
-            method: 'POST',
-            origin: '*',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(credentials)
-        }).then(response => response.json())
-                    // If authenticated, server responds with success == true
-                    .then(result => {
-                        if (result.success == true) {
-                            // Get token & user data and put it in local storage
-                            const token = result.token;
-                            localStorage.setItem('jsonwebtoken', token)
-                            localStorage.setItem('user_Id', result.user_id)
-                            localStorage.setItem('name', result.name)
-                            localStorage.setItem('high_score', result.high_score)
-                            // Route user to their profile page
-                            router.push('profile')
-                        }
-                        // Display error message sent from server if success != true
-                        else {
-                            setMessage(result.message)
-                        }
-                    })
+            //Submit credentials state to server for authentication
+            fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
+                method: 'POST',
+                origin: '*',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(credentials)
+            }).then(response => response.json())
+                // If authenticated, server responds with success == true
+                .then(result => {
+                    if (result.success == true) {
+                        // Get token & user data and put it in local storage
+                        const token = result.token;
+                        localStorage.setItem('jsonwebtoken', token)
+                        localStorage.setItem('user_Id', result.user_id)
+                        localStorage.setItem('name', result.name)
+                        localStorage.setItem('high_score', result.high_score)
+                        // Route user to their profile page
+                        router.push('profile')
+                    }
+                    // Display error message sent from server if success != true
+                    else {
+                        setMessage(result.message)
+                    }
+                })
         }
     };
-
+    // Clears error message off screen
     const remove = function () {
         setMessage("")
     };

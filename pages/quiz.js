@@ -26,27 +26,23 @@ function StartQuiz() {
   }, []);
 
   function getQuestions(cat) {
-    console.log("cat", cat)
     // Gets user name from local storage and puts in wizardName state
     // Retrieves questions from api and puts them in the questions state
     setWizardName(localStorage.getItem('name'))
     fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
       .then(response => response.json())
       .then(result => {
-        console.log("result", result)
         setQuestions([...result]);
       })
       .catch(error => console.log("error", error));
   }
 
   async function playquiz() {
-    console.log("counter", questionCounter)
     // Fired from on click and removes the wizard image from page
     document.getElementById('wizard').classList.add('remove')
     document.getElementById('question').classList.add('minimum')
     // When answer is clicked, 1 is added to questionCounter total
-    // When the counter gets to 10 it sets quizfinished to true
-    // Then fires the gameOver function
+    // When the counter gets to 10 it sets quizfinished to true & fires gameOver
     if (questionCounter === 10) {
       setQuizFinished(true);
       gameOver();
@@ -121,7 +117,6 @@ function StartQuiz() {
   }
   // Calculates final score and puts it in finalScore state
   // Sends final score to api which returns if it's a user high score 
-  // Which
   function gameOver() {
     setFinalScore(currentScore * 107)
     var myHeaders = new Headers();
@@ -148,12 +143,15 @@ function StartQuiz() {
     <div className="quiz-page">
       <div className="quiz-container">
         {quizFinished != true ? (
+          // Display start button when first rendered
           <div className="question-container" id="question-container">
             <div id="question" className="question"> {currentQuestion}</div>
             {questions.length > 0 && correctAnswer == null ? (
+              // Keeps start button from rendering until questions are loaded to prevent undefined error
               <button className="btn quiz-btn" onClick={() => playquiz()}><span>Start Quiz</span></button>
             ) : null}
             {correctAnswer != null ? (
+              // Renders answer buttons
               <ButtonGroup
                 className="button-group"
                 orientation="vertical"
@@ -168,13 +166,13 @@ function StartQuiz() {
             ) : null}
           </div>
         ) : (
+          // Displays once quizFinished is set to true
           <div>
-
             <div className="done">
               <h1 >Congratulations</h1>
               <h2>Your score is <span className="done-score">{finalScore}</span></h2>
-              <Link href='/home'>
-                <a><span className="final-btn">Back</span></a>
+              <Link href='/leaderboard'>
+                <a><span className="final-btn">Leaderboard</span></a>
               </Link>
             </div>
 
@@ -185,7 +183,7 @@ function StartQuiz() {
             <div className="bubble bubble-bottom">
               <p>That's a New High Score!</p>
             </div>
-            <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority />
+            <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority={true} />
           </div>
           :
           (highScore === "false" ?
@@ -193,7 +191,7 @@ function StartQuiz() {
               <div className="bubble bubble-bottom">
                 <p>You Can Do Better :&#40;</p>
               </div>
-              <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority />
+              <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority={true} />
             </div>
             : null
           )}
@@ -201,7 +199,7 @@ function StartQuiz() {
           <div className="bubble bubble-bottom">
             <p>Lol, You look scared!!!</p>
           </div>
-          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority />
+          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority={true} />
         </div>
       </div>
     </div>

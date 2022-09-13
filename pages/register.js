@@ -15,35 +15,39 @@ function Register(props) {
     };
 
     const handleRegisterButton = () => {
+        // Some validation here but complete validation is done on server 
         if (user.username === '') {
             setMessage("You must enter a username")
         } else if (user.password === '') {
             setMessage("You must enter a password")
         } else {
-        // Sends server the credentials that are to be added to the DB  
-        fetch('https://polar-dawn-36653.herokuapp.com/api/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        }).then(response => response.json())
-            // Redirect to login page if server replies success === true 
-            .then(result => {
-                if (result.success) {
-                    router.push('/')
-                }
-                else {
-                    console.log("test",result)
-                    // Display error message from server if success != true
-                    setMessage(result.message)
-                }
-            })
+            // Sends server the credentials that are to be added to the DB  
+            fetch('https://polar-dawn-36653.herokuapp.com/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            }).then(response => response.json())
+                // Redirect to login page if server replies success === true 
+                .then(result => {
+                    if (result.success) {
+                        router.push('/')
+                    }
+                    else {
+                        console.log("test", result)
+                        // Display error message from server if success != true
+                        setMessage(result.message)
+                    }
+                })
         }
     };
+
+    // Clears error message from screen
     const remove = function () {
         setMessage("")
     };
+
     return (
         // Render Display
         <div className='login register column'>

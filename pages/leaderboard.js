@@ -8,7 +8,7 @@ function Leaderboard(props) {
     useEffect(() => {
         getLeaderboard()
     }, []);
-
+    // Fetch top 100 high scores
     const getLeaderboard = () => {
         fetch('https://polar-dawn-36653.herokuapp.com/api/highscore')
             .then(response => response.json())
@@ -16,7 +16,7 @@ function Leaderboard(props) {
                 setLeaderboard(result)
             });
     };
-
+    // Display top 100 scores in table element
     const leaderboardList = leaderboard.map((score, index) => {
         return (
             <tr key={index}>
@@ -29,7 +29,6 @@ function Leaderboard(props) {
     return (
         <div className='leaderboard-page '>
             <Background />
-
             <ScoreCard />
             <div className="wrap">
                 <div className='flex'>
@@ -44,7 +43,9 @@ function Leaderboard(props) {
                     </table>
                 </div>
             </div>
-            <div className='ss'><div className='world'></div></div>
+            <div className='ss'>
+                <div className='world'></div>
+            </div>
         </div>
     )
 };

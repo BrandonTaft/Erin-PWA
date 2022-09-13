@@ -1171,7 +1171,7 @@ td {
   width: 20rem;
   height: 10rem;
   background-color: #050610;
-  background-image: url("/images/earth2.jpg");
+  background-image: url("/images/earth.jpg");
   border-radius: 10rem 10rem 0 0;
   position: relative;
   animation-name: rotate;

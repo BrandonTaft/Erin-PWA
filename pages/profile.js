@@ -4,13 +4,14 @@ import Image from 'next/image';
 function Profile(props) {
     const [myScore, setMyScore] = useState(null)
     const [wizardName, setwizardName] = useState("")
-
+    // On first render retrieves username from local storage  & sets it to wizardName state
+    // Then calls function to retrieve user high score and passes in the username
     useEffect(() => {
         let name = localStorage.getItem('name')
         setwizardName(name.toUpperCase())
         getuserscore(name)
     }, []);
-
+    //  Used to retrieve the users high score from database & sets it in myScore state
     function getuserscore(wizardName) {
         fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
             .then(response => response.json())
@@ -18,8 +19,8 @@ function Profile(props) {
                 setMyScore(myScore.score)
             })
     };
-
     return (
+        // Render Display
         <div className="profile-page">
             <div className='p-8 resize'>
                 <div className='profile-name yellow'>
@@ -38,7 +39,7 @@ function Profile(props) {
             </div>
             <a className="btn profile-btn" href="/home">Ready</a>
             <div className="my-score" >
-                <Image className='rotate' src="/images/qw-gold.png" alt="logo" layout='fill' />
+                <Image className='rotate' src="/images/qw-gold.png" alt="logo" layout='fill' priority={true} />
             </div>
         </div>
     )

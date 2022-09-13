@@ -11,19 +11,18 @@ function ScoreCard() {
     }, []);
 
     function getuserscore(wizardName) {
-        fetch(`https://damp-spire-28696.herokuapp.com/api/userscore?username=${wizardName}`)
-            .then(response => response.json())
-            .then(myScore => {
-                setMyScore(myScore.score)
-            })
+        fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
+        .then(response => response.json())
+        .then(myScore => {
+            setMyScore(myScore.score)
+        })
     };
 
     return (
         <div className="scorecard">
             <p className='yellow'>Your High Score</p>
-            <p className="white high-score">      
-                    {/* {myScore} */}
-                    55555
+            <p className="high-score done-score">      
+                    {myScore}
             </p>
         </div>
     )
