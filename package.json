@@ -1,0 +1,29 @@
+{
+  "name": "quizwiz",
+  "version": "1.0.0",
+  "description": "Hottest trivia app on the scene",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "author": "Brandon Taft",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.10.2",
+    "@mui/material": "^5.10.2",
+    "next": "^12.2.5",
+    "next-pwa": "^5.6.0",
+    "nextjs": "^0.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-tsparticles": "^2.2.4",
+    "reactjs-popup": "^2.0.5",
+    "tsparticles": "^2.2.4"
+  }
+}
