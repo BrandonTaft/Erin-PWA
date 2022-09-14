@@ -1595,10 +1595,7 @@ td {
 }
 
 @media (min-width: 375px) {
-  .quiz-wiz {
-    margin: auto 2em 6em;
-  }
-
+  
   .bubble {
     bottom: 3em;
   }
