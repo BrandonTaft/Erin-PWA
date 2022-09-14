@@ -8,11 +8,23 @@ import Avatar from '@mui/material/Avatar';
 function Navbar() {
     const router = useRouter()
     const [name, setName] = useState("")
+    // useEffect(() => {
+    //     // Get user name from local storage
+    //     const name = localStorage.getItem("name")
+    //     setName(name)
+    // }, []);
     useEffect(() => {
-        // Get user name from local storage
-        const name = localStorage.getItem("name")
-        setName(name)
-    }, []);
+        let name = localStorage.getItem('name')
+        if(name != null) {
+            setName(name)
+        } else {
+            if(!router.isReady) return;
+        const query = router.query;
+        let passportName = query.name;
+        localStorage.setItem('name', passportName)
+        setName(passportName)
+        }
+      }, [router.isReady, router.query]);
 
     function logOut() {
         // Clear user info and send back to login page

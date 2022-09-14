@@ -1,16 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
 import Image from 'next/image';
 
 function Profile(props) {
     const [myScore, setMyScore] = useState(null)
     const [wizardName, setwizardName] = useState("")
+    const router = useRouter();
+
     // On first render retrieves username from local storage  & sets it to wizardName state
     // Then calls function to retrieve user high score and passes in the username
+    // useEffect(() => {
+    //     let name =searchParams.get("name")
+    //     // let name = localStorage.getItem('name')
+    //     // let name = query.name;
+    //      console.log("name",name)
+
+    //     // setwizardName(name.toUpperCase())
+    //     // getuserscore(name)
+    // }, []);
+
     useEffect(() => {
         let name = localStorage.getItem('name')
-        setwizardName(name.toUpperCase())
-        getuserscore(name)
-    }, []);
+        if(name != null) {
+            setwizardName(name.toUpperCase())
+            getuserscore(name)
+        } else {
+            if(!router.isReady) return;
+        const query = router.query;
+        let passportName = query.name;
+        localStorage.setItem('name', passportName)
+        setwizardName(passportName.toUpperCase())
+        getuserscore(passportName)
+        }
+      }, [router.isReady, router.query]);
+
     //  Used to retrieve the users high score from database & sets it in myScore state
     function getuserscore(wizardName) {
         fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
