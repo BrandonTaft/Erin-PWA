@@ -1621,12 +1621,12 @@ td {
   }
 
   .quiz-wiz {
-    height: 35em;
+    height: 30em;
     margin: auto 2em 3em;
   }
 
   .bubble {
-    bottom: 1em;
+    bottom: 2.2em;
     font-size: 1.75em;
   }
   
