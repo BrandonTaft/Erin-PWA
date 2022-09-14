@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Image from 'next/image';
+import Background from '../src/components/Background';
 
 function Profile(props) {
     const [myScore, setMyScore] = useState(null)
@@ -43,9 +44,9 @@ function Profile(props) {
             })
     };
     return (
-        // Render Display
         <div className="profile-page">
-            <div className='p-8 resize'>
+            <Background />
+            <div className='p-8 z-2 resize'>
                 <div className='profile-name yellow'>
                     <p>
                         Hello {wizardName}<br></br>
@@ -60,10 +61,17 @@ function Profile(props) {
                     </p>
                 </div>
             </div>
-            <a className="btn profile-btn" href="/home">Ready</a>
-            <div className="my-score" >
-                <Image className='rotate' src="/images/qw-gold.png" alt="logo" layout='fill' priority={true} />
-            </div>
+            <a className="btn profile-btn z-2" href="/home">Ready</a>
+            <div className="fill z-2">
+                    <Image
+                        className='wiz-img'
+                        alt="wizard"
+                        src="/images/flying.png"
+                        layout='fill'
+                        objectFit='scale-down'
+                        priority={true}
+                    />
+                </div>
         </div>
     )
 }

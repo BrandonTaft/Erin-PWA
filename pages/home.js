@@ -34,10 +34,21 @@ function SelectionPage() {
     return (
         // Render Display
         <ThemeProvider theme={theme}>
-            <div className="container row column" >
-                <Box className='m-auto'>
+            <div className="fill-top">
+                    <Image
+                        className='wiz-img'
+                        alt="wizard"
+                        src="/images/logo-full.png"
+                        layout='fill'
+                        objectFit='scale-down'
+                        priority={true}
+                    />
+                </div>
+            <div className="home container row column " >
+            
+                <Box className='grid-box'>
                     <Grid className="grid-container" container spacing={{ xs: 1, sm: 2.5, md: 3 }} columns={{ xs: 2, rs: 3 }}>
-                        <Grid className='square' item xs={1} >
+                        <Grid className='ma-auto' item xs={1} >
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -52,7 +63,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -67,7 +78,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -82,7 +93,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <div className="yellow">
                                     <Link
@@ -100,7 +111,7 @@ function SelectionPage() {
                                 </div>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -115,7 +126,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -130,7 +141,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -145,7 +156,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -160,7 +171,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -175,7 +186,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -190,7 +201,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -205,7 +216,7 @@ function SelectionPage() {
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='square' item xs={1}>
+                        <Grid className='ma-auto' item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -222,16 +233,6 @@ function SelectionPage() {
                         </Grid>
                     </Grid>
                 </Box>
-                <div className="fill">
-                    <Image
-                        className='wiz-img'
-                        alt="wizard"
-                        src="/images/flying-wiz.png"
-                        layout='fill'
-                        objectFit='scale-down'
-                        priority={true}
-                    />
-                </div>
             </div>
         </ThemeProvider>
     )
