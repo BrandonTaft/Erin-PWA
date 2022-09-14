@@ -228,7 +228,7 @@ function SelectionPage() {
                         alt="wizard"
                         src="/images/flying-wiz.png"
                         layout='fill'
-                        objectFit='cover'
+                        objectFit='scale-down'
                         priority={true}
                     />
                 </div>

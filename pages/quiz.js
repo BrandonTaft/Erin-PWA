@@ -141,10 +141,10 @@ function StartQuiz() {
 
   return (
     <div className="quiz-page">
-      <div className="quiz-container">
+      <div className="quiz-scale-downer">
         {quizFinished != true ? (
           // Display start button when first rendered
-          <div className="question-container" id="question-container">
+          <div className="question-scale-downer" id="question-scale-downer">
             <div id="question" className="question"> {currentQuestion}</div>
             {questions.length > 0 && correctAnswer == null ? (
               // Keeps start button from rendering until questions are loaded to prevent undefined error
@@ -183,7 +183,7 @@ function StartQuiz() {
             <div className="bubble bubble-bottom">
               <p>That's a New High Score!</p>
             </div>
-            <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority={true} />
+            <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
           </div>
           :
           (highScore === "false" ?
@@ -191,7 +191,7 @@ function StartQuiz() {
               <div className="bubble bubble-bottom">
                 <p>You Can Do Better :&#40;</p>
               </div>
-              <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority={true} />
+              <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
             </div>
             : null
           )}
@@ -199,7 +199,7 @@ function StartQuiz() {
           <div className="bubble bubble-bottom">
             <p>Lol, You look scared!!!</p>
           </div>
-          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="contain" layout="fill" priority={true} />
+          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
         </div>
       </div>
     </div>
