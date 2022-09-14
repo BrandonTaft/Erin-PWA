@@ -141,10 +141,10 @@ function StartQuiz() {
 
   return (
     <div className="quiz-page">
-      <div className="quiz-scale-downer">
+      <div className="quiz-container">
         {quizFinished != true ? (
           // Display start button when first rendered
-          <div className="question-scale-downer" id="question-scale-downer">
+          <div className="question-container" id="question-container">
             <div id="question" className="question"> {currentQuestion}</div>
             {questions.length > 0 && correctAnswer == null ? (
               // Keeps start button from rendering until questions are loaded to prevent undefined error
