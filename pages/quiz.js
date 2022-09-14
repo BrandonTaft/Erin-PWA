@@ -179,7 +179,7 @@ function StartQuiz() {
           </div>
         )}
         {highScore === "true" ?
-          <div id="wizard" className="quiz-wiz finish">
+          <div id="wizard" className="fill finish">
             <div className="bubble bubble-bottom">
               <p>That's a New High Score!</p>
             </div>
@@ -187,7 +187,7 @@ function StartQuiz() {
           </div>
           :
           (highScore === "false" ?
-            <div id="wizard" className="quiz-wiz finish">
+            <div id="wizard" className="fill finish">
               <div className="bubble bubble-bottom">
                 <p>You Can Do Better :&#40;</p>
               </div>
@@ -195,7 +195,7 @@ function StartQuiz() {
             </div>
             : null
           )}
-        <div id="wizard" className="quiz-wiz">
+        <div id="wizard" className="fill">
           <div className="bubble bubble-bottom">
             <p>Lol, You look scared!!!</p>
           </div>
