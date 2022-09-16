@@ -80,6 +80,18 @@ h5 {
   padding-top: 0px;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
 .w-50 {
   width: 50%;
 }
@@ -705,22 +717,7 @@ body {
   font-size: 1.5em;
 }
 
-.fill {
-  display: flex;
-  position: relative;
-  flex-grow: 1;
-  margin-top: 10px;
-}
 
-.fill img {
-  animation: floating 2s ease-in-out infinite
-}
-
-@keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 6px); }
-  100%   { transform: translate(0, -0px); }   
-}
 
 @media (min-width: 340px) {
   .grid-item {
@@ -757,10 +754,6 @@ body {
 @media (min-width: 768px) {
   .grid-item svg {
     font-size: 2em;
-  }
-
-  .fill {
-    margin-top: 20px;
   }
 
   .container {
@@ -859,6 +852,10 @@ body {
   font-size: 1.2em;
 }
 
+.welcome {
+  text-align: center;
+}
+
 .welcome p {
   margin: 0;
   font-weight: 500;
@@ -870,10 +867,46 @@ body {
 }
 
 .profile-btn {
-  margin: 10px auto;
-  background-color: var(--bs-purple);
-  border: 1px solid var(--bs-yellow);
-  color: var(--bs-yellow);
+	cursor: pointer;
+	position: relative;
+  margin: auto;
+	padding: .5rem 2rem;
+	border-radius: 3.75rem;
+	line-height: 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	border: 1px solid #012880;
+	background-image: linear-gradient(-180deg, var(--bs-purple) 0%, #332268 100%);
+	box-shadow: 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+
+.profile-btn span {
+	color: transparent;
+  background-image: linear-gradient(0deg, #52490d 0%, #fed900 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	
+}
+
+.fill {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+.fill img {
+  animation: floating 2s ease-in-out infinite;
+  padding: 5px !important;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 8px); }
+  100%   { transform: translate(0, -0px); }   
 }
 
 @media (min-width: 360px) {

@@ -46,7 +46,7 @@ function Profile(props) {
     return (
         <div className="profile-page">
             <Background />
-            <div className='p-8 z-2 resize'>
+            <div className='p-8 pb-0 z-2 resize'>
                 <div className='profile-name yellow'>
                     <p>
                         Hello {wizardName}<br></br>
@@ -55,13 +55,14 @@ function Profile(props) {
                 </div>
                 <div className="welcome p-10" >
                     <p className="grey">
-                        Welcome to QuizWiz! The hottest trivia app in all 9&nbsp;realms. Now it's time to
-                        select a topic and rack up as many correct answers as you can to place on
-                        the leaderboard. You must prove to everyone that you are now a wizard <span className="yellow">{wizardName}</span>!
+                        Welcome to QuizWiz! The hottest trivia app in all 9&nbsp;realms. Rack up as many points
+                         as you can to place on the leaderboard and prove that you are a wizard!
                     </p>
                 </div>
             </div>
-            <a className="btn profile-btn z-2" href="/home">Ready</a>
+            <a className="profile-btn z-2" href="/home">
+                <span>READY</span>
+            </a>
             <div className="fill z-2">
                     <Image
                         className='wiz-img'
