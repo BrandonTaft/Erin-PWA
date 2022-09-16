@@ -56,7 +56,7 @@ function Profile(props) {
                 <div className="welcome p-10" >
                     <p className="grey">
                         Welcome to QuizWiz! The hottest trivia app in all 9&nbsp;realms. Rack up as many points
-                         as you can to place on the leaderboard and prove that you are a wizard!
+                         as you can to place on the leaderboard and prove that you are a wizard
                     </p>
                 </div>
             </div>

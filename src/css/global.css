@@ -852,14 +852,11 @@ body {
   font-size: 1.2em;
 }
 
-.welcome {
-  text-align: center;
-}
-
 .welcome p {
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .score {
@@ -869,7 +866,7 @@ body {
 .profile-btn {
 	cursor: pointer;
 	position: relative;
-  margin: auto;
+  margin: 1em auto;
 	padding: .5rem 2rem;
 	border-radius: 3.75rem;
 	line-height: 1.5rem;
@@ -900,7 +897,7 @@ body {
 
 .fill img {
   animation: floating 2s ease-in-out infinite;
-  padding: 5px !important;
+  padding: 1em !important;
 }
 
 @keyframes floating {
@@ -923,18 +920,29 @@ body {
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 375px) {
+  .profile-name {
+    margin-top: 1em;
+  }
+
   .profile-name p {
-    font-size: 1.75rem;
+    font-size: 1.95rem;
   }
 
   .welcome p {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
 
   .profile-btn {
     font-size: 1.4em;
   }
+}
+
+@media (min-width: 400px) {
+  .welcome p {
+    font-size: 1.75rem;
+  }
+
 }
 
 @media (min-width: 500px) {
