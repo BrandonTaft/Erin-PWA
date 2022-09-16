@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Background from '../src/components/Background';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -34,18 +34,8 @@ function SelectionPage() {
     return (
         // Render Display
         <ThemeProvider theme={theme}>
-            <div className="fill-top">
-                    <Image
-                        className='wiz-img'
-                        alt="wizard"
-                        src="/images/logo-full.png"
-                        layout='fill'
-                        objectFit='scale-down'
-                        priority={true}
-                    />
-                </div>
+           <Background />
             <div className="home container row column " >
-            
                 <Box className='grid-box'>
                     <Grid className="grid-container" container spacing={{ xs: 1, sm: 2.5, md: 3 }} columns={{ xs: 2, rs: 3 }}>
                         <Grid className='ma-auto' item xs={1} >

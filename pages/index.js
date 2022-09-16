@@ -65,7 +65,7 @@ function Login(props) {
                 <input className="log-RegText" type="password" name="password" onChange={handleLoginChange} placeholder="Password" />
                 {message && <div id="message" className="message">
                     <p  >{message}</p>
-                    <Image className='m-img' src='/images/warning-wiz.png' alt="Wizard" layout='responsive' height={75} width={60} />
+                    <Image className='m-img' src='/images/warning-wiz.png' alt="Wizard" layout='responsive' height={75} width={60} priority/>
                     <button onClick={remove}>Ok</button>
                 </div>}
                 <a className="btn log-btn" onClick={handleLoginButton}>Login</a>
