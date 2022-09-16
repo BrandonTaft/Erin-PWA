@@ -844,19 +844,27 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', serif;
 }
 
 .profile-name p {
   margin: 4px !important;
-  font-weight: 500;
-  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.line {
+  width: 5em;
+  height: 5px;
+  background-color: #ffff0075;
+  border-radius: 3.75rem;
+  margin: .25rem auto;
 }
 
 .welcome p {
   margin: 0;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-align: center;
   font-family: 'Barlow', sans-serif;
 }
