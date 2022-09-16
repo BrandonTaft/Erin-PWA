@@ -849,8 +849,8 @@ body {
 
 .profile-name p {
   margin: 4px !important;
-  font-weight: 600;
-  font-size: 1.25em;
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 .line {
@@ -863,7 +863,7 @@ body {
 
 .welcome p {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.25rem;
   text-align: center;
   font-family: 'Barlow', sans-serif;
@@ -876,7 +876,7 @@ body {
 .profile-btn {
 	cursor: pointer;
 	position: relative;
-  margin: 1em auto 0;
+  margin: .25em auto 0;
 	padding: .5rem 2rem;
 	border-radius: 3.75rem;
 	line-height: 1.5rem;
