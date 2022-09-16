@@ -46,7 +46,7 @@ function Profile(props) {
     return (
         <div className="profile-page">
             <Background />
-            <div className='p-8 pb-0 z-2 resize'>
+            <div className='profile p-8 pb-0 z-2 resize'>
                 <div className='profile-name yellow'>
                     <p>
                         HELLO {wizardName.toUpperCase()}<br></br>
@@ -57,7 +57,7 @@ function Profile(props) {
                 <div className="welcome p-10" >
                     <p className="grey">
                         Welcome to QuizWiz! The hottest trivia app in all 9&nbsp;realms. Rack up as many points
-                         as you can to place on the leaderboard and prove that you are a wizard
+                         as you can to place on the leaderboard and prove that you&nbsp;are&nbsp;a&nbsp;wizard
                     </p>
                 </div>
             </div>

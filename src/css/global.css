@@ -674,6 +674,12 @@ body {
     height: 80px !important;
     width: 80px !important;
   }
+
+  .avatar {
+    height: 60px !important;
+    width: 60px !important;
+    font-size: 2.3rem !important;
+}
 }
 
 /****************** HOME ********************/
@@ -854,7 +860,7 @@ body {
 }
 
 .line {
-  width: 5em;
+  width: 7em;
   height: 5px;
   border-radius: 3.75rem;
   margin: .25rem auto;
@@ -874,6 +880,10 @@ body {
 
 .score {
   color: #ffffff;
+}
+
+.profile {
+  margin-top: .5em;
 }
 
 .profile-btn {
@@ -992,8 +1002,12 @@ body {
     font-size: 2.25rem;
   }
 
+  .profile {
+    margin: 2em auto 0;
+  }
+
   .welcome {
-    padding: 12px;
+    padding: 12px 30px;
   }
 
   .welcome p {
@@ -1002,6 +1016,8 @@ body {
 
   .profile-btn {
     font-size: 1.75em;
+    margin: 15px auto;
+    padding: 1rem 3rem;
   }
 }
 
@@ -1015,20 +1031,17 @@ body {
   }
 
   .welcome p {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   .resize {
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto 0;
   }
 
   .profile-btn {
-    font-size: 2em;
-    padding: 18px 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 2.25em;
+    margin: 30px auto;
   }
 }
 
@@ -1056,11 +1069,9 @@ body {
 
   .profile-btn {
     font-size: 1.5em;
-    padding: 5px 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 20%;
+    margin: .25em auto 0;
   }
+  
 }
 
 
@@ -1079,6 +1090,11 @@ body {
 
   .welcome p {
     font-size: 1.5rem;
+  }
+
+  .profile-btn {
+    font-size: 1.25em;
+    padding: .5rem 2rem;
   }
 
 }
