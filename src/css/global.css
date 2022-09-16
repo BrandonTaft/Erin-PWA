@@ -921,12 +921,10 @@ body {
 }
 
 @media (min-width: 375px) {
-  .profile-name {
-    margin-top: 1em;
-  }
+ 
 
   .profile-name p {
-    font-size: 1.95rem;
+    font-size: 1.75rem;
   }
 
   .welcome p {
