@@ -37,8 +37,8 @@ function SelectionPage() {
            <Background />
             <div className="home container row column " >
                 <Box className='grid-box'>
-                    <Grid className="grid-container" container spacing={{ xs: 1, sm: 2.5, md: 3 }} columns={{ xs: 2, rs: 3 }}>
-                        <Grid className='ma-auto' item xs={1} >
+                    <Grid className="grid-container" container spacing={{ xs: 0, sm: 2.5, md: 3 }} columns={{ xs: 2, rs: 3 }}>
+                        <Grid item xs={1} >
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -46,14 +46,14 @@ function SelectionPage() {
                                         query: { cat: '9' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <PsychologyIcon />
                                         <div>GENERAL INFO</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -61,14 +61,14 @@ function SelectionPage() {
                                         query: { cat: '11' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <MovieIcon />
                                         <div>MOVIES</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -76,23 +76,23 @@ function SelectionPage() {
                                         query: { cat: '22' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <LanguageIcon />
                                         <div>GEOGRAPHY</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
-                                <div className="yellow">
+                                <div className="yellow m-auto">
                                     <Link
                                         href={{
                                             pathname: '/quiz',
                                             query: { cat: '10' },
                                         }}
                                     >
-                                        <div className="yellow">
+                                        <div className="yellow m-auto">
                                             <AutoStoriesIcon />
                                             <div>BOOKS</div>
                                         </div>
@@ -101,7 +101,7 @@ function SelectionPage() {
                                 </div>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -109,14 +109,14 @@ function SelectionPage() {
                                         query: { cat: '15' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <SportsEsportsIcon />
                                         <div>VIDEO GAMES</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -124,14 +124,14 @@ function SelectionPage() {
                                         query: { cat: '12' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <MusicNoteIcon />
                                         <div>MUSIC</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -139,14 +139,14 @@ function SelectionPage() {
                                         query: { cat: '14' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <LiveTvIcon />
                                         <div>TV</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -154,14 +154,14 @@ function SelectionPage() {
                                         query: { cat: '29' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <BoltIcon />
                                         <div>COMICS</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -169,14 +169,14 @@ function SelectionPage() {
                                         query: { cat: '20' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <BalanceIcon />
                                         <div>MYTHOLOGY</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -184,14 +184,14 @@ function SelectionPage() {
                                         query: { cat: '21' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <SportsFootballIcon />
                                         <div>SPORTS</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -199,14 +199,14 @@ function SelectionPage() {
                                         query: { cat: '17' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <ScienceIcon />
                                         <div>SCIENCE</div>
                                     </div>
                                 </Link>
                             </Box>
                         </Grid>
-                        <Grid className='ma-auto' item xs={1}>
+                        <Grid item xs={1}>
                             <Box className="grid-item">
                                 <Link
                                     href={{
@@ -214,7 +214,7 @@ function SelectionPage() {
                                         query: { cat: '27' },
                                     }}
                                 >
-                                    <div className="yellow">
+                                    <div className="yellow m-auto">
                                         <PetsIcon />
                                         <div>ANIMALS</div>
                                     </div>
