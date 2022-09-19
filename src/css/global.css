@@ -609,8 +609,8 @@ body {
 }
 
 .iconBar img {
-  height: 80px !important;
-  width: 80px !important;
+  height: 70px !important;
+  width: 70px !important;
 }
 
 .trophy {
@@ -618,8 +618,9 @@ body {
 }
 
 .avatar {
-  height: 60px !important;
-  width: 60px !important;
+  height: 50px !important;
+  width: 50px !important;
+  font-family: 'Rubik' !important;
   font-size: 2.5rem !important;
 }
 
@@ -636,7 +637,7 @@ body {
   }
 }
 
-@media (min-width: 400px) {
+/* @media (min-width: 400px) {
   .iconBar img {
     height: 100px !important;
     width: 100px !important;
@@ -647,7 +648,7 @@ body {
     width: 80px !important;
     font-size: 3rem !important;
   }
-}
+} */
 
 @media (min-width: 768px) {
   .iconBar img {
@@ -1531,7 +1532,7 @@ td {
 .quiz-fill {
   position: relative;
   flex-grow: 1;
-  margin-top: 7em;
+  margin-top: 10em;
 }
 
 
@@ -1550,8 +1551,10 @@ td {
   background: var(--bs-purple);
   border-radius: 30px;
   padding: 14px 15px 17px;
-  font-size: 1.25em;
-  font-weight: 600;
+  font-size: 1.35em;
+  font-family: 'Rubik';
+  font-weight: 400;
+  color: var(--bs-yellow);
   text-align: center;
   width: fit-content;
   bottom: 4em;
@@ -1582,14 +1585,12 @@ td {
 }
 
 .bubble p {
-  color: var(--bs-yellow);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid black; /* The cursor */
   white-space: nowrap; /* Important Keeps the content on a single line */
   margin: 0 auto; /* scrolling effect as the typing happens */
-  letter-spacing: .05em;
   animation: 
-    typing 6s steps(40, end),
+    typing 3s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
@@ -1697,6 +1698,12 @@ td {
 
   .quiz-btn {
     padding: 10px 70px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  .quiz-fill {
+    margin-top: 8em;
   }
 
   .done {
@@ -1725,10 +1732,17 @@ td {
   }
 
   .bubble {
-    bottom: 2.75em;
     font-size: 1.75em;
   }
-  
+
+  .quiz-fill {
+    margin-top: 10em;
+  }
+
+  .quiz-btn {
+    margin-bottom: 3em;
+  }
+
   .q-btn {
     font-size: 1.5rem !important;
   }
