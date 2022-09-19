@@ -1701,7 +1701,7 @@ td {
   }
 
   .quiz-btn {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   .quiz-fill {
@@ -1728,21 +1728,12 @@ td {
     font-size: 1.9em;
   }
 
-  .quiz-wiz {
-    height: 27em;
-    margin: auto 2em 3em;
-  }
-
   .bubble {
     font-size: 1.75em;
   }
 
   .quiz-fill {
-    margin-top: 10em;
-  }
-
-  .quiz-btn {
-    margin-bottom: 3em;
+    margin-top: 8em;
   }
 
   .q-btn {
