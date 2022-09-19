@@ -631,9 +631,9 @@ body {
   }
 
   .avatar {
-    height: 60px !important;
-    width: 60px !important;
-    font-size: 2.3rem !important;
+    height: 55px !important;
+    width: 55px !important;
+    font-size: 2.5rem !important;
   }
 }
 
@@ -644,8 +644,8 @@ body {
   }
 
   .avatar {
-    height: 70px !important;
-    width: 70px !important;
+    height: 65px !important;
+    width: 65px !important;
     font-size: 3rem !important;
   }
 }
@@ -1732,6 +1732,22 @@ td {
     font-size: 1.75em;
   }
 
+  .bubble-bottom:before {
+    border-left: 23px solid var(--bs-yellow);
+    border-right: 33px solid #0000;
+    border-top: 30px solid var(--bs-yellow);
+    border-bottom: 19px solid #0000;
+    top: 88%;
+}
+
+  .bubble-bottom:after {
+    border-left: 20px solid var(--bs-purple);
+    border-right: 30px solid #0000;
+    border-top: 27px solid var(--bs-purple);
+    border-bottom: 17px solid #0000;
+    top: 84%;
+}
+
   .quiz-fill {
     margin-top: 8em;
   }
@@ -1755,11 +1771,6 @@ td {
 }
 
 @media (min-width: 500px) {
-  .quiz-wiz {
-    height: 20em;
-    margin: auto auto 5em;
-  }
-
   .bubble {
     bottom: 3em;
   }
@@ -1777,6 +1788,10 @@ td {
     width: 80%;
   }
 
+  .quiz-btn {
+    font-size: 1em;
+  }
+
   .q-btn {
     font-size: 1.25rem !important;
   }
@@ -1787,19 +1802,30 @@ td {
     font-size: 1em;
   }
 
-  .quiz-wiz {
-    height: 30em;
-  } 
-
   .bubble {
     font-size: 2.5em;
-    bottom: 3.25em;
-    padding: 30px 25px 30px
+    bottom: 2.75em;
+    padding: 20px 30px;
+    border-radius: 50px;
   }
 
+  .bubble-bottom:before {
+    border-left: 25px solid var(--bs-yellow);
+    border-right: 45px solid #0000;
+    border-top: 45px solid var(--bs-yellow);
+    border-bottom: 22px solid #0000;
+    top: 89%;
+    right: 28%;
+}
+
   .bubble-bottom:after {
+    border-left: 20px solid var(--bs-purple);
+    border-right: 40px solid #0000;
+    border-top: 40px solid var(--bs-purple);
+    border-bottom: 20px solid #0000;
+    top: 85%;
     right: 29%;
-  }
+}
 
   .minimum {
     min-height: 4em;
@@ -1839,22 +1865,13 @@ td {
   }
 
   .quiz-fill {
-    margin-top: 12em;
+    margin-top: 10em;
   }
 }
 
 @media (min-width: 800px) {
   .done {
     margin-top: 1em;
-  }
-
-  .quiz-wiz {
-    height: 35em;
-    margin: auto auto 10em;
-  } 
-
-  .quiz-wiz.finish {
-    margin-bottom: 3em;
   }
 
   .question-container {
@@ -1865,9 +1882,6 @@ td {
     font-size: 2rem !important;
   }
 
-  .quiz-fill {
-    margin-top: 14em;
-  }
 }
 
 @media (min-width: 900px) {
