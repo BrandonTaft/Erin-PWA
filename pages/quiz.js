@@ -152,10 +152,10 @@ function StartQuiz() {
           // Display start button when first rendered
           <div className="question-container" id="question-container">
             <div id="question" className="question"> {currentQuestion}</div>
-            {/* {questions.length > 0 && correctAnswer == null ? ( */}
-              {/* // Keeps start button from rendering until questions are loaded to prevent undefined error */}
+            {questions.length > 0 && correctAnswer == null ? (
+              // Keeps start button from rendering until questions are loaded to prevent undefined error
               <button className="btn quiz-btn" onClick={() => playquiz()}><span>Start Quiz</span></button>
-            {/* ) : null} */}
+             ) : null}
             {correctAnswer != null ? (
               // Renders answer buttons
               <ButtonGroup
@@ -185,7 +185,7 @@ function StartQuiz() {
           </div>
         )}
         {highScore === "true" ?
-          <div id="wizard" className="quiz-fill finish">
+          <div id="wizard" className="quiz-fill end finish">
             <div className="bubble bubble-bottom">
               <p>That's a New High Score!</p>
             </div>
@@ -193,7 +193,7 @@ function StartQuiz() {
           </div>
           :
           (highScore === "false" ?
-            <div id="wizard" className="quiz-fill finish">
+            <div id="wizard" className="quiz-fill end finish">
               <div className="bubble bubble-bottom">
                 <p>You Can Do Better :&#40;</p>
               </div>

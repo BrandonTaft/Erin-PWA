@@ -1544,15 +1544,9 @@ td {
   margin-top: 8em;
 }
 
-
-.quiz-wiz {
-  position: relative;
-  height: 17em;
-  margin: auto auto 6em;
-}
-
-.quiz-wiz.finish {
-  margin-bottom: 3em;
+.quiz-fill.end {
+  margin-top: 6em;
+  margin-bottom: 2em;
 }
 
 .bubble {
@@ -1896,6 +1890,10 @@ td {
   .quiz-fill {
     margin-top: 12em;
   }
+
+  .quiz-fill.end {
+    margin-top: 10em;
+  }
 }
 
 @media (min-width: 800px) {
@@ -1953,6 +1951,10 @@ td {
     margin-top: 14em;
   }
 
+  .quiz-fill.end {
+    margin-top: 12em;
+  }
+
   .done h1 {
     font-size: 5em;
   }
@@ -1977,15 +1979,6 @@ td {
     font-size: 1em;
     margin-bottom: 0em;
     margin-top: 1em;
-  }
-
-  .quiz-wiz {
-   height: 20em;
-   margin-bottom: 1em;
-  }
-
-  .quiz-wiz.finish {
-    margin-bottom: 1em;
   }
 
   .bubble {
@@ -2051,6 +2044,10 @@ td {
     margin-top: 8em;
   }
 
+  .quiz-fill.end {
+    margin-top: 8em;
+  }
+
   .quiz-btn {
     font-size: 1.5em;
   }
@@ -2083,6 +2080,11 @@ td {
 
   .quiz-fill {
     margin-top: 5em;
+  }
+
+  .quiz-fill.end {
+    margin-top: 3em;
+    margin-bottom: 1em;
   }
 
   .quiz-btn {
@@ -2134,6 +2136,10 @@ td {
   .quiz-fill {
   margin-top: 1em;
 }
+
+.quiz-fill.end {
+ display: none;
+}
 }
 
 @media (max-height: 375px) {
@@ -2167,10 +2173,18 @@ td {
     bottom: 3.5em;
     padding: 20px;
   }
+
+  .quiz-fill.end {
+    margin-top: 8em;
+  }
 }
 
 @media (min-width: 1300px) and (min-height:900px) {
   .quiz-fill {
+    margin-top: 10em;
+  }
+
+  .quiz-fill.end {
     margin-top: 10em;
   }
 
