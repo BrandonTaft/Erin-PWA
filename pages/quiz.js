@@ -142,14 +142,20 @@ function StartQuiz() {
   return (
     <div className="quiz-page">
       <div className="quiz-container">
+      <div id="wizard" className="quiz-fill">
+          <div className="bubble bubble-bottom">
+            <p>Lol, You look scared!!!</p>
+          </div>
+          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+        </div>
         {quizFinished != true ? (
           // Display start button when first rendered
           <div className="question-container" id="question-container">
             <div id="question" className="question"> {currentQuestion}</div>
-            {questions.length > 0 && correctAnswer == null ? (
-              // Keeps start button from rendering until questions are loaded to prevent undefined error
+            {/* {questions.length > 0 && correctAnswer == null ? ( */}
+              {/* // Keeps start button from rendering until questions are loaded to prevent undefined error */}
               <button className="btn quiz-btn" onClick={() => playquiz()}><span>Start Quiz</span></button>
-            ) : null}
+            {/* ) : null} */}
             {correctAnswer != null ? (
               // Renders answer buttons
               <ButtonGroup
@@ -195,12 +201,6 @@ function StartQuiz() {
             </div>
             : null
           )}
-        <div id="wizard" className="quiz-fill">
-          <div className="bubble bubble-bottom">
-            <p>Lol, You look scared!!!</p>
-          </div>
-          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
-        </div>
       </div>
     </div>
   );

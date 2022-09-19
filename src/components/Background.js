@@ -39,7 +39,7 @@ function Background() {
                         }
                     },
                     size: {
-                        value: 3,
+                        value: 4,
                         random: true,
                     },
                     move: {

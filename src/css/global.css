@@ -609,8 +609,8 @@ body {
 }
 
 .iconBar img {
-  height: 60px !important;
-  width: 60px !important;
+  height: 80px !important;
+  width: 80px !important;
 }
 
 .trophy {
@@ -618,12 +618,12 @@ body {
 }
 
 .avatar {
-  height: 45px !important;
-  width: 45px !important;
-  font-size: 1.75rem !important;
+  height: 60px !important;
+  width: 60px !important;
+  font-size: 2.5rem !important;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 375px) {
   .iconBar img {
     height: 80px !important;
     width: 80px !important;
@@ -636,30 +636,43 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .iconBar img {
     height: 100px !important;
     width: 100px !important;
   }
 
   .avatar {
-    height: 70px !important;
-    width: 70px !important;
-    font-size: 2.3rem !important;
+    height: 80px !important;
+    width: 80px !important;
+    font-size: 3rem !important;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .iconBar img {
     height: 120px !important;
     width: 120px !important;
   }
 
-
   .avatar {
     height: 90px !important;
     width: 90px !important;
-    font-size: 2.75rem !important;
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .iconBar img {
+    height: 140px !important;
+    width: 140px !important;
+  }
+
+
+  .avatar {
+    height: 110px !important;
+    width: 110px !important;
+    font-size: 4.5rem !important;
   }
 }
 
@@ -708,12 +721,13 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 15px;
   height: 80%;
-  width: 90%;
+  width: 92%;
   margin: auto;
-  padding: 5px 0;
+  padding: 5px 3px;
   cursor: pointer;
+  font-family: 'Rubik', sans-serif;
   font-weight: 600;
   background-image: linear-gradient(-180deg, var(--bs-purple) 0%, #332268 100%);
 	box-shadow: 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
@@ -732,9 +746,9 @@ body {
   height: 1.25em;
 }
 
-@media (min-width: 340px) {
+@media (min-width: 360px) {
   .grid-item {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -750,7 +764,7 @@ body {
 
 @media (min-width: 540px) {
   .grid-item {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -761,6 +775,10 @@ body {
 }
 
 @media (min-width: 768px) {
+  .grid-item {
+    font-size: 2rem;
+  }
+
   .grid-item svg {
     font-size: 2em;
   }
@@ -773,17 +791,17 @@ body {
 
 @media (min-width: 820px) {
   .grid-item {
-    font-size: 2rem;
+    font-size: 2.15rem;
   }
 }
 
 @media (min-width: 900px) {
   .grid-item {
-    font-size: 2.25rem;
+    font-size: 2.4rem;
   }
 
   .grid-item svg {
-    font-size: 3.5rem !important;
+    font-size: 5rem !important;
   }
 
   .home.container {
@@ -791,16 +809,13 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (max-device-height: 900px) {
+@media (min-width: 1024px) {
   .grid-item {
-    padding: 14px 0;
-    font-size: 1.3rem;
+    font-size: 2.65rem;
   }
-}
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 900px) {
-  .grid-item {
-    padding: 14px 0;
+  .home.container {
+    margin-top: 3em;
   }
 }
 
@@ -809,17 +824,13 @@ body {
     flex-direction: row-reverse;
   }
 
-  .grid-item svg {
-    font-size: 1.75em;
-  }
-
   .container {
     height: fit-content;
     margin: auto;
   }
 
   .home.container {
-    margin-top: 0em;
+    margin-top: 1em;
   }
 
   .grid-container {
@@ -830,14 +841,47 @@ body {
 }
 
 
+@media only screen and (min-device-width: 1000px) and (max-device-height: 900px) {
+  .grid-item {
+    padding: 14px 0;
+    font-size: 2rem;
+  }
+
+  .grid-item svg {
+    font-size: 3rem !important;
+  }
+}
+
+@media only screen and (min-device-width: 1000px) and (min-device-height: 900px) {
+  .home.container {
+    margin-top: 2em;
+}
+
+  .grid-item {
+    padding: 14px 0;
+    font-size: 2.5rem;
+  }
+
+  .grid-item svg {
+    font-size: 4rem !important;
+  }
+}
+
+
+
 @media (max-height: 600px) {
   .grid-container {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .grid-item {
-    font-size: 1.25rem;
-    padding: .75em 0;
+    font-size: 1rem;
+    padding: .5em 0;
+    width: 85%;
+  }
+
+  .grid-item svg {
+    font-size: 3rem !important;
   }
 }
 
@@ -881,10 +925,6 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
-.score {
-  color: #ffffff;
-}
-
 .profile {
   margin-top: .5em;
 }
@@ -892,7 +932,7 @@ body {
 .profile-btn {
 	cursor: pointer;
 	position: relative;
-  margin: .25em auto 0;
+  margin: .5em auto 0;
 	padding: .5rem 2rem;
 	border-radius: 3.75rem;
 	line-height: 1.5rem;
@@ -1449,7 +1489,7 @@ td {
   margin-left: auto;
   margin-right: auto;
   font-size: .75em;
-  padding: 10px 20px;
+  padding: 10px 60px;
   width: fit-content;
 }
 
@@ -1467,7 +1507,7 @@ td {
   flex-direction: column;
   font-size: 1.65em;
   margin-top: 1em;
-  min-height: 25vh;
+  margin-bottom: 2em;
 }
 
 .minimum {
@@ -1491,7 +1531,7 @@ td {
 .quiz-fill {
   position: relative;
   flex-grow: 1;
-  margin-top: 10px;
+  margin-top: 7em;
 }
 
 
@@ -1626,7 +1666,7 @@ td {
   }
 
   .bubble {
-    bottom: 2.5em;
+    bottom: 3em;
     font-size: 1.5em;
   }
 
@@ -1653,6 +1693,10 @@ td {
   
   .bubble {
     bottom: 3em;
+  }
+
+  .quiz-btn {
+    padding: 10px 70px;
   }
 
   .done {
@@ -1786,6 +1830,10 @@ td {
   .quiz-wiz.finish {
     margin-bottom: 1em;
   }
+
+  .quiz-fill {
+    margin-top: 12em;
+  }
 }
 
 @media (min-width: 800px) {
@@ -1808,6 +1856,10 @@ td {
 
   .q-btn {
     font-size: 2rem !important;
+  }
+
+  .quiz-fill {
+    margin-top: 14em;
   }
 }
 
@@ -1855,6 +1907,10 @@ td {
   .q-btn {
     font-size: 2.25rem !important;
   }
+
+  .quiz-btn {
+    padding: 10px 120px;
+}
   
   .done h1 {
     font-size: 5em;
@@ -1919,8 +1975,7 @@ td {
   }
 
   .question-container {
-    margin-top: 2em;
-    font-size: 2em;
+    font-size: 1.25em;
   }
 
   .button-group {
@@ -1948,11 +2003,19 @@ td {
   .final-btn {
     font-size: 1.5em;
   }
+
+  .quiz-fill {
+    margin-top: 8em;
+  }
+
+  .quiz-btn {
+    font-size: 1.5em;
+  }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 500px) {
   .quiz-btn {
-    font-size: .75em;
+    font-size: .5em;
   }
   .bubble {
     visibility: hidden;
@@ -1974,6 +2037,14 @@ td {
   .q-btn {
     font-size: 1.2rem !important;
   }
+
+  .quiz-btn {
+    margin-top: 4em;
+  }
+
+  .quiz-fill {
+   display: none;
+}
 }
 
 
@@ -1995,9 +2066,6 @@ td {
 }
 
 @media (min-width: 1300px) and (max-height:899px) {
-  .quiz-btn {
-    font-size: 1.25em;
-  }
 
   .bubble {
     font-size: 1.75em;
@@ -2006,13 +2074,9 @@ td {
   }
 }
 
-@media (min-width: 1300px) and (min-height:900px) {
+/* @media (min-width: 1300px) and (min-height:900px) {
   .question-container {
     margin-top: 0;
-  }
-
-  .quiz-btn {
-    font-size: 1.5em;
   }
 
   .quiz-wiz {
@@ -2077,7 +2141,7 @@ td {
     margin-bottom: 3em;
   }
 
-}
+} */
 
 
 @media (min-width: 1500px) and (max-height:799px) {

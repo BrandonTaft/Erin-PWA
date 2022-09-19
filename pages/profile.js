@@ -49,14 +49,14 @@ function Profile(props) {
             <div className='profile p-8 pb-0 z-2 resize'>
                 <div className='profile-name yellow'>
                     <p>
-                        HELLO {wizardName.toUpperCase()}<br></br>
-                        YOUR HIGH SCORE IS <span className='score done-score'>{myScore}</span>
+                        HELLO <span className='done-score'>{wizardName.toUpperCase()}</span><br></br>
+                        YOUR HIGH SCORE IS <span className='done-score'>{myScore}</span>
                     </p>
                 </div>
                 <div className='line'></div>
                 <div className="welcome p-10" >
                     <p className="grey">
-                        Welcome to QuizWiz! The hottest trivia app in all 9&nbsp;realms. Rack up as many points
+                        Welcome to the&nbsp;hottest trivia app in all 9&nbsp;realms. Rack up as many points
                          as you can to place on the leaderboard and prove that you&nbsp;are&nbsp;a&nbsp;wizard
                     </p>
                 </div>

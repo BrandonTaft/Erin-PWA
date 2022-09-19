@@ -37,7 +37,7 @@ function SelectionPage() {
            <Background />
             <div className="home container row column " >
                 <Box className='grid-box'>
-                    <Grid className="grid-container" container spacing={{ xs: 0, sm: 2.5, md: 3 }} columns={{ xs: 2, rs: 3 }}>
+                    <Grid className="grid-container" container spacing={{ xs: 0, sm: 1 }} columns={{ xs: 2, rs: 3 }}>
                         <Grid item xs={1} >
                             <Box className="grid-item">
                                 <Link
@@ -48,7 +48,7 @@ function SelectionPage() {
                                 >
                                     <div className="yellow m-auto">
                                         <PsychologyIcon />
-                                        <div>GENERAL INFO</div>
+                                        <div>GENERAL</div>
                                     </div>
                                 </Link>
                             </Box>
