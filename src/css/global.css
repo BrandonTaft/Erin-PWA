@@ -652,27 +652,27 @@ body {
 
 @media (min-width: 768px) {
   .iconBar img {
-    height: 100px !important;
-    width: 100px !important;
+    height: 110px !important;
+    width: 110px !important;
   }
 
   .avatar {
-    height: 70px !important;
-    width: 70px !important;
+    height: 75px !important;
+    width: 75px !important;
     font-size: 3.5rem !important;
   }
 }
 
 @media (min-width: 900px) {
   .iconBar img {
-    height: 115px !important;
-    width: 115px !important;
+    height: 125px !important;
+    width: 125px !important;
   }
 
 
   .avatar {
-    height: 80px !important;
-    width: 80px !important;
+    height: 90px !important;
+    width: 90px !important;
     font-size: 4rem !important;
   }
 }
@@ -1532,6 +1532,10 @@ td {
   font-size: 1.15rem !important;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+.q-btn:hover {
+  background-color: initial !important;
 }
 
 .quiz-fill {
