@@ -172,7 +172,7 @@ function StartQuiz() {
             ) : null}
           </div>
         ) : (
-          // Displays once quizFinished is set to true
+          // Displays once quizFinished is true
           <div>
             <div className="done">
               <h1 >Congratulations</h1>
