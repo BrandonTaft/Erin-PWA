@@ -2206,7 +2206,7 @@ td {
   .final-btn {
     font-size: 1.75em;
 }
-
+}
 @media (min-width: 1300px) and (min-height:900px) {
   .quiz-fill {
     margin-top: 10em;
@@ -2258,8 +2258,8 @@ td {
 
   .final-btn {
     font-size: 2.25em;
-
   }
+}
 
 @media (min-width: 1500px) and (max-height:799px) {
   .bubble {
