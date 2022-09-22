@@ -173,7 +173,7 @@ function StartQuiz() {
           </div>
         ) : (
           // Displays once quizFinished is set to to true
-          <div>
+          <div className="done-container">
             <div className="done">
               <h1 >Congratulations</h1>
               <h2>Your score is <span className="done-score">{finalScore}</span></h2>
