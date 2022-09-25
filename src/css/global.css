@@ -620,7 +620,7 @@ body {
 .avatar {
   height: 50px !important;
   width: 50px !important;
-  font-family: 'Rubik' !important;
+  font-family: 'Playfair Display' !important;
   font-size: 2.5rem !important;
 }
 
@@ -1514,12 +1514,13 @@ td {
 .quiz-btn {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
   font-family: 'Rubik';
-  font-size: .85em;
-  padding: 8px 40px;
+  font-size: .7em;
+  padding: 8px 20px;
   width: fit-content;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   background-image: linear-gradient(-180deg, var(--bs-purple) 0%, #332268 100%);
 	box-shadow: 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
 							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
@@ -1568,7 +1569,7 @@ td {
 .quiz-fill {
   position: relative;
   flex-grow: 1;
-  margin-top: 8em;
+  margin-top: 7em;
 }
 
 .quiz-fill.end {
@@ -1579,24 +1580,24 @@ td {
 .bubble {
   position: relative;
     background: var(--bs-purple);
-    border-radius: 30px;
-    padding: 18px 10px;
-    font-size: 1.5em;
-    font-family: 'Rubik';
+    border-radius: 40px;
+    padding: 18px 12px;
+    font-size: 1.25em;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: #fdfeff;
     text-align: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    bottom: 3em;
+    bottom: 3.5em;
     margin: auto;
     box-shadow: 0 -0.25rem 3rem rgb(110 15 155) inset,
                 0 0.75rem 0.75rem rgb(255 255 255 / 40%) inset;
 }
 
 .bubble-bottom:before {
-  content: "";
+    content: "";
     position: absolute;
     z-index: -1;
     right: 38%;
@@ -1605,7 +1606,7 @@ td {
     width: 80px;
     height: 110px;
     border-radius: 50%;
-    box-shadow: 0px 55px 0 0 #532b85;
+    box-shadow: 0px 40px 0 0 #532b85;
     transform: rotate(238deg);
 }
 
@@ -1710,7 +1711,17 @@ td {
 
 @media (min-width: 360px) {
   .bubble {
-    font-size: 1.6em;
+    font-size: 1.5em;
+    bottom: 3.25em;
+    padding: 20px 12px;
+  }
+
+  .quiz-btn {
+    font-size: .8em;
+  }
+
+  .bubble-bottom:before {
+    box-shadow: 0px 50px 0 0 #532b85;
   }
 
   .question-container {
@@ -1744,18 +1755,6 @@ td {
 }
 
 @media (min-width: 375px) {
-  .bubble {
-    font-size: 1.75em;
-  }
-
-  .quiz-btn {
-    margin-bottom: 1em;
-  }
-
-  .quiz-fill {
-    margin-top: 8.5em;
-  }
-
   .done {
     margin-top: .5em;
   }
@@ -1777,23 +1776,23 @@ td {
   }
 
   .bubble {
-    padding: 20px 10px;
-    bottom: 2.75em;
-    font-size: 2em;
+    padding: 25px 10px;
+    font-size: 1.85em;
+    bottom: 3.25em;
   }
 
   .bubble-bottom:before {
-    right: 37%;
+    right: 35%;
     top: 83%;
     width: 100px;
     height: 135px;
     border-radius: 50%;
-    box-shadow: 0px 70px 0 0 #532b85;
+    box-shadow: 0px 55px 0 0 #532b85;
     transform: rotate(235deg);
 }
 
   .quiz-fill {
-    margin-top: 10em;
+    margin-top: 9.5em;
   }
 
   .q-btn {
@@ -1801,7 +1800,7 @@ td {
   }
 
   .quiz-btn {
-    padding: 10px 60px;
+    padding: 10px 30px;
   }
 
   .minimum {
@@ -1820,16 +1819,16 @@ td {
 
 @media (min-width: 500px) {
   .bubble {
-    font-size: 1.75em;
+    font-size: 1.6em;
+    padding: 20px 10px;
     bottom: 3em;
   }
 
   .bubble-bottom:before {
     right: 40%;
-    top: 83%;
+    top: 75%;
     width: 83px;
     height: 120px;
-    box-shadow: 0px 60px 0 0 #532b85;
 }
 
   .minimum {
@@ -1861,9 +1860,9 @@ td {
 @media (min-width: 768px) {
   .bubble {
     font-size: 2.5em;
-    padding: 20px 20px;
-    border-radius: 40px;
-    bottom: 2.5em;
+    padding: 25px 20px;
+    border-radius: 50px;
+    bottom: 3em;
   }
 
   .bubble-bottom:before {
@@ -1871,7 +1870,7 @@ td {
     top: 80%;
     width: 110px;
     height: 145px;
-    box-shadow: 0px 80px 0 0 #532b85;
+    box-shadow: 0px 70px 0 0 #532b85;
 }
 
   .minimum {
@@ -1915,8 +1914,7 @@ td {
   }
 
   .quiz-btn {
-    padding: 11px 75px;
-    border-radius: 30px;
+    padding: 12px 40px;
   }
 }
 
@@ -1947,7 +1945,7 @@ td {
     top: 80%;
     width: 130px;
     height: 170px;
-    box-shadow: 0px 95px 0 0 #532b85;
+    box-shadow: 0px 80px 0 0 #532b85;
     transform: rotate(243deg);
 }
   .question-container {
@@ -1957,10 +1955,6 @@ td {
 
   .minimum {
    min-height: 5em;
-  }
-
-  .quiz-btn {
-    padding: 15px 90px;
   }
 
   .button-group {
@@ -1992,6 +1986,10 @@ td {
   .final-btn {
     font-size: 2.5em;
   }
+
+  .quiz-btn {
+    font-size: 9em;
+  }
 }
 
 @media (orientation: landscape) {
@@ -2011,7 +2009,7 @@ td {
     top: 65%;
     width: 95px;
     height: 115px;
-    box-shadow: 0px 65px 0 0 #532b85;
+    box-shadow: 0px 55px 0 0 #532b85;
     transform: rotate(243deg);
 }
   
@@ -2061,7 +2059,7 @@ td {
   .quiz-btn {
     margin: 1.5em auto;
     font-size: 1.15em;
-    padding: 7px 70px;
+    padding: 7px 40px;
   }
 }
 
@@ -2078,7 +2076,7 @@ td {
     top: 65%;
     width: 70px;
     height: 90px;
-    box-shadow: 0px 50px 0 0 #532b85;
+    box-shadow: 0px 45px 0 0 #532b85;
     transform: rotate(243deg);
 }
 
@@ -2093,7 +2091,7 @@ td {
 
   .quiz-btn {
     font-size: .85em;
-    padding: 6px 50px;
+    padding: 6px 30px;
     margin: 1em auto 0;
   }
 
@@ -2160,7 +2158,7 @@ td {
   .quiz-btn {
     font-size: .6em;
     margin: 1em auto .5em;
-    padding: 5px 40px;
+    padding: 5px 20px;
   }
 
   .quiz-fill {
@@ -2213,7 +2211,7 @@ td {
     margin-bottom: 0em;
     margin: 2em auto;
     font-size: 1.25em;
-    padding: 8px 80px;
+    padding: 8px 50px;
   }
 
   .bubble {
@@ -2261,11 +2259,11 @@ td {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     font-size: 1.65em;
-    padding: 20px 100px;
+    padding: 15px 50px;
   }
 
   .bubble {
-    font-size: 2.75em;
+    font-size: 2.5em;
     padding: 25px;
     bottom: 2.75em;
   }
@@ -2275,7 +2273,7 @@ td {
     top: 65%;
     width: 130px;
     height: 170px;
-    box-shadow: 0px 95px 0 0 #532b85;
+    box-shadow: 0px 80px 0 0 #532b85;
     transform: rotate(243deg);
 }
 

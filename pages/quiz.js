@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { useRouter } from 'next/router';
@@ -154,7 +155,7 @@ function StartQuiz() {
             <div id="question" className="question"> {currentQuestion}</div>
             {questions.length > 0 && correctAnswer == null ? (
               // Keeps start button from rendering until questions are loaded to prevent undefined error
-              <button className="btn quiz-btn" onClick={() => playquiz()}><span>Start Quiz</span></button>
+              <button className="btn quiz-btn" onClick={() => playquiz()}><span className="done-score">Start Quiz</span></button>
              ) : null}
             {correctAnswer != null ? (
               // Renders answer buttons
