@@ -1186,7 +1186,11 @@ body {
   font-size: 1.75em;
   font-weight: 600;
   text-transform: uppercase;
-  margin: auto;
+  margin-top: 1em;
+  position: sticky;
+  top: -2px;
+  z-index: 4;
+  background: #050610;
 }
 
 .scorecard span {
@@ -1207,30 +1211,27 @@ body {
 .particle-bg {
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .leaderboard-page {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  overflow: hidden;
+  overflow: scroll;
 }
 
-.wrap {
-  margin: 0 auto auto auto;
-}
-
-.lead-container {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 24em;
+.table-top {
+  position: sticky;
+    top: 90px;
+    z-index: 3;
+    background: #050610;
 }
 
 table {
   border-collapse: collapse;
   font-size: 1.75em;
-  color: #ffffff;
+  color: var(--bs-yellow);
   width: 100vw;
   table-layout: fixed;
   font-weight: 500;
@@ -1241,13 +1242,11 @@ td {
 }
 
 .table-title {
-  color: #ffffff;
+  color: var(--bs-light-purple);
   font-size: 1.75em;
   font-weight: 600;
   text-align: center;
-  color: var(--bs-yellow);
-  border-bottom: solid 1px #8b8e8e0f;
-  padding: 0px 8px 8px;
+  padding: 0px 0px 8px;
 }
 
 .left-column {
@@ -1270,19 +1269,36 @@ td {
   top: 5px !important;
 }
 
+.wrap {
+  position: relative;
+  margin: 1em auto 2em;
+}
+
+/* .wrap:before {
+  content: "";
+  box-shadow: inset 0 0 2000px rgb(31 12 12 / 92%);
+} */
+
+
 .ss {
   display: flex;
+  position: absolute;
   flex-direction: column;
-  z-index: 0;
-  margin: auto auto 0 auto;
+  z-index: -1;
+  margin: auto auto 1em;
+  width: 100vw;
+  align-items: center;
+  top: 40%;
 }
 
 .world {
   width: 20rem;
-  height: 10rem;
+  height: 20rem;
   background-color: #050610;
   background-image: url("/images/earth.jpg");
-  border-radius: 10rem 10rem 0 0;
+  background-color: #7b5af3; /* Tint color */
+  background-blend-mode: multiply;
+  border-radius: 50%;
   position: relative;
   animation-name: rotate;
   animation-duration: 32s;
@@ -1299,6 +1315,23 @@ td {
   }
 }
 
+.board-score {
+  color: var(--bs-yellow);
+  text-shadow: 1px 1px 1px var(--bs-purple), 0 .05em .05em var(--bs-light-purple), 0 .05em 0.05em var(--bs-yellow);
+  animation: hue2 5s infinite linear;
+  font-weight: 500;
+  letter-spacing: 3px;
+  }
+  
+  @keyframes hue2 {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(-359deg);
+    }
+  }
+
 @media (min-width: 400px) {
   .scorecard {
     font-size: 2em;
@@ -1308,10 +1341,26 @@ td {
     font-size: 2em;
   }
 
+  .table-top {
+    top: 100px;
+  }
+
+  table {
+    font-size: 2em;
+  }
+
+  .left-column img {
+    height: 40px !important;
+    width: 35px !important;
+  }
+
+  .middle-column {
+    overflow: scroll;
+  }
+
   .world {
-    border-radius: 50%;
-    height: 15rem;
-    width: 15rem;
+    height: 25rem;
+    width: 25rem;
   }
 
   .prize {
@@ -1327,19 +1376,36 @@ td {
   .right-column {
     padding-right: 2.5rem;
   }
+
+  .scorecard {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 600px) {
   .scorecard {
     font-size: 2.5em;
   }
+
+  .table-top {
+    top: 120px;
+  }
+
+  .wrap {
+    margin: 0em auto 2em;
+}
+
+  .ss {
+    top: 35%;
+  }
+
   .world {
-    height: 20em;
-    width: 20em;
+    height: 35em;
+    width: 35em;
   }
 
   table {
-    font-size: 2.75em;
+    font-size: 3em;
   }
 
   .prize {
@@ -1347,41 +1413,32 @@ td {
   }
 
   .table-title {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 
   .left-column img {
-    height: 45px !important;
-    width: 40px !important;
-  }
-}
-
-@media (min-width: 800px) {
-  .scorecard {
-    margin-bottom: 0;
-  }
-
-  .lead-container {
-    max-height: 35em;
+    height: 55px !important;
+    width: 50px !important;
   }
 }
 
 @media (min-width: 900px) {
-  .lead-container {
-    max-height: 40em;
-  }
-
   .scorecard {
     font-size: 3em;
   }
 
   .world {
-    height: 25em;
-    width: 25em;
+    height: 45em;
+    width: 45em;
+    background-size: cover;
   }
 
   table {
-    font-size: 3.25em;
+    font-size: 3.5em;
+  }
+
+  .table-top {
+    top: 140px;
   }
 
   .middle-column {
@@ -1393,45 +1450,51 @@ td {
   }
 
   .left-column {
-    padding-left: 3rem;
-    padding-right: 1.5rem;
+    width: 60px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .right-column {
-    padding-right: 4rem;
+    padding-right: 2rem;
   }
 
   .left-column img {
-    height: 55px !important;
+    height: 65px !important;
+    width: 60px !important;
   }
 }
 
 @media (orientation: landscape) {
   .scorecard {
-    font-size: 1.5em;
-  }
-
-  .lead-container {
-    max-height: 20em;
+    font-size: 2.5em;
   }
 
   .table-title {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
 
   table {
-    font-size: 2em;
-    width: 85vw;
-    margin: auto;
+    font-size: 2.5em;
   }
 
-  .left-column img {
-    height: 40px !important;
-  }
+  .table-top {
+    top: 120px;
+}
 
   .prize {
     top: 5px !important;
   }
+
+  .ss {
+    top: 40%;
+  }
+
+  .world {
+    height: 25em;
+    width: 25em;
+    background-size: cover;
+}
 
 }
 
@@ -1440,9 +1503,13 @@ td {
     font-size: 3em;
   }
 
+  .ss {
+    top: 45%;
+  }
+
   .world {
-    height: 25em;
-    width: 25em;
+    height: 35em;
+    width: 35em;
   }
 
   table {
@@ -1450,35 +1517,24 @@ td {
     width: 100vw;
   }
 
+  .table-top {
+    top: 140px;
+}
+
   .table-title {
     font-size: 3em;
   }
 
-  .lead-container {
-    max-height: 25em;
-  }
+  .left-column img {
+    height: 65px !important;
+    width: 60px !important;
+}
 }
 
-@media (max-height: 800px) {
-  .world {
-    width: 20rem;
-    height: 10rem;
-    border-radius: 10rem 10rem 0 0;
-  }
-}
 
-@media (min-height: 1200px) {
-  .world {
-    height: 25em;
-    width: 25em;
-  }
-
-  .scorecard {
-    font-size: 3em;
-  }
-
-  .dial {
-    font-size: 2.5rem;
+@media (min-width: 1300px) {
+  table {
+    font-size: 3.5em;
   }
 }
 
@@ -1487,9 +1543,34 @@ td {
     overflow: visible;
   }
 
+  .scorecard {
+    font-size: 2em;
+  }
+
+  .table-top {
+    top: 100px;
+  }
+
+  .table-title {
+    font-size: 2em;
+  }
+
+  table{
+    font-size: 2em;
+  }
+
   .ss {
     display: none;
   }
+
+  .left-column {
+    width: 30px;
+  }
+
+  .left-column img {
+    height: 35px !important;
+    width: 30px !important;
+}
 }
 
 /***********Quiz***********/
@@ -1578,7 +1659,7 @@ td {
 }
 
 .bubble {
-  position: relative;
+    position: relative;
     background: var(--bs-purple);
     border-radius: 40px;
     padding: 18px 12px;
@@ -1694,7 +1775,7 @@ td {
 
 .done-score {
   color: var(--bs-yellow);
-  text-shadow: 1px 1px 2px var(--bs-purple), 0 0 1em var(--bs-light-purple), 0 0 0.2em var(--bs-yellow);
+  text-shadow: 1px 5px 0px var(--bs-purple), 0 .05em .025em var(--bs-light-purple), 0 0.05em 0.025em var(--bs-yellow);
   animation: hue 5s infinite linear;
   font-weight: 500;
   letter-spacing: 3px;
@@ -1776,8 +1857,8 @@ td {
   }
 
   .bubble {
-    padding: 25px 10px;
-    font-size: 1.85em;
+    padding: 25px 15px;
+    font-size: 1.75em;
     bottom: 3.25em;
   }
 
