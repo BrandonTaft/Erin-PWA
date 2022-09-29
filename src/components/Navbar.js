@@ -8,11 +8,6 @@ import Avatar from '@mui/material/Avatar';
 function Navbar() {
     const router = useRouter()
     const [name, setName] = useState("")
-    // useEffect(() => {
-    //     // Get user name from local storage
-    //     const name = localStorage.getItem("name")
-    //     setName(name)
-    // }, []);
     useEffect(() => {
         let name = localStorage.getItem('name')
         if(name != null) {
@@ -52,7 +47,7 @@ function Navbar() {
                 </a>
             </Link>
             <span className="pointer" onClick={logOut} >
-                <Image src="/icons/exit.png" alt="logout icon" width={120} height={120} quality={100} />
+                <Image src="/icons/exit.webp" alt="logout icon" width={120} height={120} quality={100} />
             </span>
             <Link href="/profile">
                 <Avatar className="avatar pointer" sx={{ bgcolor: '#33236c', color: '#ceb728' }} {...stringAvatar(name.toUpperCase())} />
