@@ -338,6 +338,11 @@ body {
     width: 50px !important;
   }
 
+  .passport-btn.github img {
+    height: 50px !important;
+    width: 42px !important;
+  }
+
 }
 
 @media (min-width: 500px) {
@@ -390,6 +395,11 @@ body {
     width: 60px !important;
   }
 
+  .passport-btn.github img {
+    height: 60px !important;
+    width: 50px !important;
+  }
+
   .message {
     font-size: 2em;
     padding: 0 80px 30px;
@@ -431,6 +441,12 @@ body {
     height: 80px !important;
     width: 80px !important;
   }
+
+  .passport-btn.github img {
+    height: 80px !important;
+    width: 67px !important;
+  }
+
 
   .message {
     font-size: 2em;
@@ -486,7 +502,12 @@ body {
   .passport-btn img {
     height: 50px !important;
     width: 50px !important;
-}
+  }
+
+  .passport-btn.github img {
+  height: 50px !important;
+  width: 42px !important;
+  }
 
   #google-btn {
     margin-top: 8px;
@@ -552,6 +573,11 @@ body {
     width: 30px !important;
   }
 
+  .passport-btn.github img {
+    height: 30px !important;
+    width: 25px !important;
+  }
+
   .message {
     font-size: 1.25em;
     width: 15%;
@@ -591,6 +617,11 @@ body {
   .passport-btn img {
     height: 50px !important;
     width: 50px !important;
+  }
+
+  .passport-btn.github img {
+    height: 50px !important;
+    width: 42px !important;
   }
 
   .message {

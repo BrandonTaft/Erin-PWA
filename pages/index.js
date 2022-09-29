@@ -80,8 +80,8 @@ function Login(props) {
                     <Image src='/icons/facebook.webp' alt="Login With Facebook" height={40} width={40} />
                     <div className='btn-text'>Login With Facebook</div>
                 </a>
-                <a id="github-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/github">
-                    <Image src='/icons/github.webp' alt="Login With Github" height={40} width={40} quality={100} />
+                <a id="github-btn" className="passport-btn github" href="https://polar-dawn-36653.herokuapp.com/auth/github">
+                    <Image src='/icons/github.webp' alt="Login With Github" height={40} width={33} quality={100} />
                     <div className='btn-text'>Login With Github</div>
                 </a>
             </div>
