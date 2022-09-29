@@ -73,15 +73,15 @@ function Login(props) {
             </div>
             <div className="icon-container">
                 <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
-                    <Image src='/icons/google.png' alt="Login With Google" height={40} width={40} />
+                    <Image src='/icons/google.webp' alt="Login With Google" height={40} width={40} />
                     <div className='btn-text'>Login With Google</div>
                 </a>
                 <a id="facebook-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/facebook">
-                    <Image src='/icons/facebook.png' alt="Login With Facebook" height={40} width={40} />
+                    <Image src='/icons/facebook.webp' alt="Login With Facebook" height={40} width={40} />
                     <div className='btn-text'>Login With Facebook</div>
                 </a>
                 <a id="github-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/github">
-                    <Image src='/icons/github.png' alt="Login With Github" height={40} width={40} quality={100} />
+                    <Image src='/icons/github.webp' alt="Login With Github" height={40} width={40} quality={100} />
                     <div className='btn-text'>Login With Github</div>
                 </a>
             </div>

@@ -20,7 +20,7 @@ function Leaderboard(props) {
     const leaderboardList = leaderboard.map((score, index) => {
         return (
             <tr key={index}>
-                <td className="left-column"><Image className="prize" src="/icons/trophy.png" alt="leaderboard icon" width={30} height={35} /></td>
+                <td className="left-column"><Image className="prize" src="/icons/trophy.webp" alt="leaderboard icon" width={30} height={35} /></td>
                 <td className="middle-column"><span className='board-score'>{index + 1}.</span>&nbsp;{score.username}</td>
                 <td className="right-column board-score" >{score.score}</td>
             </tr>
@@ -43,16 +43,6 @@ function Leaderboard(props) {
                     </table>
                 </div>
             </div>
-          
-                    {/* <Image
-                        className="spinning-logo rotate"
-                        alt="logo"
-                        src="/images/qw-gold.png"
-                        layout='fill'
-                        objectFit='scale-down'
-                        priority={true}
-                    /> */}
-             
             <div className='ss'>
                 <div className='world'></div>
             </div>

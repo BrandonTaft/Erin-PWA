@@ -38,12 +38,12 @@ function Navbar() {
         <Box className="iconBar">
             <Link href="/home">
                 <a>
-                    <Image src="/icons/house.png" alt="home icon" width={120} height={120} quality={100}  />
+                    <Image src="/icons/house.webp" alt="home icon" width={120} height={120} quality={100}  />
                 </a>
             </Link>
             <Link href="/leaderboard">
                 <a>
-                    <Image className="trophy" src="/icons/trophy.png" alt="leaderboard icon" width={120} height={120} quality={100} />
+                    <Image className="trophy" src="/icons/trophy.webp" alt="leaderboard icon" width={120} height={120} quality={100} />
                 </a>
             </Link>
             <span className="pointer" onClick={logOut} >
