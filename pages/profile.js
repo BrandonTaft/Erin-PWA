@@ -8,18 +8,6 @@ function Profile(props) {
     const [wizardName, setwizardName] = useState("")
     const router = useRouter();
 
-    // On first render retrieves username from local storage  & sets it to wizardName state
-    // Then calls function to retrieve user high score and passes in the username
-    // useEffect(() => {
-    //     let name =searchParams.get("name")
-    //     // let name = localStorage.getItem('name')
-    //     // let name = query.name;
-    //      console.log("name",name)
-
-    //     // setwizardName(name.toUpperCase())
-    //     // getuserscore(name)
-    // }, []);
-
     useEffect(() => {
         let name = localStorage.getItem('name')
         if(name != null) {
@@ -40,7 +28,11 @@ function Profile(props) {
         fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
             .then(response => response.json())
             .then(myScore => {
+                if(myScore.score != null){
                 setMyScore(myScore.score)
+                }else{
+                    setMyScore(0)
+                }
             })
     };
     return (
