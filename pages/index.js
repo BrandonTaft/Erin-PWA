@@ -68,8 +68,8 @@ function Login(props) {
                     <Image className='m-img' src='/images/warning-wiz.png' alt="Wizard" layout='responsive' height={75} width={60} priority/>
                     <button onClick={remove}>Ok</button>
                 </div>}
-                <a className="btn log-btn" onClick={handleLoginButton}>Login</a>
-                <a href="/register" className="btn log-btn">Register</a>
+                <div className="btn log-btn" onClick={handleLoginButton}>Login</div>
+                <div href="/register" className="btn log-btn">Register</div>
             </div>
             <div className="icon-container">
                 <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">

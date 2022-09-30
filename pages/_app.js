@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>QuizWiz</title>
-        <meta name="description" content="" />
+        <meta name="description" content="The hottest trivia app on the scene" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="keywords" content="game, trivia, mobile game" />
         <meta property="og:type" content="app" />
