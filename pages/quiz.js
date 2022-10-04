@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Link from 'next/link';
-import Image from 'next/image';
-import PlayCircleIcon from '@mui/icons-material/PlayCircle';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
+const ScaredWizard = dynamic(() =>
+import('../src/components/Wizards').then((mod) => mod.ScaredWizard)
+);
+const HighScoreWizard = dynamic(() =>
+import('../src/components/Wizards').then((mod) => mod.HighScoreWizard)
+);
+const UnImpressedWizard = dynamic(() =>
+import('../src/components/Wizards').then((mod) => mod.UnImpressedWizard)
+);
+const AnswerButtons = dynamic(() =>
+import('../src/components/AnswerButtons').then((mod) => mod.AnswerButtons)
+);
+
+// const { ScaredWizard } = dynamic(() => import('../src/components/Wizards'));
+// const { HighScoreWizard } = dynamic(() => import('../src/components/Wizards'));
+// const { UnImpressedWizard } = dynamic(() => import('../src/components/Wizards'));
+// const { AnswerButtons } = dynamic(() => import('../src/components/AnswerButtons'));
 
 function StartQuiz() {
   const router = useRouter()
@@ -143,12 +157,7 @@ function StartQuiz() {
   return (
     <div className="quiz-page">
       <div className="quiz-container">
-      <div id="wizard" className="quiz-fill">
-          <div className="bubble bubble-bottom">
-            <p>You look scared! &#128514; &#128541; &#128526;&nbsp;</p>
-          </div>
-          <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
-        </div>
+      <ScaredWizard />
         {quizFinished != true ? (
           // Display start button when first rendered
           <div className="question-container" id="question-container">
@@ -159,17 +168,7 @@ function StartQuiz() {
              ) : null}
             {correctAnswer != null ? (
               // Renders answer buttons
-              <ButtonGroup
-                className="button-group"
-                orientation="vertical"
-                aria-label="button group"
-                variant="text"
-              >
-                <Button onClick={() => checkAnswer(0)} className="q-btn">{answers[0]}</Button>
-                <Button onClick={() => checkAnswer(1)} className="q-btn">{answers[1]}</Button>
-                <Button onClick={() => checkAnswer(2)} className="q-btn">{answers[2]}</Button>
-                <Button onClick={() => checkAnswer(3)} className="q-btn">{answers[3]}</Button>
-              </ButtonGroup>
+              <AnswerButtons answers={answers}/>
             ) : null}
           </div>
         ) : (
@@ -186,20 +185,10 @@ function StartQuiz() {
           </div>
         )}
         {highScore === "true" ?
-          <div id="wizard" className="quiz-fill end finish">
-            <div className="bubble bubble-bottom">
-              <p>That's a New High Score!</p>
-            </div>
-            <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
-          </div>
+          <HighScoreWizard />
           :
           (highScore === "false" ?
-            <div id="wizard" className="quiz-fill end finish">
-              <div className="bubble bubble-bottom">
-                <p>You Can Do Better :&#40;</p>
-              </div>
-              <Image src="/images/mean-wiz.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
-            </div>
+            <UnImpressedWizard />
             : null
           )}
       </div>

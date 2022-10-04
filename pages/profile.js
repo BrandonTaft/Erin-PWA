@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Image from 'next/image';
-import Background from '../src/components/Background';
 
 function Profile(props) {
     const [myScore, setMyScore] = useState(null)
@@ -37,7 +36,6 @@ function Profile(props) {
     };
     return (
         <div className="profile-page">
-            <Background />
             <div className='profile p-8 pb-0 z-2 resize'>
                 <div className='profile-name yellow'>
                     <p>

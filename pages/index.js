@@ -13,7 +13,6 @@ function Login(props) {
             [e.target.name]: e.target.value
         })
     };
-
     const handleLoginButton = () => {
         // Validation here, but complete validation done on server side
         if (credentials.username === '') {

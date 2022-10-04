@@ -1,4 +1,5 @@
-import  Navbar from "./Navbar";
+import dynamic from 'next/dynamic'
+const Navbar = dynamic(() => import('./Navbar'));
 import { useRouter } from 'next/router';
 
 function Layout({ children }) {
