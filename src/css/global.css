@@ -1326,7 +1326,7 @@ td {
   width: 20rem;
   height: 20rem;
   background-color: #050610;
-  background-image: url("/images/earth.jpg");
+  background-image: url("/images/earth.webp");
   background-color: #7b5af3; /* Tint color */
   background-blend-mode: multiply;
   border-radius: 50%;

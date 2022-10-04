@@ -57,14 +57,14 @@ function Login(props) {
         // Render Display
         <div className='login column'>
             <div className="login-title">
-                <Image className="logo" src="/images/logo-full.png" alt="Logo" height={100} width={250} quality={100} priority='true' />
+                <Image className="logo" src="/images/logo-full.webp" alt="Logo" height={100} width={250} quality={100} priority='true' />
             </div>
             <div className="login-Container column">
                 <input className="log-RegText" type="text" name="username" onChange={handleLoginChange} placeholder="User name" />
                 <input className="log-RegText" type="password" name="password" onChange={handleLoginChange} placeholder="Password" />
                 {message && <div id="message" className="message">
                     <p  >{message}</p>
-                    <Image className='m-img' src='/images/warning-wiz.png' alt="Wizard" layout='responsive' height={75} width={60} priority/>
+                    <Image className='m-img' src='/images/warning-wiz.webp' alt="Wizard" layout='responsive' height={75} width={60} priority/>
                     <button onClick={remove}>Ok</button>
                 </div>}
                 <div className="btn log-btn" onClick={handleLoginButton}>Login</div>

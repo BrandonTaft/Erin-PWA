@@ -52,7 +52,7 @@ function Register(props) {
         // Render Display
         <div className='login register column'>
             <div className="login-title">
-                <Image className="logo" src="/images/logo-full.png" alt="Logo" height={110} width={250} priority='true' />
+                <Image className="logo" src="/images/logo-full.webp" alt="Logo" height={110} width={250} priority='true' />
             </div>
             <h2>REGISTER</h2>
             <div className="login-Container column">
@@ -60,7 +60,7 @@ function Register(props) {
                 <input className="log-RegText" type="password" name="password" onChange={handleRegisterChange} placeholder="Password" />
                 {message && <div id="message" className="message register-message">
                     <p  >{message}</p>
-                    <Image className='m-img' src='/images/warning-wiz.png' alt="Wizrd" layout='responsive' height={100} width={80} />
+                    <Image className='m-img' src='/images/warning-wiz.webp' alt="Wizrd" layout='responsive' height={100} width={80} />
                     <button onClick={remove}>Ok</button>
                 </div>}
                 <a className="btn log-btn register-btn" onClick={handleRegisterButton}>Register</a>

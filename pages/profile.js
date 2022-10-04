@@ -58,7 +58,7 @@ function Profile(props) {
                     <Image
                         className='wiz-img'
                         alt="wizard"
-                        src="/images/flying.png"
+                        src="/images/flying.webp"
                         layout='fill'
                         objectFit='scale-down'
                         priority={true}
