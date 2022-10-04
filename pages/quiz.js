@@ -15,11 +15,6 @@ const AnswerButtons = dynamic(() =>
 import('../src/components/AnswerButtons').then((mod) => mod.AnswerButtons)
 );
 
-// const { ScaredWizard } = dynamic(() => import('../src/components/Wizards'));
-// const { HighScoreWizard } = dynamic(() => import('../src/components/Wizards'));
-// const { UnImpressedWizard } = dynamic(() => import('../src/components/Wizards'));
-// const { AnswerButtons } = dynamic(() => import('../src/components/AnswerButtons'));
-
 function StartQuiz() {
   const router = useRouter()
   const { cat } = router.query
