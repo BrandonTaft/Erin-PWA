@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
-const ScaredWizard = dynamic(() =>
-import('../src/components/Wizards').then((mod) => mod.ScaredWizard)
-);
-const HighScoreWizard = dynamic(() =>
-import('../src/components/Wizards').then((mod) => mod.HighScoreWizard)
-);
-const UnImpressedWizard = dynamic(() =>
-import('../src/components/Wizards').then((mod) => mod.UnImpressedWizard)
-);
 const Finished = dynamic(() =>
 import('../src/components/Finished').then((mod) => mod.Finished)
 );
