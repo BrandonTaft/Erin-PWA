@@ -1638,6 +1638,11 @@ td {
 							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
 }
 
+#start-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .quiz-container {
   display: flex;
   flex-direction: column;
@@ -1720,32 +1725,6 @@ td {
     box-shadow: 0px 40px 0 0 #531985;
     transform: rotate(238deg);
 }
-
-
-/* .bubble-bottom:before {
-  content: "";
-  position: absolute;
-  height: 55px;
-  background-color: #542b84;
-  width: 60px;
-  border-radius: 0px 90% 0 0;
-  right: 25%;
-  z-index: -1;
-  top: 70%;
-  transform: rotate(90deg);
-}
-
-.bubble-bottom:after {
-  content: "";
-  position: absolute;
-  width: 35px;
-  height: 50px;
-  background-color: #050610;
-  border-radius: 50%;
-  top: 90%;
-  z-index: -1;
-  right: 40%;
-} */
 
 .bubble p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
