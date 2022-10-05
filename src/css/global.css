@@ -1828,7 +1828,7 @@ td {
     background: var(--bs-purple);
     border-radius: 40px;
     padding: 18px 12px;
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: #fdfeff;
@@ -1836,7 +1836,7 @@ td {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    bottom: 3.5em;
+    bottom: 4em;
     margin: auto;
     box-shadow: 0 -0.25rem 3rem rgb(110 15 155) inset,
                 0 0.75rem 0.75rem rgb(255 255 255 / 40%) inset;
@@ -1930,8 +1930,8 @@ td {
 
 @media (min-width: 360px) {
   .bubble {
-    font-size: 1.5em;
-    bottom: 3.25em;
+    font-size: 1.25em;
+    bottom: 3.5em;
     padding: 20px 12px;
   }
 
@@ -1996,8 +1996,8 @@ td {
 
   .bubble {
     padding: 25px 15px;
-    font-size: 1.75em;
-    bottom: 3.25em;
+    font-size: 1.5em;
+    bottom: 3.5em;
   }
 
   .bubble-bottom:before {
@@ -2038,9 +2038,9 @@ td {
 
 @media (min-width: 500px) {
   .bubble {
-    font-size: 1.6em;
+    font-size: 1.2em;
     padding: 20px 10px;
-    bottom: 3em;
+    bottom: 4em;
   }
 
   .bubble-bottom:before {
@@ -2078,14 +2078,14 @@ td {
 
 @media (min-width: 768px) {
   .bubble {
-    font-size: 2.5em;
+    font-size: 2em;
     padding: 25px 20px;
     border-radius: 50px;
     bottom: 3em;
   }
 
   .bubble-bottom:before {
-    right: 40%;
+    right: 35%;
     top: 80%;
     width: 110px;
     height: 145px;
@@ -2153,10 +2153,10 @@ td {
 
 @media (min-width: 900px) {
   .bubble {
-    font-size: 3em;
+    font-size: 2.5em;
     padding: 30px 25px;
     border-radius: 50px;
-    bottom: 2.75em;
+    bottom: 3em;
   }
 
   .bubble-bottom:before {
@@ -2207,7 +2207,7 @@ td {
   }
 
   .quiz-btn {
-    font-size: 9em;
+    font-size: .9em;
   }
 }
 
