@@ -54,7 +54,7 @@ function Profile(props) {
             <a className="profile-btn z-2" href="/home">
                 <span>READY</span>
             </a>
-            <div className="fill z-2">
+            <div className="fill z-2 profile-wiz">
                     <Image
                         className='wiz-img'
                         alt="wizard"
@@ -64,6 +64,9 @@ function Profile(props) {
                         priority={true}
                     />
                 </div>
+                <div className='ss-profile'>
+                <div className='world-profile'></div>
+            </div>
         </div>
     )
 }
