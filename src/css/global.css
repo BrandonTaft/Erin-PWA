@@ -254,7 +254,7 @@ body {
 }
 
 #github-btn {
-  background-color: #121212;
+  background-color: #343a41;
 }
 
 #github-btn:active {
@@ -1037,12 +1037,12 @@ body {
   margin: auto auto 1em;
   width: 100vw;
   align-items: center;
-  top: 54%;
+  top: 58%;
 }
 
 .world-profile {
-  width: 18rem;
-  height: 18rem;
+  width: 15rem;
+  height: 15rem;
   background-color: #050610;
   background-image: url("/images/earth.webp");
   background-color: #7b5af3; /* Tint color */
@@ -1069,10 +1069,6 @@ body {
     font-size: 1.4rem;
   }
 
-  .world-profile {
-    width: 20rem;
-    height: 20rem;
-  }
 }
 
 @media (min-width: 375px) {
@@ -1089,20 +1085,20 @@ body {
   .profile-btn {
     font-size: 1.4em;
   }
+
+  .ss-profile {
+    top: 55%;
+  }
+
+  .world-profile {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 @media (min-width: 400px) {
   .welcome p {
     font-size: 1.75rem;
-  }
-
-  .ss-profile {
-    top: 52%;
-  }
-
-  .world-profile {
-    width: 25rem;
-    height: 25rem;
   }
 }
 
