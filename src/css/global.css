@@ -1034,15 +1034,15 @@ body {
   position: absolute;
   flex-direction: column;
   z-index: -1;
-  margin: auto auto 1em;
+  margin: 10% auto;
   width: 100vw;
   align-items: center;
-  top: 58%;
+  
 }
 
 .world-profile {
-  width: 15rem;
-  height: 15rem;
+  width: 250px;
+  height: 250px;
   background-color: #050610;
   background-image: url("/images/earth.webp");
   background-color: #7b5af3; /* Tint color */
@@ -1086,19 +1086,20 @@ body {
     font-size: 1.4em;
   }
 
-  .ss-profile {
-    top: 55%;
+  .world-profile {
+    width: 300px;
+    height: 300px;
   }
 
-  .world-profile {
-    width: 20rem;
-    height: 20rem;
-  }
 }
 
 @media (min-width: 400px) {
   .welcome p {
     font-size: 1.75rem;
+  }
+
+  .ss-profile {
+    margin-top: 15%;
   }
 }
 
@@ -1122,12 +1123,7 @@ body {
   }
 
   .ss-profile {
-    top: 48%;
-  }
-
-  .world-profile {
-    width: 22rem;
-    height: 22rem;
+    margin-top: 5%;
   }
 
 }
@@ -1142,13 +1138,9 @@ body {
   }
 
   .ss-profile {
-    top: 45%;
+    margin-top: 15%;
   }
 
-  .world-profile {
-    width: 28rem;
-    height: 28rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1175,19 +1167,20 @@ body {
   }
 
   .ss-profile {
-    top: 54%;
+    margin-top: 10%;
+  }
+
+  .world-profile {
+    width: 350px;
+    height: 350px;
   }
  
 }
 
 @media (min-width: 800px) {
-  .ss-profile {
-    top: 47%;
-  }
-
   .world-profile {
-    width: 37rem;
-    height: 37rem;
+    width: 450px;
+    height: 450px;
   }
 }
 
@@ -1212,15 +1205,6 @@ body {
   .profile-btn {
     font-size: 2.25em;
     margin: 30px auto;
-  }
-
-  .ss-profile {
-    top: 50%;
-  }
-
-  .world-profile {
-    width: 40rem;
-    height: 40rem;
   }
 }
 
@@ -1252,12 +1236,11 @@ body {
   }
 
   .ss-profile {
-    top: 55%;
+    display: none;
   }
-  
-  .world-profile {
-    width: 20rem;
-    height: 20rem;
+
+  .profile-wiz {
+    display: none;
   }
   
 }
@@ -1284,14 +1267,6 @@ body {
     padding: .5rem 2rem;
   }
 
-  .ss-profile {
-    display: none;
-  }
-
-  .profile-wiz {
-    display: none;
-  }
-
 }
 
 @media (min-height: 601px) {
@@ -1313,25 +1288,6 @@ body {
   font-size: 2.25rem;
 }
 
-.ss-profile {
-  top: 57%;
-}
-
-.world-profile {
-  width: 20rem;
-  height: 20rem;
-}
-}
-
-@media (min-width: 1300px) {
-  .ss-profile {
-    top: 51%;
-  }
-  
-  .world-profile {
-    width: 27rem;
-    height: 27rem;
-  }
 }
 
 /************* Scorecard ****************/

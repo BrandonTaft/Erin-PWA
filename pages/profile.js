@@ -63,10 +63,13 @@ function Profile(props) {
                         objectFit='scale-down'
                         priority={true}
                     />
-                </div>
-                <div className='ss-profile'>
+                    <div className='ss-profile'>
                 <div className='world-profile'></div>
-            </div>
+                </div>
+                </div>
+                {/* <div className='ss-profile'>
+                <div className='world-profile'></div>
+            </div> */}
         </div>
     )
 }
