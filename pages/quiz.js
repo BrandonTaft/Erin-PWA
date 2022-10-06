@@ -64,7 +64,7 @@ function StartQuiz() {
           <div className="bubble bubble-bottom">
             <p>You Can Do Better :&#40;</p>
           </div>
-          <Image src="/images/warning-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+          <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
         </div>
             : null
           )}

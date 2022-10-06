@@ -8,7 +8,6 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
     const [correctAnswer, setCorrectAnswer] = useState(null);
     const [answers, setAnswers] = useState([]);
     const [currentScore, setCurrentScore] = useState(0);
-    const [isLoaded, setIsLoaded] = useState(false)
     let [questionCounter, setQuestionCounter] = useState(0);
     let currentAnswers = [];
     async function playquiz() {
