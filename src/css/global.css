@@ -759,9 +759,12 @@ body {
   padding-bottom: 3em;
 }
 
-.home.container {
+.home {
+  display: flex;
   margin-top: 2em;
-  z-index: 1;
+  overflow: scroll;
+  height: 85vh;
+  scroll-snap-type: y proximity;
 }
 
 .grid-box {
@@ -775,14 +778,14 @@ body {
 }
 
 .grid-item {
+  scroll-snap-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
   border-radius: 15px;
-  height: 80%;
-  width: 92%;
-  margin: auto;
-  padding: 5px 3px;
+  width: 66%;
+  margin: .5em auto;
+  padding: 1em 0em;
   cursor: pointer;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
@@ -790,6 +793,10 @@ body {
 	box-shadow: 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
 							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
 							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+
+.grid-item:hover {
+  transform: scaleX(2);
 }
 
 .grid-item a {
@@ -1031,18 +1038,17 @@ body {
 
 .ss-profile {
   display: flex;
-  position: absolute;
   flex-direction: column;
   z-index: -1;
-  margin: 10% auto;
+  margin: auto;
   width: 100vw;
   align-items: center;
   
 }
 
 .world-profile {
-  width: 250px;
-  height: 250px;
+  width: 80vw;
+  height: 80vw;
   background-color: #050610;
   background-image: url("/images/earth.webp");
   background-color: #7b5af3; /* Tint color */
@@ -1072,8 +1078,6 @@ body {
 }
 
 @media (min-width: 375px) {
- 
-
   .profile-name p {
     font-size: 1.75rem;
   }
@@ -1085,12 +1089,6 @@ body {
   .profile-btn {
     font-size: 1.4em;
   }
-
-  .world-profile {
-    width: 300px;
-    height: 300px;
-  }
-
 }
 
 @media (min-width: 400px) {
@@ -1098,8 +1096,9 @@ body {
     font-size: 1.75rem;
   }
 
-  .ss-profile {
-    margin-top: 15%;
+  .world-profile {
+    width: 90vw;
+    height: 90vw;
   }
 }
 
@@ -1122,10 +1121,10 @@ body {
     margin: 5px auto;
   }
 
-  .ss-profile {
-    margin-top: 5%;
+  .world-profile {
+    width: 60vw;
+    height: 60vw;
   }
-
 }
 
 @media (min-width: 600px) {
@@ -1136,11 +1135,6 @@ body {
   .welcome p {
     font-size: 1.75rem;
   }
-
-  .ss-profile {
-    margin-top: 15%;
-  }
-
 }
 
 @media (min-width: 768px) {
@@ -1166,21 +1160,17 @@ body {
     padding: 1rem 3rem;
   }
 
-  .ss-profile {
-    margin-top: 10%;
+  .world-profile {
+    width: 50vw;
+    height: 50vw;
   }
 
-  .world-profile {
-    width: 350px;
-    height: 350px;
-  }
- 
 }
 
 @media (min-width: 800px) {
   .world-profile {
-    width: 450px;
-    height: 450px;
+    width: 65vw;
+    height: 65vw;
   }
 }
 
@@ -1235,21 +1225,14 @@ body {
     margin: .25em auto 0;
   }
 
-  .ss-profile {
-    display: none;
-  }
-
-  .profile-wiz {
-    display: none;
+  .world-profile {
+    width: 30vw;
+    height: 30vw;
   }
   
 }
 
 @media (max-height: 600px) {
-  .my-score {
-    display: none;
-  }
-
   .profile-name {
     margin-top: 0;
   }
@@ -1267,16 +1250,6 @@ body {
     padding: .5rem 2rem;
   }
 
-}
-
-@media (min-height: 601px) {
-  .my-score {
-    display: flex;
-  }
-
-  .profile-wiz {
-    display: flex;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -1386,12 +1359,6 @@ td {
   margin: 1em auto 2em;
 }
 
-/* .wrap:before {
-  content: "";
-  box-shadow: inset 0 0 2000px rgb(31 12 12 / 92%);
-} */
-
-
 .ss {
   display: flex;
   position: absolute;
@@ -1407,7 +1374,7 @@ td {
   width: 20rem;
   height: 20rem;
   background-color: #050610;
-  background-image: url("/images/earth.webp");
+  background-image: url("/images/ea.png");
   background-color: #7b5af3; /* Tint color */
   background-blend-mode: multiply;
   background-size: cover;
