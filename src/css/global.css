@@ -761,10 +761,10 @@ body {
 
 .home {
   display: flex;
-  margin-top: 2em;
+  /* margin-top: 2em; */
   overflow: scroll;
   height: 85vh;
-  scroll-snap-type: y proximity;
+  padding-bottom: 0;
 }
 
 .grid-box {
@@ -778,12 +778,11 @@ body {
 }
 
 .grid-item {
-  scroll-snap-align: center;
   display: flex;
   justify-content: center;
   text-align: center;
   border-radius: 15px;
-  width: 66%;
+  width: 75vw;
   margin: .5em auto;
   padding: 1em 0em;
   cursor: pointer;
@@ -793,10 +792,6 @@ body {
 	box-shadow: 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
 							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
 							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
-}
-
-.grid-item:hover {
-  transform: scaleX(2);
 }
 
 .grid-item a {
@@ -810,6 +805,49 @@ body {
   height: 1.25em;
 }
 
+.top-fade {
+  position: relative;
+}
+
+.top-fade:after{
+	height: 25%;
+	width: 100%;
+  /* background: linear-gradient(180deg, #050610, #050610, #050610e3, #050610c7); */
+  /* background: linear-gradient(180deg, rgba(5, 6, 16), rgba(5, 6, 16), rgba(5, 6, 16, .9)); */
+  content: "";
+  background: linear-gradient(to bottom,
+  rgba(5, 6, 16, 1) 20%, 
+  rgba(5, 6, 16, .0) 80%
+  );
+	position: fixed;
+	z-index: 4;
+  top: 5%;
+}
+
+.bottom-fade{
+	height: 25%;
+	width: 100%;
+  /* background: linear-gradient(180deg, #050610, #050610, #050610e3, #050610c7); */
+  /* background: linear-gradient(180deg, rgba(5, 6, 16), rgba(5, 6, 16), rgba(5, 6, 16, .9)); */
+  content: "";
+  background: linear-gradient(to top,
+  rgba(5, 6, 16, 1) 20%, 
+  rgba(5, 6, 16, .0) 80%
+  );
+	position: fixed;
+  bottom: 0;
+	z-index: 4;
+}
+
+
+.bottomGradient{
+	height: 100px;
+	width: 100%;
+  background:linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));	position: fixed;
+	bottom:0;
+	z-index: 100;
+}
+
 @media (min-width: 360px) {
   .grid-item {
     font-size: 1.4rem;
@@ -818,11 +856,11 @@ body {
 
 @media (min-width: 400px) {
   .grid-item {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .grid-item svg {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
 }
 
