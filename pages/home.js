@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import MovieIcon from '@mui/icons-material/Movie';
@@ -13,13 +13,66 @@ import LanguageIcon from '@mui/icons-material/Language';
 import BoltIcon from '@mui/icons-material/Bolt';
 import PetsIcon from '@mui/icons-material/Pets';
 import ScienceIcon from '@mui/icons-material/Science';
+import zIndex from '@mui/material/styles/zIndex';
 
 function SelectionPage() {
+    const [isInMiddle, setISInMiddle] = useState();
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        var z = document.getElementById("option")
+        // var middle = window.innerHeight / 2;
+        var middle = z.clientHeight / 2;
+        console.log("middle window", middle)
+        var myDiv = document.getElementById("myDiv");
+        var myDivLocation = myDiv.getBoundingClientRect()
+        console.log("myDiv location", myDivLocation)
+        if(myDivLocation.top > middle && myDivLocation.top < (middle+myDivLocation.height - 75)){
+            myDiv.classList.add("grow")
+        } else (
+            myDiv.classList.remove("grow")
+        )
+        const onScroll = () => setCount(count + 1);
+        // clean up code
+        z.removeEventListener('scroll', onScroll);
+        z.addEventListener('scroll', onScroll, { passive: true });
+        
+        return () => z.removeEventListener('scroll', onScroll);
+        
+    }, [count]);
+
+    // useEffect(() => {
+    // //     var y = window.innerHeight / 2;
+    // var z = document.getElementById("option")
+    // // console.log("Y", z)
+    // if(isInViewport(z)){
+    //     setISInMiddle(true)
+    // } else {
+    //     setISInMiddle(false)
+    // }
+    // console.log(isInMiddle)
+    
+    // }, [isInMiddle])
+    // function isInViewport(element) {
+    //     const rect = element.getBoundingClientRect();
+    //     return (
+    //         rect.top >= 0 &&
+    //         rect.left >= 0 &&
+    //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    //     );
+    // }
+
+    //     function scrollMe() {
+    //         var z = document.getElementById("option")
+    //         console.log("hey",isInViewport(z))
+    //     }
+
         return(
-            <div className="home column " >
+            <div className="home column" id="option">
             <div className="top-fade"></div>
             
-                            <Box id="fade" className="grid-item fading">
+                            <Box  className="grid-item fading" >
                                 <Link
                                     href={{
                                         pathname: '/quiz',
@@ -64,7 +117,7 @@ function SelectionPage() {
                             </Box>
                         
                        
-                            <Box className="grid-item fading">
+                            <Box className="grid-item fading" id="myDiv">
                                 <div className="yellow m-auto">
                                     <Link
                                         href={{
