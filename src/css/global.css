@@ -767,8 +767,14 @@ body {
   display: flex;
   /* margin-top: 2em; */
   overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
   height: 85vh;
   padding-bottom: 0;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
 }
 
 .grid-box {
