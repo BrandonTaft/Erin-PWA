@@ -13,17 +13,38 @@ import LanguageIcon from '@mui/icons-material/Language';
 import BoltIcon from '@mui/icons-material/Bolt';
 import PetsIcon from '@mui/icons-material/Pets';
 import ScienceIcon from '@mui/icons-material/Science';
-import zIndex from '@mui/material/styles/zIndex';
+import InfiniteScrollLoop from "../src/components/InfiniteScrollLoop";
 
 function SelectionPage() {
-    const [isInMiddle, setISInMiddle] = useState();
-    const [count, setCount] = useState(0);
+    // const [isInMiddle, setISInMiddle] = useState();
+    // const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        // var z = document.getElementById("option")
-        // // var middle = window.innerHeight / 2;
-        // var middle = z.clientHeight / 2;
-        // console.log("middle window", middle)
+    // useEffect(() => {
+    //     const selectionContainer = document.getElementById("selection-container");
+    //     const myContainer = selectionContainer.getBoundingClientRect();
+    //     //const topOfContainer = myContainer.y;
+    //     // const middleOfContainer = myContainer.height / 2;
+    //     const bottomOfContainer = myContainer.height;
+    //     const bottom = document.getElementById("bottom-element");
+    //     const bottomElement = bottom.getBoundingClientRect();
+
+    //     console.log(bottomElement.top, bottomOfContainer)
+    //     if(Math.ceil(bottomElement.top) == Math.ceil(bottomOfContainer)) {
+    //         const selections = selectionContainer.innerHTML;
+    //         selectionContainer.insertAdjacentHTML("afterbegin", selections);
+    //         selectionContainer.insertAdjacentHTML("beforeend", selections);
+    //         console.log("it did")
+    //     }
+        
+    //     const onScroll = () => setCount(count + 1);
+    //     selectionContainer.removeEventListener('scroll', onScroll);
+    //     selectionContainer.addEventListener('scroll', onScroll, { passive: true });
+    //     return () => selectionContainer.removeEventListener('scroll', onScroll);
+        // var middle = window.innerHeight / 2;
+        // var middle = selectionContainer.clientHeight / 2;
+        // console.log("middle window", myContainer)
+
+
         // var myDiv = document.getElementById("myDiv");
         // var myDivLocation = myDiv.getBoundingClientRect()
         // console.log("myDiv location", myDivLocation)
@@ -32,92 +53,89 @@ function SelectionPage() {
         // } else (
         //     myDiv.classList.remove("grow")
         // )
-        // const onScroll = () => setCount(count + 1);
+        //
         // // clean up code
-        // z.removeEventListener('scroll', onScroll);
-        // z.addEventListener('scroll', onScroll, { passive: true });
-        
-        // return () => z.removeEventListener('scroll', onScroll);
-        var doc = window.document,
-  context = doc.querySelector('.js-loop'),
-  clones = context.querySelectorAll('.is-clone'),
-  disableScroll = false,
-  scrollHeight = 0,
-  scrollPos = 0,
-  clonesHeight = 0,
-  i = 0;
+        // 
+//         var doc = window.document,
+//   context = doc.querySelector('.js-loop'),
+//   clones = context.querySelectorAll('.is-clone'),
+//   disableScroll = false,
+//   scrollHeight = 0,
+//   scrollPos = 0,
+//   clonesHeight = 0,
+//   i = 0;
 
-function getScrollPos () {
-  return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
-}
+// function getScrollPos () {
+//   return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+// }
 
-function setScrollPos (pos) {
-  context.scrollTop = pos;
-}
+// function setScrollPos (pos) {
+//   context.scrollTop = pos;
+// }
 
-function getClonesHeight () {
-  clonesHeight = 0;
+// function getClonesHeight () {
+//   clonesHeight = 0;
 
-  for (i = 0; i < clones.length; i += 1) {
-    clonesHeight = clonesHeight + clones[i].offsetHeight;
-  }
+//   for (i = 0; i < clones.length; i += 1) {
+//     clonesHeight = clonesHeight + clones[i].offsetHeight;
+//   }
 
-  return clonesHeight;
-}
+//   return clonesHeight;
+// }
 
-function reCalc () {
-  scrollPos = getScrollPos();
-  scrollHeight = context.scrollHeight;
-  clonesHeight = getClonesHeight();
+// function reCalc () {
+//   scrollPos = getScrollPos();
+//   scrollHeight = context.scrollHeight;
+//   clonesHeight = getClonesHeight();
 
-  if (scrollPos <= 0) {
-    setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
-  }
-}
+//   if (scrollPos <= 0) {
+//     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+//   }
+// }
 
-function scrollUpdate () {
-  if (!disableScroll) {
-    scrollPos = getScrollPos();
+// function scrollUpdate () {
+//   if (!disableScroll) {
+//     scrollPos = getScrollPos();
 
-    if (clonesHeight + scrollPos >= scrollHeight) {
-      // Scroll to the top when you’ve reached the bottom
-      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
-      disableScroll = true;
-    } else if (scrollPos <= 0) {
-      // Scroll to the bottom when you reach the top
-      setScrollPos(scrollHeight - clonesHeight);
-      disableScroll = true;
-    }
-  }
+//     if (clonesHeight + scrollPos >= scrollHeight) {
+//       // Scroll to the top when you’ve reached the bottom
+//       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+//       disableScroll = true;
+//     } else if (scrollPos <= 0) {
+//       // Scroll to the bottom when you reach the top
+//       setScrollPos(scrollHeight - clonesHeight);
+//       disableScroll = true;
+//     }
+//   }
 
-  if (disableScroll) {
-    // Disable scroll-jumping for a short time to avoid flickering
-    window.setTimeout(function () {
-      disableScroll = false;
-    }, 40);
-  }
-}
+//   if (disableScroll) {
+//     // Disable scroll-jumping for a short time to avoid flickering
+//     window.setTimeout(function () {
+//       disableScroll = false;
+//     }, 40);
+//   }
+// }
 
-function init () {
-  reCalc();
+// function init () {
+//   reCalc();
   
-  context.addEventListener('scroll', function () {
-    window.requestAnimationFrame(scrollUpdate);
-  }, false);
+//   context.addEventListener('scroll', function () {
+//     window.requestAnimationFrame(scrollUpdate);
+//   }, false);
 
-  window.addEventListener('resize', function () {
-    window.requestAnimationFrame(reCalc);
-  }, false);
-}
+//   window.addEventListener('resize', function () {
+//     window.requestAnimationFrame(reCalc);
+//   }, false);
+// }
 
-if (document.readyState !== 'loading') {
-  init()
-} else {
-  doc.addEventListener('DOMContentLoaded', init, false)
-}
+// if (document.readyState !== 'loading') {
+//   init()
+// } else {
+//   doc.addEventListener('DOMContentLoaded', init, false)
+// }
 
         
-    }, [count]);
+   // }, [count]);
 
     // useEffect(() => {
     // //     var y = window.innerHeight / 2;
@@ -147,7 +165,8 @@ if (document.readyState !== 'loading') {
     //     }
 
         return(
-            <div className="home column Loop js-loop" id="option">
+            <InfiniteScrollLoop>
+            <div className="home column Loop js-loop" id="selection-container">
             <div className="top-fade"></div>
             
                             <Box  className="grid-item fading one" >
@@ -318,7 +337,7 @@ if (document.readyState !== 'loading') {
                             </Box>
                         
                        
-                            <Box className="grid-item fading two">
+                            <Box className="grid-item fading two" id="bottom-element">
                                 <Link
                                     href={{
                                         pathname: '/quiz',
@@ -331,35 +350,10 @@ if (document.readyState !== 'loading') {
                                     </div>
                                 </Link>
                             </Box>
-                            <Box  className="grid-item fading one" >
-                                <Link
-                                    href={{
-                                        pathname: '/quiz',
-                                        query: { cat: '9' },
-                                    }}
-                                >
-                                    <div className="yellow m-auto">
-                                        <PsychologyIcon />
-                                        <div>GENERAL</div>
-                                    </div>
-                                </Link>
-                            </Box>
-                            <Box className="grid-item fading two">
-                                <Link
-                                    href={{
-                                        pathname: '/quiz',
-                                        query: { cat: '11' },
-                                    }}
-                                >
-                                    <div className="yellow m-auto">
-                                        <MovieIcon />
-                                        <div>MOVIES</div>
-                                    </div>
-                                </Link>
-                            </Box>
-                        
+                            
                             <div className="bottom-fade"></div>
             </div>
+            </InfiniteScrollLoop>
        )
 }
 
