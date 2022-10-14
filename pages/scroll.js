@@ -1,7 +1,7 @@
-import InfiniteScrollLoop from "../src/components/InfiniteScrollLoop";
+import InfiniteScroll from "../src/components/InfiniteScroll";
 
 
-function InfiniteScroll(props) {
+function Scroll(props) {
     const choices = [1, 3, 5, 7, 9]
     const display = choices.map((choice, index) => {
         return (
@@ -11,11 +11,11 @@ function InfiniteScroll(props) {
         )
     })
     return (
-        <InfiniteScrollLoop>
+        <InfiniteScroll>
         <div className="choices">
             {display}
         </div>
-        </InfiniteScrollLoop>
+        </InfiniteScroll>
     )
 }
 

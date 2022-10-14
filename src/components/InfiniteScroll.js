@@ -1,17 +1,15 @@
 import React, { useEffect, useState, useRef, useLayoutEffect, useCallback } from 'react';
- 
- function InfiniteScrollLoop(props) {
-    const surroundingBackup = 4;
+
+function InfiniteScroll(props) {
     const contentRef = useRef(null);
     const scrollRef = useRef(null);
-    const [height, setHeight] = useState(0)
-    const backupHeight = height * surroundingBackup;
+    const [height, setHeight] = useState(0);
 
     var handleScroll = useCallback(function () {
         if (scrollRef.current) {
             var scroll = scrollRef.current.scrollTop;
-            if (scroll < backupHeight || scroll >= backupHeight + height) {
-                scrollRef.current.scrollTop = backupHeight + (scroll % height);
+            if (scroll < height || scroll >= height + height) {
+                scrollRef.current.scrollTop = height + (scroll % height);
             }
         }
     }, [height]);
@@ -19,7 +17,7 @@ import React, { useEffect, useState, useRef, useLayoutEffect, useCallback } from
     useLayoutEffect(function () {
         if (contentRef.current) {
             setHeight(contentRef.current.offsetHeight);
-            scrollRef.current.scrollTop = backupHeight;
+            scrollRef.current.scrollTop = height;
         }
     });
 
@@ -33,20 +31,12 @@ import React, { useEffect, useState, useRef, useLayoutEffect, useCallback } from
                 }}
                 onScroll={handleScroll}
             >
-                {Array(surroundingBackup)
-                    .fill()
-                    .map(() => (
-                        <div>{props.children}</div>
-                    ))}
+                <div>{props.children}</div>
                 <div ref={contentRef}>{props.children}</div>
-                {Array(surroundingBackup)
-                    .fill()
-                    .map(() => (
-                        <div>{props.children}</div>
-                    ))}
+                <div>{props.children}</div>
             </div>
         </div>
     );
 };
 
-export default InfiniteScrollLoop
+export default InfiniteScroll
