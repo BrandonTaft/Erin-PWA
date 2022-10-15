@@ -169,6 +169,10 @@ h5 {
   }
 }
 
+.flip-back {
+  transform: perspective(200px) rotateX(20deg)
+}
+
 body {
   margin: 0 !important;
   height: 100%;
@@ -757,12 +761,9 @@ body {
 }
 
 /****************** HOME ********************/
-.choice {
-  color: var(--bs-yellow);
-}
-
 .infinite-scroll-loop-outer {
   position: relative;
+  overflow: hidden;
 }
 .infinite-scroll-loop-outer::after {
   content: "";
@@ -830,14 +831,14 @@ body {
 }
 
 .top-fade:after{
-	height: 25%;
+	height: 20%;
 	width: 100%;
   /* background: linear-gradient(180deg, #050610, #050610, #050610e3, #050610c7); */
   /* background: linear-gradient(180deg, rgba(5, 6, 16), rgba(5, 6, 16), rgba(5, 6, 16, .9)); */
   content: "";
   background: linear-gradient(to bottom,
-  rgba(5, 6, 16, 1) 20%, 
-  rgba(5, 6, 16, .0) 80%
+  rgba(5, 6, 16, 1) 2%, 
+  rgba(5, 6, 16, .0) 98%
   );
 	position: fixed;
 	z-index: 4;
@@ -845,14 +846,14 @@ body {
 }
 
 .bottom-fade{
-	height: 25%;
+	height: 20%;
 	width: 100%;
   /* background: linear-gradient(180deg, #050610, #050610, #050610e3, #050610c7); */
   /* background: linear-gradient(180deg, rgba(5, 6, 16), rgba(5, 6, 16), rgba(5, 6, 16, .9)); */
   content: "";
   background: linear-gradient(to top,
-  rgba(5, 6, 16, 1) 20%, 
-  rgba(5, 6, 16, .0) 80%
+  rgba(5, 6, 16, 1) 5%, 
+  rgba(5, 6, 16, .0) 95%
   );
 	position: fixed;
   bottom: 0;

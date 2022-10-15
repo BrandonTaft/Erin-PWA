@@ -1,5 +1,5 @@
+import React, { useEffect, useState, useRef, useLayoutEffect, useCallback } from 'react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import MovieIcon from '@mui/icons-material/Movie';
@@ -16,11 +16,48 @@ import ScienceIcon from '@mui/icons-material/Science';
 import InfiniteScroll from "../src/components/InfiniteScroll";
 
 function SelectionPage() {
+    const itemRef1 = useRef(null);
+    const containerRef = useRef(null);
+    const [top, setTop] = useState(0);
+
+    // useEffect(() => {
+    //     if(containerRef.current && top - itemRef1.current.getBoundingClientRect().top.toFixed() < itemRef1.current.getBoundingClientRect().height.toFixed()){
+    //         console.log("itworked")
+    //         itemRef1.current.classList.add('flip-back')
+    //     }
+    //     console.log("itemRef",itemRef1.current.getBoundingClientRect().top.toFixed() - itemRef1.current.getBoundingClientRect().height.toFixed() )
+    // },[])
+
+    // var handleScroll = useCallback(function () {
+    //     if (containerRef.current && top - itemRef1.current.getBoundingClientRect().top.toFixed() < itemRef1.current.getBoundingClientRect().height.toFixed()) {
+    //         console.log("itworked")
+    //         itemRef1.current.classList.add('flip-back')
+    //     }
+    //     console.log("itemRef", itemRef1.current.getBoundingClientRect().top.toFixed() - itemRef1.current.getBoundingClientRect().height.toFixed())
+    // }, [top]);
+
+    useLayoutEffect(function () {
+        if (containerRef.current) {
+            // const top = containerRef.current.scrollTop;
+            setTop(containerRef.current.offsetHeight);
+            console.log("top", top)
+        }
+        if (containerRef.current && itemRef1.current.getBoundingClientRect().top.toFixed() < top + 900) {
+            console.log("itworked")
+            // itemRef1.current.classList.add('flip-back')
+            itemRef1.current.style.transform= 'perspective(200px) rotateX(-20deg)'
+        }
+        console.log("itemRef", itemRef1.current.getBoundingClientRect().top.toFixed())
+    }, [top]);
+
     return (
         <InfiniteScroll>
-            <div className=" column Loop js-loop" id="selection-container">
+            <div className="column loop"
+                id="selection-container"
+                ref={containerRef}
+            >
                 <div className="top-fade"></div>
-                <Box className="grid-item fading" style={{transform : 'rotateX(20deg)'}} >
+                <Box className="grid-item fading"  >
                     <Link
                         href={{
                             pathname: '/quiz',
@@ -33,7 +70,7 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading two">
+                <Box className="grid-item fading" ref={itemRef1}>
                     <Link
                         href={{
                             pathname: '/quiz',
