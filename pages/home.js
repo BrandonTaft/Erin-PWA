@@ -14,19 +14,25 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import PetsIcon from '@mui/icons-material/Pets';
 import ScienceIcon from '@mui/icons-material/Science';
 import InfiniteScroll from "../src/components/InfiniteScroll";
+import Image from 'next/image';
 
 function SelectionPage() {
-    const containerRef = useRef(null);
-    const itemRef1 = useRef(null);
-    if(containerRef){
-    console.log("containerRef", containerRef)
-    }
+    
     return (
-        <InfiniteScroll ref={containerRef}>
+        <InfiniteScroll >
             <div className="column loop"
                 id="selection-container"
             >
-                <div className="top-fade"></div>
+                <div className="top-fade">
+                <Image
+                        className='wiz-img'
+                        alt="wizard"
+                        src="/images/hole.png"
+                        layout='fill'
+                        
+                        priority={true}
+                    />
+                </div>
                 <Box className="grid-item fading" >
                     <Link
                         href={{
@@ -40,7 +46,7 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading" ref={itemRef1}>
+                <Box className="grid-item fading">
                     <Link
                         href={{
                             pathname: '/quiz',
@@ -66,7 +72,7 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading four" id="myDiv">
+                <Box className="grid-item fading four">
                     <div className="yellow m-auto">
                         <Link
                             href={{
@@ -185,7 +191,16 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </Box>
-                <div className="bottom-fade"></div>
+                <div className="bottom-fade">
+                <Image
+                        className='wiz-img'
+                        alt="wizard"
+                        src="/images/hole.png"
+                        layout='fill'
+                        
+                        priority={true}
+                    />
+                </div>
             </div>
         </InfiniteScroll>
     )
