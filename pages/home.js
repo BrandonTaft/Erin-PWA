@@ -20,18 +20,11 @@ function SelectionPage() {
     
     return (
         <InfiniteScroll >
-            <div className="column loop"
+            <div className="loop"
                 id="selection-container"
             >
-                <div className="top-fade">
-                <Image
-                        className='wiz-img'
-                        alt="wizard"
-                        src="/images/hole.png"
-                        layout='fill'
-                        
-                        priority={true}
-                    />
+                <div className="portal top">
+               
                 </div>
                 <Box className="grid-item fading" >
                     <Link
@@ -191,15 +184,8 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </Box>
-                <div className="bottom-fade">
-                <Image
-                        className='wiz-img'
-                        alt="wizard"
-                        src="/images/hole.png"
-                        layout='fill'
-                        
-                        priority={true}
-                    />
+                <div className="portal bottom">
+               
                 </div>
             </div>
         </InfiniteScroll>
