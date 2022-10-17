@@ -848,7 +848,7 @@ body {
 }
 
 .portal.top {
-  top: 12%;
+  top: 10%;
 }
 
 .portal.bottom {
@@ -862,14 +862,31 @@ body {
   border-radius: 50%;
 }
 
-.portal:before {
-  border-left: 4px solid var(--bs-yellow);
-  /* background: linear-gradient(to right, rgba(30,144,255,.5), transparent); */
+.portal.top::before {
+  background: linear-gradient(to bottom, #ccb62a00, #0000);
   z-index: 3;
+  box-shadow: 0px 7px 12px var(--bs-yellow) inset;
 }
-.portal:after {
-  border-right: 4px solid var(--bs-yellow);
-  box-shadow: 0 0 20px var(--bs-yellow);
+
+.portal.top:after {
+  /* border-right: 4px solid var(--bs-yellow);
+  box-shadow: 0 0 20px var(--bs-yellow); */
+  z-index: 0;
+}
+
+.portal.bottom:before {
+  /* border-left: 4px solid var(--bs-yellow);
+  /* background: linear-gradient(to right, rgba(30,144,255,.5), transparent);
+  z-index: 3; */
+  background: linear-gradient(to bottom, #ccb62a00, #0000);
+  z-index: 3;
+  box-shadow: 0px -7px 12px var(--bs-yellow) inset;
+}
+
+.portal.bottom:after {
+  /* border-right: 4px solid var(--bs-yellow);
+  box-shadow: 0 0 20px var(--bs-yellow); */
+  box-shadow: 0px 8px 67px #ffff001a;
   z-index: 0;
 }
 
