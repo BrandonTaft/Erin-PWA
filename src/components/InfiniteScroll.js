@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect, useCallback } from 'react';
 
 function InfiniteScroll(props) {
     const contentRef = useRef(null);
@@ -14,7 +14,7 @@ function InfiniteScroll(props) {
         }
     }, [height]);
 
-    useLayoutEffect(function () {
+    useEffect(function () {
         if (contentRef.current) {
             setHeight(contentRef.current.offsetHeight);
             scrollRef.current.scrollTop = height;

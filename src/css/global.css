@@ -845,7 +845,7 @@ body {
   content: "";
 	position: fixed;
 	z-index: 0;
-  
+  transform: rotateX(45deg);
 }
 
 .portal.top {
@@ -863,32 +863,26 @@ body {
   border-radius: 50%;
 }
 
-.portal.top::before {
-  background: linear-gradient(to bottom, #ccb62a00, #0000);
+.portal.top:before {
+  border-left: 7px solid var(--bs-yellow);
   z-index: 3;
-  box-shadow: 0px 7px 12px var(--bs-yellow) inset;
 }
-
 .portal.top:after {
-  /* border-right: 4px solid var(--bs-yellow);
-  box-shadow: 0 0 20px var(--bs-yellow); */
+  border-right: 7px solid var(--bs-yellow);
+  border-top: 5px solid var(--bs-yellow);
+  box-shadow: 0 25px 50px var(--bs-yellow);
   z-index: 0;
 }
 
 .portal.bottom:before {
-  /* border-left: 4px solid var(--bs-yellow);
-  /* background: linear-gradient(to right, rgba(30,144,255,.5), transparent);
-  z-index: 3; */
-  background: linear-gradient(to bottom, #ccb62a00, #0000);
-  z-index: 3;
-  box-shadow: 0px -7px 12px var(--bs-yellow) inset;
-}
-
-.portal.bottom:after {
-  /* border-right: 4px solid var(--bs-yellow);
-  box-shadow: 0 0 20px var(--bs-yellow); */
-  box-shadow: 0px 8px 67px #ffff001a;
+  border-left:  7px solid var(--bs-yellow);
   z-index: 0;
+}
+.portal.bottom:after {
+  border-bottom: 5px solid var(--bs-yellow);
+  border-right:  7px solid var(--bs-yellow);
+  box-shadow: 0 -25px 50px var(--bs-yellow);
+  z-index: 3;
 }
 
 .container {
