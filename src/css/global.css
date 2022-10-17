@@ -943,7 +943,11 @@ body {
   }
 
   .portal.top {
-    top: 10%;
+    top: 9%;
+  }
+
+  .portal.bottom {
+    bottom: 1%;
   }
 }
 
