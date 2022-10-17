@@ -924,6 +924,10 @@ body {
   .grid-item svg {
     font-size: 1.5em;
   }
+
+  .portal.top {
+    top: 10%;
+  }
 }
 
 @media (min-width: 540px) {
