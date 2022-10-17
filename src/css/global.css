@@ -761,11 +761,12 @@ body {
 }
 
 /****************** HOME ********************/
+
 .infinite-scroll-loop-outer {
   position: relative;
   overflow: hidden;
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin-top: 5em;
+  margin-bottom: 6em;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 20%;
@@ -848,11 +849,11 @@ body {
 }
 
 .portal.top {
-  top: 10%;
+  top: 16%;
 }
 
 .portal.bottom {
-  bottom: 3%;
+  bottom: 8%;
 }
 
 .portal:before, .portal:after {
@@ -943,11 +944,11 @@ body {
   }
 
   .portal.top {
-    top: 9%;
+    top: 14%;
   }
 
   .portal.bottom {
-    bottom: 1%;
+    bottom: 6%;
   }
 }
 
