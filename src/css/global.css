@@ -837,7 +837,6 @@ body {
 }
 
 .portal {
-  position: relative;
   border-radius: 50%;
   height: 10%;
 	width: 90%;
@@ -856,7 +855,7 @@ body {
   bottom: 8%;
 }
 
-.portal:before, .portal:after {
+.portal:after {
   content: '';
   position: absolute;
   top:0; right:0; bottom:0; left:0;
@@ -864,23 +863,18 @@ body {
 }
 
 .portal.top:after {
-  border-left:  3px solid #ffff001f;
-  border-top: 7px solid #ffff001f;
-  border-right:  3px solid #ffff001f;
-  /* box-shadow: 0 25px 50px var(--bs-yellow); */
-  border-left: 3px solid #ffff001f;
-  border-top: 7px solid #ffff001f;
-  border-right: 3px solid #ffff001f;
-  box-shadow: 0 0px 70px -11px var(--bs-yellow);
+  border-left: 7px double var(--bs-yellow);
+  border-right: 7px double var(--bs-yellow);
+  border-top: 7px double var(--bs-yellow);
+  box-shadow: 0 10px 60px -10px var(--bs-yellow);
   z-index: 0;
 }
 
 .portal.bottom:after {
-  border-left:  3px solid #ffff001f;
-  border-bottom: 7px solid #ffff001f;
-  border-right:  3px solid #ffff001f;
-  /* box-shadow: 0 -25px 50px var(--bs-yellow); */
-  box-shadow: 0px 0px 80px -19px var(--bs-yellow);
+  border-left: 7px double var(--bs-yellow);
+  border-right: 7px double var(--bs-yellow);
+  border-bottom: 7px double var(--bs-yellow);
+  box-shadow: 0 -5px 60px -10px var(--bs-yellow);
   z-index: 3;
 }
 
