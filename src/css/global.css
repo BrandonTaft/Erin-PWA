@@ -836,7 +836,43 @@ body {
 	z-index: 100;
 }
 
-.portal {
+.infinite-scroll-loop-outer::after {
+  border-radius: 50%;
+  height: 10%;
+	width: 90%;
+  margin: auto;
+  content: "";
+	position: fixed;
+	z-index: 0;
+  transform: rotateX(45deg);
+  top: 18vh;
+  right: 0;
+  left: 0;
+  border: 7px double var(--bs-yellow);
+  border-bottom: 2px double var(--bs-yellow);
+  box-shadow: 0 -3px 60px -11px var(--bs-yellow);
+  z-index: 0;
+}
+
+.infinite-scroll-loop-outer::before {
+  border-radius: 50%;
+  height: 10%;
+	width: 90%;
+  margin: auto;
+  content: "";
+	position: fixed;
+	z-index: 0;
+  transform: rotateX(45deg);
+  bottom: 12vh;
+  right: 0;
+  left: 0;
+  border: 7px double var(--bs-yellow);
+  border-top: 2px double var(--bs-yellow);
+  box-shadow: 0 3px 60px -15px var(--bs-yellow);
+}
+
+
+/* .portal {
   border-radius: 50%;
   height: 10%;
 	width: 90%;
@@ -874,7 +910,7 @@ body {
   border-top: 2px double var(--bs-yellow);
   box-shadow: 0 3px 60px -15px var(--bs-yellow);
   z-index: 3;
-}
+} */
 
 .container {
   display: flex;

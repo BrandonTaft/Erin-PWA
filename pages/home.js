@@ -30,8 +30,8 @@ function SelectionPage() {
             <div className="loop"
                 id="selection-container"
             >
-                <div className="portal top">
-                </div>
+                {/* <div className="portal top">
+                </div> */}
                 <Box className="grid-item fading" >
                     <Link
                         href={{
@@ -190,9 +190,9 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </Box>
-                <div className="portal bottom">
+                {/* <div className="portal bottom">
                
-                </div>
+                </div> */}
             </div>
         </InfiniteScroll>
     )
