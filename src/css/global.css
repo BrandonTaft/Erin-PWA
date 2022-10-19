@@ -848,11 +848,11 @@ body {
 }
 
 .portal.top {
-  top: 19%;
+  top: 19vh;
 }
 
 .portal.bottom {
-  bottom: 12%;
+  bottom: 12vh;
 }
 
 .portal:after {
@@ -919,7 +919,7 @@ body {
   }
 
   .portal.top {
-    top: 18%;
+    top: 18vh;
   }
 }
 
@@ -930,10 +930,6 @@ body {
 
   .grid-item svg {
     font-size: 1.5em;
-  }
-
-  .portal.top {
-    top: 17%;
   }
 
 }
@@ -954,7 +950,7 @@ body {
   }
 
   .portal.top {
-    top: 19%;
+    top: 19vh;
   }
 }
 
@@ -981,7 +977,7 @@ body {
 
 @media (min-width: 820px) {
   .portal.top {
-    top: 18%;
+    top: 18vh;
   }
 }
 
