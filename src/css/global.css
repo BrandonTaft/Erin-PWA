@@ -845,7 +845,7 @@ body {
 	position: fixed;
 	z-index: 0;
   transform: rotateX(45deg);
-  top: 18vh;
+  top: 17vh;
   right: 0;
   left: 0;
   border: 7px double var(--bs-yellow);
@@ -863,7 +863,7 @@ body {
 	position: fixed;
 	z-index: 0;
   transform: rotateX(45deg);
-  bottom: 12vh;
+  bottom: 77vh;
   right: 0;
   left: 0;
   border: 7px double var(--bs-yellow);
