@@ -868,7 +868,7 @@ body {
   left: 0;
   border: 10px double var(--bs-yellow);
   border-top: 5px double var(--bs-yellow);
-  box-shadow: 0 3px 90px -5px var(--bs-yellow);
+  box-shadow: 0 3px 65px 0px var(--bs-yellow);
 }
 
 
