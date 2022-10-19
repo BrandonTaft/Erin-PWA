@@ -17,7 +17,14 @@ import InfiniteScroll from "../src/components/InfiniteScroll";
 import Image from 'next/image';
 
 function SelectionPage() {
-    
+    useEffect(() => {
+    window.addEventListener("load",function() {
+        setTimeout(function(){
+            // This hides the address bar:
+            window.scrollTo(0, 1);
+        }, 0);
+    });
+})
     return (
         <InfiniteScroll >
             <div className="loop"

@@ -771,7 +771,7 @@ body {
 
 /****************** HOME ********************/
 
-/* .infinite-scroll-loop-outer {
+.infinite-scroll-loop-outer {
   position: relative;
   overflow: hidden;
   margin-top: 13vh;
@@ -780,30 +780,7 @@ body {
   border-bottom-right-radius: 28%;
   border-top-left-radius: 28%;
   border-top-right-radius: 28%;
-} */
-
-.infinite-scroll-loop-outer {
-  position: relative;
-  overflow: hidden;
-  /* margin-top: 13vh; */
-  /* margin-bottom: 17vh; */
-  margin: auto;
-  height: 60vh;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
 }
-
-/* .infinite-scroll-loop-outer::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-} */
 
 .infinite-scroll-loop-inner {
   overflow-y: scroll;
@@ -955,16 +932,8 @@ body {
     font-size: 1.5em;
   }
 
-  /* .portal.top {
-    top: 17%;
-  } */
-
   .portal.top {
-    top: 19%;
-  }
-
-  .portal.bottom {
-    bottom: 11%;
+    top: 17%;
   }
 
 }
