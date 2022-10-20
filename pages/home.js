@@ -30,6 +30,7 @@ function SelectionPage() {
             <div className="loop"
                 id="selection-container"
             >
+
                 {/* <div className="portal top">
                 </div> */}
                 <Box className="grid-item bouncing" >
