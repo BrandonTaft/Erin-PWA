@@ -806,7 +806,7 @@ body {
 	position: fixed;
 	z-index: 0;
   transform: rotateX(45deg);
-  top: 17vh;
+  top: 17.5vh;
   right: 0;
   left: 0;
   border: 10px solid var(--bs-purple);
@@ -1050,7 +1050,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-bottom: 1em;
 }
 
 .profile-name {
