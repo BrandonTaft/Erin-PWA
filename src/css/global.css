@@ -776,10 +776,10 @@ body {
   overflow: hidden;
   margin-top: 13vh;
   margin-bottom: 17vh;
-  border-bottom-left-radius: 40%;
-  border-bottom-right-radius: 40%;
-  border-top-left-radius: 40%;
-  border-top-right-radius: 40%;
+  border-bottom-left-radius: 33%;
+  border-bottom-right-radius: 33%;
+  border-top-left-radius: 33%;
+  border-top-right-radius: 33%;
 }
 
 .infinite-scroll-loop-inner {
