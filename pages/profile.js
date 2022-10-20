@@ -56,7 +56,7 @@ function Profile(props) {
             </a>
             <div className="fill z-2 profile-wiz">
                     <Image
-                        className='wiz-img'
+                        className='wiz-img floating'
                         alt="wizard"
                         src="/images/flying.webp"
                         layout='fill'

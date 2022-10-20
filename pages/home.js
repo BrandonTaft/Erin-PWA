@@ -32,166 +32,165 @@ function SelectionPage() {
             >
                 {/* <div className="portal top">
                 </div> */}
-                <Box className="grid-item fading" >
+                <Box className="grid-item bouncing" >
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '9' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <PsychologyIcon />
                             <div>GENERAL</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading">
+                <Box className="grid-item bouncing">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '11' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <MovieIcon />
                             <div>MOVIES</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading three">
+                <Box className="grid-item bouncing three">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '22' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <LanguageIcon />
                             <div>GEOGRAPHY</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading four">
-                    <div className="yellow m-auto">
+                <Box className="grid-item bouncing four">
+                    <div className="purple m-auto">
                         <Link
                             href={{
                                 pathname: '/quiz',
                                 query: { cat: '10' },
                             }}
                         >
-                            <div className="yellow m-auto">
+                            <div className="purple m-auto">
                                 <AutoStoriesIcon />
                                 <div>BOOKS</div>
                             </div>
                         </Link>
                     </div>
                 </Box>
-                <Box className="grid-item fading five">
+                <Box className="grid-item bouncing five">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '15' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <SportsEsportsIcon />
                             <div>VIDEO GAMES</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading six">
+                <Box className="grid-item bouncing six">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '12' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <MusicNoteIcon />
                             <div>MUSIC</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading seven">
+                <Box className="grid-item bouncing seven">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '14' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <LiveTvIcon />
                             <div>TV</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading six">
+                <Box className="grid-item bouncing six">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '29' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <BoltIcon />
                             <div>COMICS</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading five">
+                <Box className="grid-item bouncing five">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '20' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <BalanceIcon />
                             <div>MYTHOLOGY</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading four">
+                <Box className="grid-item bouncing four">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '21' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <SportsFootballIcon />
                             <div>SPORTS</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading three">
+                <Box className="grid-item bouncing three">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '17' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <ScienceIcon />
                             <div>SCIENCE</div>
                         </div>
                     </Link>
                 </Box>
-                <Box className="grid-item fading two" id="bottom-element">
+                <Box className="grid-item bouncing two" id="bottom-element">
                     <Link
                         href={{
                             pathname: '/quiz',
                             query: { cat: '27' },
                         }}
                     >
-                        <div className="yellow m-auto">
+                        <div className="purple m-auto">
                             <PetsIcon />
                             <div>ANIMALS</div>
                         </div>
                     </Link>
                 </Box>
-                {/* <div className="portal bottom">
-               
+                {/* <div className="portal bottom"
                 </div> */}
             </div>
         </InfiniteScroll>
