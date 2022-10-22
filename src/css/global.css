@@ -1063,13 +1063,13 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: 'Roboto', serif;
+  font-family: 'ARCADECLASSIC', serif;
 }
 
 .profile-name p {
   margin: 4px !important;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .line {
@@ -1099,17 +1099,14 @@ body {
 	cursor: pointer;
 	position: relative;
   margin: .5em auto 0;
-	padding: .5rem 2rem;
-	border-radius: 3.75rem;
-	line-height: 1.5rem;
-	font-size: 1rem;
+  padding-left: 1em;
+  padding-right: .75em;
+  font-family: 'ARCADECLASSIC';
+	font-size: 1.5em;
 	font-weight: 600;
 	text-decoration: none;
-	border: 1px solid #012880;
-	background-image: linear-gradient(-180deg, var(--bs-purple) 0%, #332268 100%);
-	box-shadow: 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
-							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+  border: solid 1px var(--bs-purple);
+  border-radius: 10px;
 }
 
 .profile-btn span {
@@ -1123,8 +1120,6 @@ body {
 .fill {
   display: flex;
   position: relative;
-  /* flex-grow: 1;
-  margin-top: 10px; */
   margin: auto;
 }
 
@@ -1153,8 +1148,8 @@ body {
 }
 
 .world-profile {
-  width: 80vw;
-  height: 80vw;
+  width: 70vw;
+  height: 70vw;
   background-color: #050610;
   background-image: url("/images/earth.webp");
   background-color: #7b5af3; /* Tint color */
@@ -1169,31 +1164,27 @@ body {
 }
 
 @media (min-width: 360px) {
+  .welcome p {
+    font-size: 1.4rem;
+  }
+
   .profile-btn {
-    font-size: 1.2em;
+    font-size: 2em;
   }
 
   .profile-name p {
-    font-size: 1.5rem;
-  }
-
-  .welcome p {
-    font-size: 1.4rem;
+    font-size: 2em;
   }
 
 }
 
 @media (min-width: 375px) {
   .profile-name p {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
   }
 
   .welcome p {
     font-size: 1.5rem;
-  }
-
-  .profile-btn {
-    font-size: 1.4em;
   }
 }
 
@@ -1203,14 +1194,18 @@ body {
   }
 
   .world-profile {
-    width: 90vw;
-    height: 90vw;
+    height: 80vw;
+    width: 80vw;
+  }
+
+  .profile-btn {
+    font-size: 2.25em;
   }
 }
 
 @media (min-width: 500px) {
   .profile-name p {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .welcome p {
@@ -1223,13 +1218,12 @@ body {
   }
 
   .profile-btn {
-    font-size: 1.25em;
-    margin: 5px auto;
+    font-size: 1.75em;
   }
 
   .world-profile {
-    width: 60vw;
-    height: 60vw;
+    width: 50vw;
+    height: 50vw;
   }
 }
 
@@ -1245,7 +1239,7 @@ body {
 
 @media (min-width: 768px) {
   .profile-name p {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .profile {
@@ -1261,9 +1255,10 @@ body {
   }
 
   .profile-btn {
-    font-size: 1.75em;
+    font-size: 2.5em;
     margin: 15px auto;
-    padding: 1rem 3rem;
+    padding-top: .15em;
+    padding-bottom: .15em;
   }
 
   .world-profile {
@@ -1274,9 +1269,18 @@ body {
 }
 
 @media (min-width: 800px) {
+  .welcome {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .profile-name p {
+    font-size: 3em;
+  }
+
   .world-profile {
-    width: 65vw;
-    height: 65vw;
+    height: 60vw;
+    width: 60vw;
   }
 }
 
@@ -1285,12 +1289,13 @@ body {
     padding-bottom: 2em;
   }
 
-  .profile-name p {
+  .welcome p {
     font-size: 2.75rem;
   }
 
-  .welcome p {
-    font-size: 2.75rem;
+  .world-profile {
+    height: 55vw;
+    width: 55vw;
   }
 
   .resize {
@@ -1298,10 +1303,6 @@ body {
     margin: 2em auto 0;
   }
 
-  .profile-btn {
-    font-size: 2.25em;
-    margin: 30px auto;
-  }
 }
 
 @media (orientation: landscape) {
@@ -1314,7 +1315,7 @@ body {
   }
 
   .profile-name p {
-    font-size: 1.75em;
+    font-size: 2em;
   }
 
   .welcome p {
@@ -1327,8 +1328,9 @@ body {
   }
 
   .profile-btn {
-    font-size: 1.5em;
-    margin: .25em auto 0;
+    font-size: 2em;
+    margin: .5em auto;
+    border: none;
   }
 
   .world-profile {
@@ -1351,11 +1353,6 @@ body {
     font-size: 1.5rem;
   }
 
-  .profile-btn {
-    font-size: 1.25em;
-    padding: .5rem 2rem;
-  }
-
 }
 
 @media (min-width: 1200px) {
@@ -1365,6 +1362,10 @@ body {
 
 .welcome p {
   font-size: 2.25rem;
+}
+
+.profile-btn {
+  font-size: 3em;
 }
 
 }
