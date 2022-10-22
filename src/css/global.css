@@ -1782,7 +1782,7 @@ td {
   margin-right: auto;
   margin-bottom: 1em;
   font-family: 'ARCADECLASSIC';
-  font-size: 1.25em;
+  font-size: 1.1em;
   padding: 8px 20px;
   width: fit-content;
   border: none;
@@ -1860,7 +1860,7 @@ td {
     padding: 18px 12px; */
     display: flex;
     align-items: center;
-    font-size: 1.75em;
+    font-size: 2em;
     /* font-family: 'Rubik', sans-serif; */
     font-weight: 400;
     color: #fdfeff;
@@ -2057,12 +2057,16 @@ td {
   }
 
   .minimum {
-    min-height: 5em;
+    min-height: 4em;
     width: 80%;
   }
 
   .question-container {
     font-size: 1.5em;
+  }
+
+  .question {
+    margin-top: 2em;
   }
 
   .button-group {
@@ -2072,6 +2076,10 @@ td {
   .q-btn {
     font-size: 1.25rem !important;
   }
+
+  .quiz-btn {
+    font-size: 1.35em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2080,11 +2088,15 @@ td {
   }
 
   .minimum {
-    min-height: 4em;
+    min-height: 2em;
   }
 
   .question-container {
     font-size: 2.25em;
+  }
+
+  .question {
+    margin-top: 1em;
   }
 
   .button-group {
@@ -2124,6 +2136,10 @@ td {
     margin-top: 1em;
   }
 
+  .question {
+    margin-top: 2em;
+  }
+
   .question-container {
     font-size: 2.5em;
   }
@@ -2143,12 +2159,12 @@ td {
     font-size: 2.75em;
   }
 
-  .minimum {
-   min-height: 5em;
-  }
-
   .button-group {
     width: 70%;
+  }
+
+  .quiz-btn {
+    font-size: 1.5em;
   }
 
   .q-btn {
@@ -2176,12 +2192,8 @@ td {
 }
 
 @media (orientation: landscape) {
-  .question-container {
-    margin-top: 0;
-  }
-
   .bubble {
-    
+    font-size: 3em;
   }
 
   .minimum {
@@ -2191,6 +2203,12 @@ td {
 
   .question-container {
     font-size: 1.25em;
+    margin-top: 0;
+  }
+
+  .question {
+    font-size: 1.75em;
+    margin-top: 2em;
   }
 
   .button-group {
@@ -2224,22 +2242,22 @@ td {
   }
 
   .quiz-btn {
-   
+   font-size: 2em;
   }
 }
 
 @media (max-height: 600px) {
   .bubble {
-    
+    font-size: 2em;
   }
 
-  .bubble-bottom:before {
-    right: 37%;
-    top: 65%;
-    width: 70px;
-    height: 90px;
-    box-shadow: 0px 45px 0 0 #531985;
-    transform: rotate(243deg);
+  .question {
+    font-size: 1.25em;
+    margin-top: 2em;
+  }
+
+  .button-group button {
+    font-size: 1em !important;
   }
 
   .quiz-fill.end {
@@ -2248,7 +2266,8 @@ td {
   }
 
   .quiz-btn {
-    
+    font-size: 1.5em;
+    margin-bottom: 0;
   }
 
   .done h1 {
@@ -2277,13 +2296,23 @@ td {
   }
 
   .bubble {
-    
+    margin-bottom: .5em;
+    margin-top: .5em;
   }
 
   .question-container {
     margin-top: 0;
     margin-bottom: .5em;
     font-size: 1.75em;
+  }
+
+  .question {
+    font-size: .8em;
+    margin-bottom: .2em;
+  }
+
+  .button-group button {
+    font-size: .6em !important;
   }
 
   .minimum {
@@ -2299,70 +2328,57 @@ td {
   }
 
   .quiz-btn {
-   
+   font-size: 1em;
   }
-
-  .quiz-fill {
-  
-}
 
 .quiz-fill.end {
  display: none;
 }
 }
 
-@media (max-height: 400px) {
-  .bubble {
-  
-  }
-
-  .quiz-btn {
-   
-  }
-}
-
-
-@media (max-height: 360px) {
-  .bubble {
-   
-  }
-
-  .quiz-btn {
-   
-  }
-}
-
 @media (max-height: 333px) {
   .bubble {
-    
+    font-size: 1.5em;
   }
 
   .quiz-btn {
-   
+   font-size: .75em;
   }
 }
 
 
 @media (min-width: 1200px) {
   .quiz-btn {
-    
+    font-size: 2em;
   }
 
   .bubble {
-   
+    font-size: 3em;
+  }
+
+  .question {
+    font-size: 1.75em;
+    margin-top: 2em;
   }
 }
 
 @media (min-width: 1300px) and (max-height:899px) {
 
   .bubble {
+    font-size: 2.25em;
+  }
+
+  .quiz-btn {
     font-size: 1.75em;
-    bottom: 3.5em;
-    padding: 35px;
   }
 
   .quiz-fill.end {
     margin-top: 8em;
+  }
+
+  .question {
+    font-size: 2em;
+    margin-top: 1em;
   }
 
   .done h1 {
@@ -2385,25 +2401,16 @@ td {
 
   .quiz-btn {
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    font-size: 1.65em;
-    padding: 15px 50px;
+    font-size: 2.5em;
+  }
+
+  .question {
+    margin-top: 3em;
   }
 
   .bubble {
-    font-size: 2.5em;
-    padding: 25px;
-    bottom: 2.75em;
+    font-size: 3.5em;
   }
-
-  .bubble-bottom:before {
-    right: 37%;
-    top: 65%;
-    width: 130px;
-    height: 170px;
-    box-shadow: 0px 80px 0 0 #531985;
-    transform: rotate(243deg);
-}
 
   .done h1 {
     font-size: 5em;
