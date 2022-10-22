@@ -39,10 +39,11 @@ function StartQuiz() {
   return (
     <div className="quiz-page">
       <div className="quiz-container">
-      <div id="wizard" className="quiz-fill">
-        <div className="bubble bubble-bottom">
-          <p>You look scared! &#128514; &#128541; &#128526;&nbsp;</p>
+      <div className="bubble">
+          <p><span className="spaces">You</span><span className="spaces">Look</span><span className="spaces">Scared</span>!</p>
         </div>
+      <div id="wizard" className="quiz-fill">
+       
         <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
       </div>
         {quizFinished != true ? (
@@ -53,7 +54,7 @@ function StartQuiz() {
         )}
         {highScore === "true" ?
          <div id="wizard" className="quiz-fill end finish">
-         <div className="bubble bubble-bottom">
+         <div className="bubble">
            <p>That's a New High Score!</p>
          </div>
          <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
@@ -61,8 +62,8 @@ function StartQuiz() {
           :
           (highScore === "false" ?
           <div id="wizard" className="quiz-fill end finish">
-          <div className="bubble bubble-bottom">
-            <p>You Can Do Better :&#40;</p>
+          <div className="bubble">
+            <p>You Can Do Better</p>
           </div>
           <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
         </div>

@@ -14,7 +14,6 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import PetsIcon from '@mui/icons-material/Pets';
 import ScienceIcon from '@mui/icons-material/Science';
 import InfiniteScroll from "../src/components/InfiniteScroll";
-import Image from 'next/image';
 
 function SelectionPage() {
     useEffect(() => {
