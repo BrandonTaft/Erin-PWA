@@ -17,7 +17,7 @@ function StartQuiz() {
   const [finalScore, setFinalScore] = useState(0);
   const [highScore, setHighScore] = useState("");
   const [wizardName, setWizardName] = useState("");
-  
+
 
   // Get questions on first render
   useEffect(() => {
@@ -43,7 +43,7 @@ function StartQuiz() {
           <p><span className="spaces">You</span><span className="spaces">Look</span><span className="spaces">Scared</span>!</p>
         </div>
       <div id="wizard" className="quiz-fill">
-       
+
         <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
       </div>
         {quizFinished != true ? (

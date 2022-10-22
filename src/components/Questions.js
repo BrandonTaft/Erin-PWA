@@ -57,7 +57,7 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
     }
 
     // Calculates final score and puts it in finalScore state
-    // Sends final score to api which returns if it's a user high score 
+    // Sends final score to api which returns if it's a user high score
     function gameOver() {
         setFinalScore(currentScore * 107)
         var myHeaders = new Headers();
@@ -90,7 +90,7 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
                 <button className="btn quiz-btn" onClick={() => playquiz()}><span className="done-score">Start Quiz</span></button>
             ) : <button  className="btn quiz-btn"><span className="done-score">Start Quiz</span></button>}
             </div>
-            
+
             {correctAnswer != null ? (
                 <ButtonGroup
                     className="button-group"
