@@ -1816,6 +1816,10 @@ td {
   margin-bottom: 2em;
 }
 
+.question {
+  text-align: center;
+}
+
 .minimum {
   min-height: 6em;
   margin: auto;
