@@ -1977,8 +1977,11 @@ td {
   }
 
   .minimum {
-    max-height: 7em;
+    min-height: 5em;
+    margin: auto;
+    margin-bottom: 2em;
   }
+  
 
   .button-group {
     margin-top: 1em;
