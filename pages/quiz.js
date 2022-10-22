@@ -39,7 +39,7 @@ function StartQuiz() {
   return (
     <div className="quiz-page">
       <div className="quiz-container">
-      <div className="bubble">
+      <div className="bubble" id="temporary">
           <p><span className="spaces">You</span><span className="spaces">Look</span><span className="spaces">Scared</span>!</p>
         </div>
       <div id="wizard" className="quiz-fill">

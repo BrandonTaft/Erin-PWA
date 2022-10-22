@@ -15,6 +15,7 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
         document.getElementById('start-button').classList.add('remove')
         document.getElementById('wizard').classList.add('remove')
         document.getElementById('question').classList.add('minimum')
+        document.getElementById('temporary').classList.add('remove')
         // When answer is clicked, 1 is added to questionCounter total
         // When the counter gets to 10 it sets quizfinished to true & fires gameOver
         if (questionCounter === 10) {

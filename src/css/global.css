@@ -160,7 +160,7 @@ h5 {
 }
 
 .remove {
-  display: none;
+  display: none !important;
 }
 
 .rotate {
