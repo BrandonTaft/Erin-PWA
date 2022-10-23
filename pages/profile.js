@@ -39,9 +39,8 @@ function Profile(props) {
             <div className='profile p-8 pb-0 z-2 resize'>
                 <div className='profile-name yellow'>
                     <p>
-                        <span className="spaces">Hello</span><span className='done-score spaces'>{wizardName.toUpperCase()}</span><br></br>
-                        <span className="spaces">Your</span> <span className="spaces">current</span> <span className="spaces">high</span> 
-                        <span className="spaces">score</span> <span className="spaces">is</span> <span className='done-score'>{myScore}</span>
+                        HELLO <span className='done-score'>{wizardName.toUpperCase()}</span><br></br>
+                        YOUR HIGH SCORE IS <span className='done-score'>{myScore}</span>
                     </p>
                 </div>
                 <div className='line'></div>
@@ -68,9 +67,6 @@ function Profile(props) {
                 <div className='world-profile'></div>
                 </div>
                 </div>
-                {/* <div className='ss-profile'>
-                <div className='world-profile'></div>
-            </div> */}
         </div>
     )
 }

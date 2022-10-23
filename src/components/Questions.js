@@ -83,14 +83,14 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
     return (
         // Display start button when first rendered
         <div className="question-container" id="question-container">
-            <div id="question" className="question"> {currentQuestion}</div>
+            <div id="question" className="question"> {currentQuestion}
             <div id="start-button">
             {questions.length > 0 && correctAnswer == null ? (
                 // Keeps start button from rendering until questions are loaded to prevent undefined error
                 <button className="btn quiz-btn" onClick={() => playquiz()}><span className="done-score">Start Quiz</span></button>
             ) : <button  className="btn quiz-btn"><span className="done-score">Start Quiz</span></button>}
             </div>
-
+            </div>
             {correctAnswer != null ? (
                 <ButtonGroup
                     className="button-group"
