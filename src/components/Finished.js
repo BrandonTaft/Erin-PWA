@@ -4,10 +4,9 @@ export function Finished({ finalScore }) {
     return(
         <div className="done-container">
         <div className="done">
-          <h1 >Congratulations</h1>
-          <h2>Your score is <span className="done-score">{finalScore}</span></h2>
+          <h1>Your score is <span className="done-score">{finalScore}</span></h1>
           <Link href='/leaderboard'>
-            <a><span className="final-btn">LEADERBOARD</span></a>
+            <a><span className="final-btn done-score">LEADERBOARD</span></a>
           </Link>
         </div>
 
