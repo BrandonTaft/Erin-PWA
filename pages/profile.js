@@ -54,9 +54,9 @@ function Profile(props) {
             <a className="profile-btn z-2 done-score" href="/home">
                 <span>READY</span>
             </a>
-            <div className="fill z-2 profile-wiz">
+            <div className="fill z-2">
                     <Image
-                        className='wiz-img floating'
+                        className='floating'
                         alt="wizard"
                         src="/images/flying.webp"
                         layout='fill'

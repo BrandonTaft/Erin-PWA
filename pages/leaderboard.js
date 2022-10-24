@@ -43,8 +43,16 @@ function Leaderboard(props) {
                     </table>
                 </div>
             </div>
-            <div className='ss'>
-                <div className='world'></div>
+            <div className='ss fill'>
+                {/* <div className='world'></div> */}
+                <Image
+                        className='wiz-img floating'
+                        alt="wizard"
+                        src="/images/gold.webp"
+                        layout='fill'
+                        objectFit='scale-down'
+                        priority={true}
+                    />
             </div>
         </div>
     )
