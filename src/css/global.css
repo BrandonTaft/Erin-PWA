@@ -1366,6 +1366,10 @@ body {
 
 
 /***********Leaderboard***********/
+.leaderboard-page {
+  background: linear-gradient(to bottom, #02010780 0%, #201b4680 100%);
+}
+
 .particle-bg {
   position: absolute;
   top: 0;
@@ -1422,10 +1426,10 @@ td {
   position: absolute;
   flex-direction: column;
   z-index: -1;
-  margin: auto auto 1em;
   width: 100vw;
   align-items: center;
-  top: 40%;
+  top: 30%;
+  height: 50vh;
 }
 
 .world {
@@ -1468,6 +1472,23 @@ td {
       filter: hue-rotate(-359deg);
     }
   }
+
+.circle {
+  animation: circle 20s infinite linear;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(-0deg);
+  }
+}
+
 
 @media (min-width: 400px) {
   .scorecard {

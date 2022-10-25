@@ -46,7 +46,7 @@ function Leaderboard(props) {
             <div className='ss fill'>
                 {/* <div className='world'></div> */}
                 <Image
-                        className='wiz-img floating'
+                        className='wiz-img circle'
                         alt="wizard"
                         src="/images/gold.webp"
                         layout='fill'
