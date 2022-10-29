@@ -1171,11 +1171,6 @@ body {
   .profile-btn {
     padding: .25em 1em;
   }
-
-  .world-profile {
-    width: 90vw;
-    height: 90vw;
-  }
 }
 
 @media (min-width: 500px) {
