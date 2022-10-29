@@ -1739,7 +1739,7 @@ table {
 }
 
 .minimum {
-  min-height: 6em;
+  min-height: 7em;
   width: 90%;
   margin: auto;
   padding: 10px;
@@ -1892,7 +1892,6 @@ table {
   }
 
   .minimum {
-    min-height: 5em;
     margin: auto;
     margin-bottom: 2em;
   }
