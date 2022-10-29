@@ -1087,9 +1087,7 @@ body {
 .fill {
   display: flex;
   position: relative;
-  /* flex-grow: 1;
-  margin-top: 10px; */
-  margin: auto;
+  margin: 1em auto;
 }
 
 .fill img {
