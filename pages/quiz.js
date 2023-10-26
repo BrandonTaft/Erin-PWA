@@ -25,10 +25,11 @@ function StartQuiz() {
   }, []);
 
   function getQuestions(cat) {
+    console.log("GOT QUESTins")
     // Gets user name from local storage and puts in wizardName state
     // Retrieves questions from api and puts them in the questions state
     setWizardName(localStorage.getItem('name'))
-    fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
+    fetch(`http://127.0.0.1:8080/quiz/${cat}`)
       .then(response => response.json())
       .then(result => {
         setQuestions([...result]);
@@ -40,11 +41,17 @@ function StartQuiz() {
     <div className="quiz-page">
       <div className="quiz-container">
       <div className="bubble" id="temporary">
-          <p><span className="spaces">You</span><span className="spaces">Look</span><span className="spaces">Scared</span>!</p>
+          READY
         </div>
       <div id="wizard" className="quiz-fill">
 
-        <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+        <Image className="erin" src="/images/erin.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+        
+      </div>
+      <div id="wizard" className="quiz-fill">
+
+        
+        <Image className="circle" src="/icons/logo-icon.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
       </div>
         {quizFinished != true ? (
           <Questions setQuizFinished={setQuizFinished} questions={questions} setFinalScore={setFinalScore} wizardName={wizardName} setHighScore={setHighScore}/>
@@ -57,7 +64,7 @@ function StartQuiz() {
          <div className="bubble">
            <p>That's a New High Score!</p>
          </div>
-         <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+         <Image src="/images/erin.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
        </div>
           :
           (highScore === "false" ?
@@ -65,7 +72,7 @@ function StartQuiz() {
           <div className="bubble">
             <p>You Can Do Better</p>
           </div>
-          <Image src="/images/mean-wiz.webp" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+          <Image src="/images/erin.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
         </div>
             : null
           )}

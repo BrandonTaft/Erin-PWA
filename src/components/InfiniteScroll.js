@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useLayoutEffect, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 function InfiniteScroll(props) {
     const contentRef = useRef(null);
@@ -6,20 +6,16 @@ function InfiniteScroll(props) {
     const [height, setHeight] = useState(0);
 
     var handleScroll = useCallback(function () {
-        if (scrollRef.current) {
             var scroll = scrollRef.current.scrollTop;
             if (scroll < height || scroll >= height + height) {
                 scrollRef.current.scrollTop = height + (scroll % height);
             }
-        }
     }, [height]);
 
-    useEffect(function () {
-        if (contentRef.current) {
+    useEffect(function () { 
             setHeight(contentRef.current.offsetHeight);
             scrollRef.current.scrollTop = height;
-        }
-    });
+    },[contentRef.current]);
 
     return (
         <div className="infinite-scroll-loop-outer">
@@ -33,6 +29,7 @@ function InfiniteScroll(props) {
             >
                 <div>{props.children}</div>
                 <div ref={contentRef}>{props.children}</div>
+                <div>{props.children}</div>
                 <div>{props.children}</div>
             </div>
         </div>

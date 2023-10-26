@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
-function Login(props) {
+import logo from '../public/icons/logo-icon.png';
+import erin from '../public/images/erin.png'
+function Login() {
     const [credentials, setCredentials] = useState({})
     const [message, setMessage] = useState('')
     const router = useRouter()
@@ -21,7 +22,8 @@ function Login(props) {
             setMessage("You must enter a password")
         } else {
             //Submit credentials state to server for authentication
-            fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
+           // fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
+            fetch('http://127.0.0.1:8080/api/login',{
                 method: 'POST',
                 origin: '*',
                 headers: {
@@ -56,32 +58,37 @@ function Login(props) {
     return (
         // Render Display
         <div className='login column'>
-            <div className="login-title">
-                <Image className="logo" src="/images/logo-full.webp" alt="Logo" height={100} width={250} quality={100} priority='true' />
+            <h1 className='login-title'>ARE YOU SMARTER THAN ERIN</h1>
+            <div className="login-header">
+                
+                <div className="logo">
+                <Image  src={logo} alt="Logo"  />
+                </div>
+                <div className="erin">
+                <Image  src={erin} alt="Logo"  />
+                </div>
             </div>
             <div className="login-Container column">
                 <input className="log-RegText" type="text" name="username" onChange={handleLoginChange} placeholder="User name" />
                 <input className="log-RegText" type="password" name="password" onChange={handleLoginChange} placeholder="Password" />
                 {message && <div id="message" className="message">
-                    <p  >{message}</p>
-                    <Image className='m-img' src='/images/warning-wiz.webp' alt="Wizard" layout='responsive' height={75} width={60} priority/>
+                    <p className="message-text" >{message}</p>
+                    <Image className='m-img' src={erin} layout='responsive'  priority/>
                     <button onClick={remove}>Ok</button>
                 </div>}
-                <div className="btn log-btn" onClick={handleLoginButton}>Login</div>
-                <div href="/register" className="btn log-btn">Register</div>
+                <div className='btn-box'>
+                <div className="log-btn" onClick={handleLoginButton}>Login</div>
+                <a href="/register" className="log-btn">Register</a>
+                </div>
             </div>
             <div className="icon-container">
                 <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
                     <Image src='/icons/google.webp' alt="Login With Google" height={40} width={40} />
-                    <div className='btn-text'>Login With Google</div>
+                    <div className=''>Login With Google</div>
                 </a>
                 <a id="facebook-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/facebook">
                     <Image src='/icons/facebook.webp' alt="Login With Facebook" height={40} width={40} />
-                    <div className='btn-text'>Login With Facebook</div>
-                </a>
-                <a id="github-btn" className="passport-btn github" href="https://polar-dawn-36653.herokuapp.com/auth/github">
-                    <Image src='/icons/github.webp' alt="Login With Github" height={40} width={47} quality={100} />
-                    <div className='btn-text'>Login With Github</div>
+                    <div className=''>Login With Facebook</div>
                 </a>
             </div>
         </div>
