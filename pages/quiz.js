@@ -29,7 +29,7 @@ function StartQuiz() {
     // Gets user name from local storage and puts in wizardName state
     // Retrieves questions from api and puts them in the questions state
     setWizardName(localStorage.getItem('name'))
-    fetch(`http://127.0.0.1:8080/quiz/${cat}`)
+    fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
       .then(response => response.json())
       .then(result => {
         setQuestions([...result]);

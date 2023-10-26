@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'ARCADECLASSIC';
+  /* font-family: 'ARCADECLASSIC'; */
   src: url('/fonts/ARCADECLASSIC.TTF');
   font-weight: 400;
   font-style: normal;
@@ -1355,7 +1355,7 @@ table {
 }
 
 .bubble {
-  font-family: 'ARCADECLASSIC';
+  /* font-family: 'ARCADECLASSIC'; */
   display: flex;
   align-items: center;
   font-size: 2em;
@@ -1367,7 +1367,7 @@ table {
 
 .bubble p {
   height: fit-content;
-  font-family: 'ARCADECLASSIC';
+  /* font-family: 'ARCADECLASSIC'; */
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
   border-right: .15em solid white;
@@ -1427,7 +1427,7 @@ table {
 
 .done h1 {
   color: var(--bs-yellow);
-  font-family: 'ARCADECLASSIC';
+  /* font-family: 'ARCADECLASSIC'; */
 }
 
 .done h2 {
@@ -1437,7 +1437,7 @@ table {
 .final-btn {
   color: var(--bs-yellow);
   text-decoration: none !important;
-  font-family: 'ARCADECLASSIC';
+  /* font-family: 'ARCADECLASSIC'; */
   padding: 5px 15px 8px;
   border: 2px solid var(--bs-yellow) !important;
   border-radius: 15px;
