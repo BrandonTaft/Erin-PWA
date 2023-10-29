@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import logo from '../public/icons/logo-icon.png';
-import erin from '../public/images/erin.png'
+import logo from '../public/images/logo.png';
 
 function Register(props) {
     const [user, setUser] = useState({})
@@ -24,8 +23,8 @@ function Register(props) {
             setMessage("You must enter a password")
         } else {
             // Sends server the credentials that are to be added to the DB  
-            fetch('https://polar-dawn-36653.herokuapp.com/api/register', {
-               // fetch('http://127.0.0.1:8080/api/register',{
+            //fetch('https://polar-dawn-36653.herokuapp.com/api/register', {
+            fetch('http://127.0.0.1:8080/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -53,14 +52,10 @@ function Register(props) {
 
     return (
         <div className='login register column'>
-           <h1 className='login-title'>ARE YOU SMARTER THAN ERIN</h1>
             <div className="login-header">
-                
-                <div className="logo">
-                <Image  src={logo} alt="Logo"  />
-                </div>
+
                 <div className="erin">
-                <Image  src={erin} alt="Logo"  />
+                    <Image src={logo} alt="Logo" />
                 </div>
             </div>
             <h2 className='m-0'>REGISTER</h2>
@@ -69,7 +64,7 @@ function Register(props) {
                 <input className="log-RegText" type="password" name="password" onChange={handleRegisterChange} placeholder="Password" />
                 {message && <div id="message" className="message">
                     <p className="message-text">{message}</p>
-                    <Image className='m-img' src={erin} layout='responsive'  priority/>
+                    <Image className='m-img' src={erin} layout='responsive' priority />
                     <button className="message-btn" onClick={remove}>Ok</button>
                 </div>}
                 <a className="log-btn reg-btn" onClick={handleRegisterButton}>Register</a>

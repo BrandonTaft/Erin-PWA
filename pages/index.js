@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import logo from '../public/icons/logo-icon.png';
-import erin from '../public/images/erin.png'
+import logo from '../public/images/logo.png';
+import erin from '../public/images/erin.png';
+
 function Login() {
     const [credentials, setCredentials] = useState({})
     const [message, setMessage] = useState('')
@@ -22,8 +23,8 @@ function Login() {
             setMessage("You must enter a password")
         } else {
             //Submit credentials state to server for authentication
-         fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
-           // fetch('http://127.0.0.1:8080/api/login',{
+            // fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
+            fetch('http://127.0.0.1:8080/api/login', {
                 method: 'POST',
                 origin: '*',
                 headers: {
@@ -58,14 +59,10 @@ function Login() {
     return (
         // Render Display
         <div className='login column'>
-            <h1 className='login-title'>ARE YOU SMARTER THAN ERIN</h1>
+            
             <div className="login-header">
-                
-                <div className="logo">
-                <Image  src={logo} alt="Logo"  />
-                </div>
                 <div className="erin">
-                <Image  src={erin} alt="Logo"  />
+                    <Image src={logo} alt="Logo" />
                 </div>
             </div>
             <div className="login-Container column">
@@ -73,12 +70,12 @@ function Login() {
                 <input className="log-RegText" type="password" name="password" onChange={handleLoginChange} placeholder="Password" />
                 {message && <div id="message" className="message">
                     <p className="message-text" >{message}</p>
-                    <Image className='m-img' src={erin} layout='responsive'  priority/>
-                    <button onClick={remove}>Ok</button>
+                    <Image className='m-img' src={erin} layout='responsive' priority />
+                    <button className="log-btn" onClick={remove}>Ok</button>
                 </div>}
                 <div className='btn-box'>
-                <div className="log-btn" onClick={handleLoginButton}>Login</div>
-                <a href="/register" className="log-btn">Register</a>
+                    <div className="log-btn" onClick={handleLoginButton}>Login</div>
+                    <a href="/register" className="log-btn">Register</a>
                 </div>
             </div>
             <div className="icon-container">

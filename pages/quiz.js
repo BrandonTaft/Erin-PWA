@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import erin from '../public/images/quiz-erin.png';
+import logo from '../public/images/logo.png';
 import dynamic from 'next/dynamic';
 const Finished = dynamic(() =>
 import('../src/components/Finished').then((mod) => mod.Finished)
@@ -39,19 +41,11 @@ function StartQuiz() {
 
   return (
     <div className="quiz-page">
-      <div className="quiz-container">
-      <div className="bubble" id="temporary">
-          READY
-        </div>
+     
       <div id="wizard" className="quiz-fill">
 
-        <Image className="erin" src="/images/erin.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+      <Image src={logo} alt="Logo" />
         
-      </div>
-      <div id="wizard" className="quiz-fill">
-
-        
-        <Image className="circle" src="/icons/logo-icon.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
       </div>
         {quizFinished != true ? (
           <Questions setQuizFinished={setQuizFinished} questions={questions} setFinalScore={setFinalScore} wizardName={wizardName} setHighScore={setHighScore}/>
@@ -64,7 +58,7 @@ function StartQuiz() {
          <div className="bubble">
            <p>That's a New High Score!</p>
          </div>
-         <Image src="/images/erin.png" alt="wizard" objectFit="scale-down" layout="fill" priority={true} />
+         <Image src={erin} alt="Logo" />
        </div>
           :
           (highScore === "false" ?
@@ -76,7 +70,7 @@ function StartQuiz() {
         </div>
             : null
           )}
-      </div>
+    
     </div>
   );
 }

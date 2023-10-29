@@ -15,10 +15,10 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
         document.getElementById('start-button').classList.add('remove')
         document.getElementById('wizard').classList.add('remove')
         document.getElementById('question').classList.add('minimum')
-        document.getElementById('temporary').classList.add('remove')
+        
         // When answer is clicked, 1 is added to questionCounter total
         // When the counter gets to 10 it sets quizfinished to true & fires gameOver
-        if (questionCounter === 10) {
+        if (questionCounter === questions.length) {
             setQuizFinished(true);
             gameOver();
         } else {
@@ -84,11 +84,11 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
         // Display start button when first rendered
         <div className="question-container" id="question-container">
             <div id="question" className="question"> {currentQuestion}
-            <div id="start-button">
+            <div id="start-button" className="start-button">
             {questions.length > 0 && correctAnswer == null ? (
                 // Keeps start button from rendering until questions are loaded to prevent undefined error
-                <button className="btn quiz-btn" onClick={() => playquiz()}><span className="done-score">Start Quiz</span></button>
-            ) : <button  className="btn quiz-btn"><span className="done-score">Start Quiz</span></button>}
+                <button className="quiz-start-btn" onClick={() => playquiz()}>Start Quiz</button>
+            ) : <button  className="quiz-start-btn">Start Quiz</button>}
             </div>
             </div>
             {correctAnswer != null ? (

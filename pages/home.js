@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import erin from '../public/images/erin.png'
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import FaceIcon from '@mui/icons-material/Face';
 import WaterIcon from '@mui/icons-material/Water';
@@ -15,6 +17,8 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import InfiniteScroll from "../src/components/InfiniteScroll";
 
 function SelectionPage() {
+    const [leaderboard, setLeaderboard] = useState([])
+
     useEffect(() => {
         window.addEventListener("load", function () {
             setTimeout(function () {
@@ -22,7 +26,14 @@ function SelectionPage() {
                 window.scrollTo(0, 1);
             }, 0);
         });
+
+        fetch('https://polar-dawn-36653.herokuapp.com/api/highscore')
+            .then(response => response.json())
+            .then(result => {
+                setLeaderboard(result)
+            });
     })
+
     return (
         <>
             <InfiniteScroll >
@@ -184,11 +195,31 @@ function SelectionPage() {
                     </Link>
                 </div>
             </InfiniteScroll>
-            {/* <div className='leaders'>
-                <h1>
-                    leaderboard
+            <div className='leader-img'>
+                <Image
+
+                    alt="wizard"
+                    src={erin}
+                    width={340}
+                    height={340}
+                    priority={true}
+                />
+                </div>
+            <div className='leaders'>
+               
+                <h1 className='board-score'>
+                    TOP 10
                 </h1>
-            </div> */}
+                {leaderboard.slice(0, 10).map((score, index) => (
+
+                    <div className='side-board' key={index}>
+                        <div className=""><span className='board-score'>{index + 1}</span></div>
+                        <div className="name">{score.username}</div>
+                        <div className="board-score">{score.score}</div>
+                    </div>
+                )
+                )}
+            </div>
         </>
     )
 }
