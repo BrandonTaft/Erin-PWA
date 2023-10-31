@@ -27,7 +27,7 @@ function Profile(props) {
     //  Used to retrieve the users high score from database & sets it in myScore state
     function getuserscore(wizardName) {
         // fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
-        fetch(`http://127.0.0.1:8080/api/userscore?username=${wizardName}`)
+        fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
             .then(response => response.json())
             .then(myScore => {
                 if (myScore.score != null) {
@@ -49,7 +49,7 @@ function Profile(props) {
                 <div className="welcome" >
                     <p>
                         Welcome to the&nbsp;hottest trivia app in the world. Rack up as many points
-                        as you can to place on the leaderboard and prove that you have what it takes.
+                        as you can to place on the leaderboard.
                     </p>
                 </div>
             </div>
