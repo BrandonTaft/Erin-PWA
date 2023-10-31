@@ -21,7 +21,7 @@ function Leaderboard(props) {
             <div className="lead-container">
                 <div className='flex-table-top'>
                     <div className="table-column">
-                        <div className='table-title w-50 ma-auto'>Wizard</div>
+                        <div className='table-title w-50 ma-auto'>User</div>
                         {leaderboard.map((score, index) => (
                             <div className='left-column' key={index}>
                                 
