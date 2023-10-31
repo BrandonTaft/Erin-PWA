@@ -37,6 +37,19 @@ function SelectionPage() {
     return (
         <>
             <InfiniteScroll >
+            <div className="grid-item bouncing five">
+                    <Link
+                        href={{
+                            pathname: '/quiz',
+                            query: { cat: 'ERIN' },
+                        }}
+                    >
+                        <div className="item-icon m-auto">
+                            <FaceIcon />
+                            <div>ERIN</div>
+                        </div>
+                    </Link>
+                </div>
                 <div className="grid-item bouncing" >
                     <Link
                         href={{
@@ -89,19 +102,7 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing five">
-                    <Link
-                        href={{
-                            pathname: '/quiz',
-                            query: { cat: '15' },
-                        }}
-                    >
-                        <div className="item-icon m-auto">
-                            <FaceIcon />
-                            <div>ERIN</div>
-                        </div>
-                    </Link>
-                </div>
+               
                 <div className="grid-item bouncing six">
                     <Link
                         href={{
