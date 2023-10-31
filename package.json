@@ -11,6 +11,7 @@
   },
   "author": "Brandon Taft",
   "license": "ISC",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",

@@ -3,23 +3,25 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { htmlDecode } from './Utils';
 
-export function Questions({ setQuizFinished, questions, setFinalScore, wizardName, setHighScore }) {
+export function Questions({started, setStarted, setQuizFinished, questions, setFinalScore, wizardName }) {
     const [currentQuestion, setCurrentQuestion] = useState("");
     const [correctAnswer, setCorrectAnswer] = useState(null);
     const [answers, setAnswers] = useState([]);
     const [currentScore, setCurrentScore] = useState(0);
     let [questionCounter, setQuestionCounter] = useState(0);
     let currentAnswers = [];
+
+    useEffect(() => {
+        if (started) playquiz()
+    }, [started])
+
     async function playquiz() {
-        // Fired from on click and removes the wizard image from page
-        document.getElementById('start-button').classList.add('remove')
-        document.getElementById('wizard').classList.add('remove')
-        document.getElementById('question').classList.add('minimum')
-        
+
         // When answer is clicked, 1 is added to questionCounter total
         // When the counter gets to 10 it sets quizfinished to true & fires gameOver
         if (questionCounter === questions.length) {
-            setQuizFinished(true);
+            setStarted(false);
+            setQuizFinished(true)
             gameOver();
         } else {
             currentAnswers = [];
@@ -69,28 +71,25 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
             redirect: 'follow'
         };
         fetch("https://polar-dawn-36653.herokuapp.com/api/submit", requestOptions)
-            .then(response => response.json())
-            .then(result => {
-                if (result.newHighScore == true) {
-                    setHighScore("true")
-                } else {
-                    setHighScore("false")
-                }
-            })
+            // .then(response => response.json())
+            // .then(result => {
+            //     if (result.newHighScore == true) {
+            //         setHighScore("true")
+            //     } else {
+            //         setHighScore("false")
+            //     }
+            // })
             .catch(error => console.log('error', error));
     }
 
     return (
-        // Display start button when first rendered
-        <div className="question-container" id="question-container">
-            <div id="question" className="question"> {currentQuestion}
-            <div id="start-button" className="start-button">
-            {questions.length > 0 && correctAnswer == null ? (
-                // Keeps start button from rendering until questions are loaded to prevent undefined error
-                <button className="quiz-start-btn" onClick={() => playquiz()}>Start Quiz</button>
-            ) : <button  className="quiz-start-btn">Start Quiz</button>}
+        <>
+        
+        <div className="question-container">
+            <div className="top-question q-btn">
+                {currentQuestion}
             </div>
-            </div>
+            
             {correctAnswer != null ? (
                 <ButtonGroup
                     className="button-group"
@@ -105,5 +104,6 @@ export function Questions({ setQuizFinished, questions, setFinalScore, wizardNam
                 </ButtonGroup>
             ) : null}
         </div>
+        </>
     )
 }

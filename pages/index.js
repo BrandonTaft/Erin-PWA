@@ -24,7 +24,7 @@ function Login() {
         } else {
             //Submit credentials state to server for authentication
             // fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
-            fetch('http://127.0.0.1:8080/api/login', {
+            fetch('/api/login', {
                 method: 'POST',
                 origin: '*',
                 headers: {
