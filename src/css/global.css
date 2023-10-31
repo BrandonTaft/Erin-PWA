@@ -1032,11 +1032,8 @@ body {
 }
 
 /***********Quiz***********/
-.quiz-page {
-  /* height: 100vh;
-  display: flex;
-  flex-direction: column;
-  z-index: 1; */
+.quiz-page .done-container{
+  margin-top: 1em;
 }
 
 .background {
@@ -1083,7 +1080,7 @@ body {
 
 .q-btn {
   color: var(--bs-yellow) !important;
-  font-size: 1.15rem !important;
+  font-size: 26px !important;
   border-radius: 10px !important;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -1100,7 +1097,8 @@ body {
 
 .top-question.q-btn {
   min-height: 100px;
-  font-size: 24px !important;
+  font-size: 26px !important;
+  text-align: center;
 }
 
 .quiz-fill {
