@@ -23,8 +23,8 @@ function Login() {
             setMessage("You must enter a password")
         } else {
             //Submit credentials state to server for authentication
-            // fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
-            fetch('/api/login', {
+            fetch('https://polar-dawn-36653.herokuapp.com/api/login', {
+            // fetch('/api/login', {
                 method: 'POST',
                 origin: '*',
                 headers: {
