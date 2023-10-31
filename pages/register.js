@@ -23,8 +23,7 @@ function Register(props) {
             setMessage("You must enter a password")
         } else {
             // Sends server the credentials that are to be added to the DB  
-            //fetch('https://polar-dawn-36653.herokuapp.com/api/register', {
-            fetch('http://127.0.0.1:8080/api/register', {
+            fetch('https://polar-dawn-36653.herokuapp.com/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

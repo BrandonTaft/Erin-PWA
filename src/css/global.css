@@ -1036,6 +1036,10 @@ body {
   margin-top: 1em;
 }
 
+.done-container h1 {
+  margin-bottom: 10px;
+}
+
 .background {
   position: absolute;
   top: 0;
