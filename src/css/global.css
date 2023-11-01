@@ -39,28 +39,8 @@
   --bs-dark: #121212;
 }
 
-.purple {
-  color: var(--bs-purple);
-}
-
-.yellow {
-  color: var(--bs-yellow);
-}
-
-.grey {
-  color: var(--bs-gray-500);
-}
-
-.white {
-  color: var(--bs-white);
-}
-
-h2,
-h3,
-h4,
-h5 {
-  color: #8e8282bd;
-  font-weight: 400;
+a {
+  text-decoration: none;
 }
 
 .m-auto {
@@ -103,24 +83,6 @@ h5 {
   width: 50%;
 }
 
-/* .pointer {
-  cursor: pointer;
-} */
-
-.btn {
-  border-radius: 10px;
-  font-size: 1em;
-  font-weight: 500;
-  padding: 10px 0;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  width: 50%;
-  cursor: pointer;
-  margin: 8px;
-}
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -132,18 +94,6 @@ h5 {
   flex-direction: column;
   height: 100vh;
   background-color: #fff;
-}
-
-.flex {
-  display: flex;
-}
-
-.row {
-  flex-direction: row;
-}
-
-.column {
-  flex-direction: column;
 }
 
 .z-0 {
@@ -188,11 +138,6 @@ h5 {
   transform: perspective(200px) rotateX(20deg)
 }
 
-html {
-  overflow: hidden;
-  width: 100%;
-}
-
 body {
   /* overflow-y: scroll;
   -webkit-overflow-scrolling: touch; */
@@ -206,27 +151,13 @@ body {
 .login {
   margin: auto;
   display: flex;
+  flex-direction: column;
   text-align: center;
-}
-
-.login-header {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px 10px 20px;
-}
-
-.login-erin {
-  color: #3474c3;
-  font-size: 40px;
+  align-items: center;
 }
 
 .erin {
   width: 40vh;
-}
-
-.logo {
-  width: 30vh;
-  position: absolute;
 }
 
 .login-Container {
@@ -236,7 +167,7 @@ body {
   justify-content: space-evenly;
 }
 
-.log-RegText {
+.credentials {
   width: 13em;
   border-radius: 10px;
   border: 2px solid;
@@ -245,35 +176,21 @@ body {
   margin: 5px;
 }
 
-.btn-box {
+.log-btn-box {
   display: flex;
 }
-
-.icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 .log-btn {
-  border-radius: 22px;
+  border-radius: 12px;
   font-size: 18px;
   font-weight: 500;
   padding: 6px 0;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #f99c0e;
+  color: #fff;
   width: 7em;
   cursor: pointer;
   margin: 8px;
   background-color: #1f1a41;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.22);
-}
-
-.reg-btn {
-  width: 10em;
 }
 
 .passport-btn {
@@ -296,29 +213,20 @@ body {
   background-color: #c23825;
 }
 
-#google-btn:active {
-  transform: translateY(5px);
-}
-
 #facebook-btn {
   background-color: #304a7d;
-}
-
-#facebook-btn:active {
-  transform: translateY(5px);
 }
 
 #github-btn {
   background-color: #343a41;
 }
 
-#github-btn:active {
-  transform: translateY(5px);
+.reg-btn {
+  width: 10em;
 }
 
-.btn-text {
-  margin: auto;
-  font-size: 1.1rem;
+.register-btn {
+  margin-top: 2em;
 }
 
 .message {
@@ -328,40 +236,20 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  background-color: #1f1a41;
-  border: 3px solid #f99c0e;
+  background-color: rgba(0,0,0, 90%); /* Just adjust the color or opacity to make the text pop! */
   box-shadow: rgb(0 0 0 / 20%) 0px 11px 15px -7px,
     rgb(0 0 0 / 14%) 0px 24px 38px 3px, rgb(0 0 0 / 12%) 0px 9px 46px 8px;
-  padding: 0 10px 10px;
+  padding: 20px;
   text-align: center;
-  font-size: 1.5em;
-  color: #f99c0e;
+  font-size: 23px;
+  font-weight: 500;
+  color: #fff;
   border-radius: 10px;
 }
 
-.message button {
-
+.message-btn {
+  background-color: #fff;
   color: #1f1a41;
-  font-weight: 700;
-  background-color: #f99c0e;
-}
-
-.register {
-  justify-content: center;
-}
-
-.register h2 {
-  color: white;
-  align-self: center;
-  margin: 0;
-}
-
-.register-btn {
-  margin-top: 2em;
-}
-
-.message-text {
-  margin: 10px 0 0;
 }
 
 @media (min-width: 768px) {
