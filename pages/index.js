@@ -49,7 +49,6 @@ function Login() {
             <div className="erin">
                 <Image src={logo} alt="Logo" />
             </div>
-            <h2>LOGIN</h2>
             <div className="login-Container">
                 <input className="credentials" type="text" name="username" onChange={handleLoginChange} placeholder="User name" />
                 <input className="credentials" type="password" name="password" onChange={handleLoginChange} placeholder="Password" />

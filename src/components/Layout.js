@@ -6,7 +6,7 @@ function Layout({ children }) {
     const router = useRouter();
     let path = router.pathname;
     return (
-        <div className={path === '/' || path === '/register' ? "light-layout" : "layout"} >
+        <div className="layout" >
             {path === '/' || path === '/register' ? "" : <Navbar path={path} />}
             {children}
         </div>

@@ -26,7 +26,6 @@ function Profile(props) {
 
     //  Used to retrieve the users high score from database & sets it in myScore state
     function getuserscore(wizardName) {
-        // fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
         fetch(`https://polar-dawn-36653.herokuapp.com/api/userscore?username=${wizardName}`)
             .then(response => response.json())
             .then(myScore => {
@@ -39,35 +38,35 @@ function Profile(props) {
     };
     return (
         <div className="profile-page">
-            <div className='profile'>
-                <div className='profile-name yellow'>
-                    <p>
+            <div style={{textAlign:'center'}}>
+                <h2 className='profile-name'>
+                    
                         HELLO <span className='profile-score'>{wizardName.toUpperCase()}</span><br></br>
                         YOUR HIGH SCORE IS <span className='profile-score'>{myScore}</span>
-                    </p>
-                </div>
+                    
+                </h2>
                 <div className="welcome" >
-                    <p>
+                   
                         Welcome to the&nbsp;hottest trivia app in the world. Rack up as many points
                         as you can to place on the leaderboard.
-                    </p>
+                    
                 </div>
-            </div>
+               
             <a className="profile-btn z-2" href="/home">
                 <span>READY</span>
             </a>
+            </div>
             <div className="fill z-2">
                 <Image
-
                     alt="wizard"
                     src={erin}
                     layout='fill'
                     objectFit='scale-down'
                     priority={true}
                 />
-                <div className='ss-profile'>
-                    <Image src={globe} alt="Logo" />
-                </div>
+               
+                <Image src={globe} alt="Logo" style={{zIndex:-1}}/>
+              
             </div>
         </div>
     )
