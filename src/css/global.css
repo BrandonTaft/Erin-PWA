@@ -516,7 +516,7 @@ body {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .leaders {
     display: flex;
     flex-direction: column;
@@ -528,21 +528,48 @@ body {
     text-align: center;
     cursor: pointer;
     border-radius: 10px;
-   
     width: 400px;
+    font-size: 26px;
+    font-weight: 600;
   }
 
   .leaders h1 {
+    color: #3473c3;
     font-size: 30px;
+    text-align: center;
     text-decoration: underline;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .side-board {
+    display: flex;
+    width: 100%;
+  }
+
+  .leaders div {
+    margin: 3px;
+  }
+
+  .home-place {
+    color: #3473c3;
+    width: 10%;
+    text-align: end;
+  }
+
+  .home-name {
+    color: #000;
+    width: 70%;
+    text-align: start;
+    overflow: hidden;
+    padding-left: 2%;
   }
 
   .home-score {
     color: #3473c3;
-    font-weight: 700;
-    font-size: 26px;
+    text-align: end;
+    padding-right: 2%;
   }
+
 
   .leader-img {
     display: block;
@@ -553,21 +580,9 @@ body {
     border-radius: 10px;
   }
 
-  .side-board {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    font-size: 26px;
-  }
+  
 
-  .side-board .home-name {
-    color: #000;
-    font-weight: 700;
-    font-size: 26px;
-    width: 200px;
-    text-align: start;
-    overflow: hidden;
-  }
+  
 }
 
 /***********Quiz***********/
