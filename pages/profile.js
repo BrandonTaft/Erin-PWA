@@ -38,12 +38,14 @@ function Profile() {
     return (
         <div className="profile-page">
             <div style={{ textAlign: 'center' }}>
-            <div className="welcome" >
-                <h3 className='profile-name'>
-                    HELLO <span className='profile-score'>{wizardName.toUpperCase()}</span><br></br>
-                    YOUR HIGH SCORE IS <span className='profile-score'>{myScore}</span>
-                </h3>
-                <div className='divider'></div>
+                <div className="welcome" >
+                    <div className='profile-name'>
+                        HELLO {wizardName.toUpperCase()}
+                    </div>
+                    <div className='profile-name'>
+                        YOUR HIGH SCORE IS {myScore}
+                    </div>
+                    <div className='divider'></div>
                     Welcome to the&nbsp;hottest trivia app in the world. Rack up as many points
                     as you can to place on the leaderboard.
                 </div>
