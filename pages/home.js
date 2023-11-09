@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import erin from '../public/images/erin.svg'
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import FaceIcon from '@mui/icons-material/Face';

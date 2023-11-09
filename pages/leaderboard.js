@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import ScoreCard from '../src/components/Scorecard';
 import Background from '../src/components/Background';
 import EmojiEventsTwoToneIcon from '@mui/icons-material/EmojiEventsTwoTone';

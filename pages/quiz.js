@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import logo from '../public/images/logo.svg';
 import dynamic from 'next/dynamic';
 

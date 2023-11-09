@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import erin from '../public/images/erin.svg'
 import globe from '../public/images/globe.svg';
 

@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'Rubik', sans-serif;
-  src: url('/fonts/Rubik-ExtraBold.ttf');
-  font-weight: 900;
-  font-style: normal;
-}
+
 
 a {
   text-decoration: none;
@@ -17,12 +12,11 @@ a {
 }
 
 button {
-  font-family: 'Rubik', sans-serif;
+  font-family: sans-serif;
 }
 
 body {
   margin: 0 !important;
-  font-family: "Rubik", sans-serif;
   font-weight: 400;
   /* line-height: 1; */
 }
@@ -237,7 +231,7 @@ body {
 
 .profile-name {
   text-align: center;
-  font-family: 'Rubik';
+  /* font-family: 'Rubik'; */
   color: gold;
   margin: 0;
 }
@@ -447,7 +441,7 @@ body {
   height: 25vh;
   margin: 2em auto;
   cursor: pointer;
-  font-family: 'Rubik', sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   box-shadow: inset -25px -15px 40px rgb(0 0 0 / 74%);
   background-image: url('../../public/images/logo-icon.svg');

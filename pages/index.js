@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 import logo from '../public/images/logo.svg';
 import erin from '../public/images/erin.svg';
