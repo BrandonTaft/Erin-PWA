@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import logo from '../public/images/logo.png';
-import erin from '../public/images/erin.png';
+import logo from '../public/images/logo.svg';
+import erin from '../public/images/erin.svg';
 
 function Register(props) {
     const [user, setUser] = useState({});

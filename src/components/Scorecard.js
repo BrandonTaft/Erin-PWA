@@ -20,10 +20,10 @@ function ScoreCard() {
 
     return (
         <div className="scorecard">
-            <p className='scorecard-title'>Your High Score</p>
-            <p className="high-score done-score">      
+            <div>YOUR HIGH SCORE</div>
+            <div className="card-score">      
                     {myScore}
-            </p>
+            </div>
         </div>
     )
 }

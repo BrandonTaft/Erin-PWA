@@ -1,21 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import trophy from '../../public/images/trophy.png';
+import trophy from '../../public/images/trophy.svg';
 
 export function Finished({ finalScore }) {
   return (
-    
-      <div className="done-container">
 
-        <h1>Your score is <span className="done-score">{finalScore}</span></h1>
-        <Link className="final-btn" href='/leaderboard'>
-          <a className="final-btn"><span >LEADERBOARD</span></a>
-        </Link>
-      
-      <div id="wizard" className="trophy-fill">
-        <Image src={trophy} alt="Logo" objectFit="scale-down" layout="fill" priority={true} />
+    <div className="done-container">
+      <h1>
+        YOUR SCORE IS <span className="done-score">{finalScore}</span>
+      </h1>
+      <Link className="final-btn" href='/leaderboard'>
+        <a className="final-btn">
+            LEADERBOARD
+        </a>
+      </Link>
+      <div className="finished-img">
+        <Image src={trophy} alt="Logo" priority={true} />
       </div>
-      </div>
-   
+
+    </div>
   )
 }

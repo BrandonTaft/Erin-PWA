@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import logo from '../public/images/logo.png';
-import erin from '../public/images/erin.png';
+import logo from '../public/images/logo.svg';
+import erin from '../public/images/erin.svg';
 
 function Login() {
     const [credentials, setCredentials] = useState({});
@@ -44,6 +44,14 @@ function Login() {
         }
     };
 
+    const handleGuestLogin =async () => {
+        setCredentials({
+            username: "guest",
+            password: "password"
+          })
+        handleLoginButton()
+    }
+
     return (
         <div className='login'>
             <div className="erin">
@@ -72,6 +80,9 @@ function Login() {
                     </a>
                 </div>
             </div>
+            {/* <div className="" onClick={handleGuestLogin}>
+                        Login as guest
+                    </div> */}
             <div className="icon-container">
                 <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
                     <Image src='/icons/google.webp' alt="Login With Google" height={40} width={40} />

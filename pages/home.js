@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import erin from '../public/images/erin.png'
+import erin from '../public/images/erin.svg'
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import FaceIcon from '@mui/icons-material/Face';
 import WaterIcon from '@mui/icons-material/Water';
@@ -17,16 +17,10 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import InfiniteScroll from "../src/components/InfiniteScroll";
 
 function SelectionPage() {
-    const [leaderboard, setLeaderboard] = useState([])
+    const [leaderboard, setLeaderboard] = useState([]);
+    const [error, setError] = useState(false)
 
     useEffect(() => {
-        window.addEventListener("load", function () {
-            setTimeout(function () {
-                // This hides the address bar:
-                window.scrollTo(0, 1);
-            }, 0);
-        });
-
         fetch('https://polar-dawn-36653.herokuapp.com/api/highscore')
             .then(response => response.json())
             .then(result => {
@@ -36,8 +30,19 @@ function SelectionPage() {
 
     return (
         <>
+        {error &&
+                    <div className="err message">
+                        <div className='err-message'>
+                            We are still working on that!
+                        </div>
+                        <Image src={erin} layout='responsive' priority={true} />
+                        <button className="log-btn err message-btn" onClick={() => setError(false)}>
+                            Ok
+                        </button>
+                    </div>
+                }
             <InfiniteScroll >
-            <div className="grid-item bouncing five">
+                <div className="grid-item bouncing five">
                     <Link
                         href={{
                             pathname: '/quiz',
@@ -45,153 +50,171 @@ function SelectionPage() {
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <FaceIcon />
                             <div>ERIN</div>
+                            <FaceIcon />
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" >
+                <div className="grid-item bouncing" onClick={() => setError(true)} >
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '9' },
                         }}
                     >
                         <div className="item-icon m-auto">
+                        <div>BENEFITS</div>
                             <MedicalInformationIcon />
-                            <div>BENEFITS</div>
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '11' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <WaterIcon />
+                           
                             <div>FLOOD</div>
+                            <WaterIcon />
+
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing three">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '22' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <AirIcon />
+                           
                             <div>WIND</div>
+                            <AirIcon />
+
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing four">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '10' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <StormIcon />
+                            
                             <div>HURRICANE</div>
+                            <StormIcon />
+
                         </div>
                     </Link>
                 </div>
-               
-                <div className="grid-item bouncing six">
+
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '12' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <ApartmentIcon />
+                            
                             <div>CONDO</div>
                             <div>MASTER</div>
+                            <ApartmentIcon />
+
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing seven">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '14' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <EmojiPeopleIcon />
+                            
                             <div>GREETING</div>
+                            <EmojiPeopleIcon />
+
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing six">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '29' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <ContactEmergencyIcon />
+                            
                             <div>VERIFY</div>
+                            <ContactEmergencyIcon />
+
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing five">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '20' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <WarningIcon />
+                            
                             <div>LPI</div>
+                            <WarningIcon />
+
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing four">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '21' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <AttractionsIcon />
+                            
                             <div>PERKS</div>
+                            <AttractionsIcon />
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing three">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '17' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <LocalFireDepartmentIcon />
+                            
                             <div>HAZARD</div>
+                            <LocalFireDepartmentIcon />
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing two" id="bottom-element">
+                <div className="grid-item bouncing" onClick={() => setError(true)}>
                     <Link
                         href={{
-                            pathname: '/quiz',
+                            // pathname: '/quiz',
                             query: { cat: '27' },
                         }}
                     >
                         <div className="item-icon m-auto">
-                            <CreditCardIcon />
+                            
                             <div>PAYMENTS</div>
+                            <CreditCardIcon />
+
                         </div>
                     </Link>
                 </div>
@@ -201,22 +224,21 @@ function SelectionPage() {
 
                     alt="wizard"
                     src={erin}
-                    width={340}
-                    height={340}
+                    width={360}
+                    height={360}
                     priority={true}
                 />
-                </div>
+            </div>
             <div className='leaders'>
-               
-                <h1 className='board-score'>
+
+                <h1 className='home-score'>
                     TOP 10
                 </h1>
                 {leaderboard.slice(0, 10).map((score, index) => (
-
                     <div className='side-board' key={index}>
-                        <div className=""><span className='board-score'>{index + 1}</span></div>
-                        <div className="name">{score.username}</div>
-                        <div className="board-score">{score.score}</div>
+                        <div className='home-score'>{index + 1}.</div>
+                        <div className="home-name">{score.username}</div>
+                        <div className="home-score">{score.score}</div>
                     </div>
                 )
                 )}

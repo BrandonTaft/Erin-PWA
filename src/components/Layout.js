@@ -7,7 +7,7 @@ function Layout({ children }) {
     let path = router.pathname;
     return (
         <div className="layout" >
-            {path === '/' || path === '/register' ? "" : <Navbar path={path} />}
+            {path === '/' || path === '/register' ? null : <Navbar path={path} />}
             {children}
         </div>
     )
