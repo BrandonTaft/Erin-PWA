@@ -35,7 +35,7 @@ function Login() {
                         localStorage.setItem('user_Id', result.user_id)
                         localStorage.setItem('name', result.name)
                         localStorage.setItem('high_score', result.high_score)
-                        router.push('profile')
+                        router.push('welcome')
                     }
                     else {
                         setMessage(result.message)
@@ -55,7 +55,7 @@ function Login() {
     return (
         <div className='login'>
             <div className="erin">
-                <Image src={logo} alt="Logo" />
+                <Image src={logo} alt="are you smarter than erin Logo" priority={true}/>
             </div>
             <div className="login-Container">
                 <input className="credentials" type="text" name="username" onChange={handleLoginChange} placeholder="User name" />
@@ -65,7 +65,7 @@ function Login() {
                         <div>
                             {message}
                         </div>
-                        <Image src={erin} layout='responsive' priority={true} />
+                        <Image src={erin} alt="cartoon erin" layout='responsive'/>
                         <button className="log-btn message-btn" onClick={() => setMessage("")}>
                             Ok
                         </button>

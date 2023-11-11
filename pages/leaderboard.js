@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ScoreCard from '../src/components/Scorecard';
 import Background from '../src/components/Background';
-import EmojiEventsTwoToneIcon from '@mui/icons-material/EmojiEventsTwoTone';
 
 function Leaderboard(props) {
     const [leaderboard, setLeaderboard] = useState([])
@@ -17,9 +16,8 @@ function Leaderboard(props) {
         <div className='leaderboard-page '>
             <Background />
             <ScoreCard />
-            <div className='table-title'>LEADERBOARD</div>
+            <div className='table-title'><span className='tt'>LEADERBOARD</span></div>
             <div className='table'>
-               
                     {leaderboard.map((score, index) => (
                         <div className='row' key={index}>
                             <div className='front-row'>

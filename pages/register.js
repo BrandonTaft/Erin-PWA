@@ -42,7 +42,7 @@ function Register(props) {
     return (
         <div className='login'>
                 <div className="erin">
-                    <Image src={logo} alt="Logo" />
+                    <Image src={logo} alt="are you smarter than erin Logo" priority={true}/>
                 </div>
             <h2>REGISTER</h2>
             <div className="login-Container">
@@ -53,7 +53,7 @@ function Register(props) {
                         <div>
                             {message}
                         </div>
-                        <Image src={erin} layout='responsive' priority={true} />
+                        <Image src={erin} alt='cartoon Erin' layout='responsive'/>
                         <button className="log-btn message-btn" onClick={() => setMessage("")}>
                             Ok
                         </button>

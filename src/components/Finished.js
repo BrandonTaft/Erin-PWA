@@ -10,12 +10,10 @@ export function Finished({ finalScore }) {
         YOUR SCORE IS <span className="done-score">{finalScore}</span>
       </h1>
       <Link className="final-btn" href='/leaderboard'>
-        <a className="final-btn">
             LEADERBOARD
-        </a>
       </Link>
       <div className="finished-img">
-        <Image src={trophy} alt="Logo" priority={true} />
+        <Image src={trophy} alt="are you smarter than erin logo" priority={true} />
       </div>
 
     </div>

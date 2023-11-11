@@ -33,9 +33,9 @@ function SelectionPage() {
         {error &&
                     <div className="err message">
                         <div className='err-message'>
-                            We are still working on that!
+                            I am still working on that!
                         </div>
-                        <Image src={erin} layout='responsive' priority={true} />
+                        <Image src={erin} alt='cartoon erin' layout='responsive' priority={true} />
                         <button className="log-btn err message-btn" onClick={() => setError(false)}>
                             Ok
                         </button>
@@ -221,8 +221,7 @@ function SelectionPage() {
             </InfiniteScroll>
             <div className='leader-img'>
                 <Image
-
-                    alt="wizard"
+                    alt="cartoon erin"
                     src={erin}
                     width={360}
                     height={360}

@@ -1,43 +1,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" 
 xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/0.8" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" >
     <url>
-        <loc>http://127.0.0.1:3000</loc>
+        <loc>https://areyousmarter.vercel.app</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://127.0.0.1:3000/index</loc>
+        <loc>https://areyousmarter.vercel.app/index</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://127.0.0.1:3000/home</loc>
+        <loc>https://areyousmarter.vercel.app/home</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://127.0.0.1:3000/leaderboard</loc>
+        <loc>https://areyousmarter.vercel.app/leaderboard</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://127.0.0.1:3000/profile</loc>
+        <loc>https://areyousmarter.vercel.app/welcome</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://127.0.0.1:3000/quiz</loc>
+        <loc>https://areyousmarter.vercel.app/quiz</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://127.0.0.1:3000/register</loc>
+        <loc>https://areyousmarter.vercel.app/register</loc>
         <lastmod>2022-09-12T20:31:52.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

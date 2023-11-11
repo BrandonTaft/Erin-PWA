@@ -11,14 +11,9 @@ a {
   overflow: hidden;
 }
 
-button {
-  font-family: sans-serif;
-}
-
 body {
   margin: 0 !important;
-  font-weight: 400;
-  /* line-height: 1; */
+  font-weight: 600;
 }
 
 /****************** LOGIN AND REGISTER *******************/
@@ -42,7 +37,7 @@ body {
 }
 
 .credentials {
-  width: 13em;
+  width: 12em;
   border-radius: 10px;
   border: 2px solid;
   padding: 5px;
@@ -56,8 +51,7 @@ body {
 
 .log-btn {
   border-radius: 12px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
   padding: 6px 0;
   color: #fff;
   width: 7em;
@@ -71,8 +65,7 @@ body {
   display: flex;
   color: white;
   border-radius: 10px;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
   width: 14em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out 0.4s;
@@ -133,19 +126,53 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 400px) and (min-height: 800px) {
+  .erin {
+    width: 80vw;
+  }
+}
+
 @media (min-width: 400px) {
   .credentials {
     width: 15em;
   }
-}
 
-@media (min-width: 768px) {
-  .credentials {
-    width: 17em;
+  .log-btn {
+    font-size: 18px;
+  }
+
+  .passport-btn {
+    font-size: 20px;
   }
 }
 
+@media (min-width: 768px) and (min-height:800px) {
+  .credentials {
+    width: 17em;
+  }
 
+  .log-btn {
+    font-size: 20px;
+  }
+
+  .passport-btn {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) and (min-height:800px) {
+  .credentials {
+    width: 18em;
+  }
+
+  .log-btn {
+    font-size: 22px;
+  }
+
+  .passport-btn {
+    font-size: 24px;
+  }
+}
 
 
 /****************** NAVBAR ********************/
@@ -168,6 +195,7 @@ body {
   border-radius: 0%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  padding: 4px 0px;
 }
 
 .patty {
@@ -187,29 +215,31 @@ body {
   z-index: 999;
   background-color: #fff;
   width: fit-content;
-  border: solid 4px #005991;
+  border: solid 6px #005991;
   border-top-style: none;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding-top: 5px;
+  padding-bottom: 24px;
+  padding-top: 16px;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  padding: 6px 10px;
+  padding: 6px 16px 6px 6px;
   color: #005991;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .menu-item:hover {
-  color: #fff;
+  color: gold;
   background-color: #005991;
 }
 
 .menu-item svg {
+  color: gold;
   font-size: 36px;
   margin-right: 10px;
 }
@@ -226,14 +256,31 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.welcome {
+  margin: 2em 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  background-color: #005991;
+  border-radius: 22px;
+  padding: 1em;
+  box-shadow:
+    4px 4px 12px #000,
+    0 -0.25rem 1.5rem #005991 inset,
+    0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
+    0 0.25rem 0.5rem 0 #005991 inset;
 }
 
 .profile-name {
   text-align: center;
-  /* font-family: 'Rubik'; */
+  font-weight: 900;
   color: gold;
   margin: 0;
+  font-size: 22px;
 }
 
 .divider {
@@ -244,24 +291,17 @@ body {
   margin: 10px auto;
 }
 
-.welcome {
-  margin: 15px 10px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 20px;
-  text-align: center;
-  background-color: #005991;
-  border-radius: 22px;
-  padding: 20px 10px;
-}
+
 
 
 .profile-btn {
+  display: inline;
+  margin: 0px 10px;
   cursor: pointer;
   padding: 5px 20px;
   border-radius: 10px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 900;
   background-color: gold;
   color: #005991;
   width: fit-content;
@@ -271,8 +311,8 @@ body {
   display: flex;
   position: relative;
   margin: 0 auto;
-  height: 40vh;
-  width: 40vh;
+  width: 90vw;
+  margin: 2em auto;
 }
 
 .floating {
@@ -293,89 +333,125 @@ body {
   }
 }
 
-@media (max-width: 320px) {
-  .profile-name {
-    font-size: 19px;
-  }
-
+@media (max-width: 400px) and (max-height: 800px) {
   .welcome {
-    font-size: 17px;
+    margin: 1em 10px;
+    font-size: 16px;
   }
-}
 
-@media (max-width: 360px) {
-  .fill {
-    height: 30vh;
-    width: 30vh;
-  }
-}
-
-@media (min-width: 400px) and (min-height: 601px) {
   .profile-name {
-    font-size: 30px;
+    font-size: 18px;
+  }
+
+  .fill {
+    width: 75vw;
+    margin: 1em auto;
+  }
+}
+
+
+@media (min-width: 400px) and (min-height: 801px) {
+  .profile-name {
+    font-size: 26px;
   }
 
   .welcome {
     font-size: 24px;
+    margin: 2em 20px;
   }
 
   .profile-btn {
     font-size: 22px
   }
-}
 
-@media (min-width: 500px) {
-  .welcome {
-    width: 75vw;
-    margin: 20px auto;
-    padding: 20px;
+  .fill {
+    width: 35vh
   }
 }
 
-@media (min-width: 700px) and (max-height:600px) {
+@media (min-width: 400px) and (max-height: 800px) {
   .welcome {
-    width: 50vw;
+    margin: 1em 10px;
+    font-size: 20px;
   }
-}
 
-@media (min-width: 700px) and (min-height: 601px) {
   .profile-name {
-    font-size: 34px;
+    font-size: 22px;
+  }
+
+  .fill {
+    width: 40vh;
+    margin: 1em auto;
+  }
+}
+
+
+@media (min-width: 600px) and (min-height: 801px) {
+  .profile-name {
+    font-size: 28px;
   }
 
   .welcome {
-    font-size: 24px;
-    width: 55vw;
-    padding: 33px;
+    font-size: 26px;
+   
   }
 
   .profile-btn {
-    font-size: 22px;
+    font-size: 24px
+  }
+
+  .fill {
+    width: 40vh
   }
 }
 
-@media (min-width: 900px) and (max-height: 600px) {
+@media (min-width: 600px) and (max-height: 800px) {
+  .welcome {
+    font-size: 24px;
+    width: 70vw;
+    margin: 1em auto;
+  }
+
+  .profile-name {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 800px) {
+  .welcome {
+    width: 60vw;
+    margin: 2em auto;
+  }
+}
+
+@media (min-width: 800px) and (max-height: 800px) {
+  .welcome {
+   
+  margin: 1em auto;
+  }
+}
+
+@media (min-width: 1200px) and (max-height: 800px) {
   .welcome {
     width: 40vw;
   }
 }
 
-@media (min-width: 900px) and (min-height: 601px) {
+
+@media (min-width: 1200px) and (min-height: 801px) {
+  .welcome {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1400px) and (min-height: 801px) {
   .profile-name {
-    font-size: 34px;
+    font-size: 30px;
   }
-
   .welcome {
-    font-size: 26px;
+    width: 40vw;
   }
 }
-
-@media (min-width:1200px) {
-  .welcome {
-    width: 36vw;
-  }
-}
-
 
 /****************** HOME ********************/
 
@@ -441,7 +517,6 @@ body {
   height: 25vh;
   margin: 2em auto;
   cursor: pointer;
-  font-family: sans-serif;
   font-weight: 500;
   box-shadow: inset -25px -15px 40px rgb(0 0 0 / 74%);
   background-image: url('../../public/images/logo-icon.svg');
@@ -518,7 +593,7 @@ body {
     border-radius: 10px;
     width: 400px;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 800;
   }
 
   .leaders h1 {
@@ -629,7 +704,7 @@ body {
   margin-bottom: 20px;
   background-image: linear-gradient(-180deg, #7595ba 0%, #005991 100%);
   box-shadow:
-    3px 3px 8px #000,
+    4px 4px 12px #000,
     0 -0.25rem 1.5rem #005991 inset,
     0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
     0 0.25rem 0.5rem 0 #005991 inset;
@@ -642,24 +717,25 @@ body {
 
 .q-btn {
   position: relative;
+  color: #000;
   font-size: 20px;
   font-weight: 500;
   border-radius: 10px;
   border-style: none;
-  margin: 6px 5%;
-  padding: 10px;
+  margin: 15px 5%;
+  padding: 15px;
   text-align: center;
   cursor: pointer;
   background-image: linear-gradient(-180deg, #7595ba 0%, #005991 100%);
   box-shadow:
-    2px 2px 9px #000,
+    4px 4px 12px #000,
     0 -0.25rem 1.5rem #005991 inset,
     0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
     0 0.25rem 0.5rem 0 #005991 inset;
 }
 
 .q-btn:hover {
-  color: #FFF;
+  color: gold;
   bottom: 2px;
 }
 
@@ -681,7 +757,7 @@ body {
 .final-btn {
   width: fit-content;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 800;
   padding: 2px 8px;
   background-color: gold;
   color: #005991;
@@ -725,10 +801,11 @@ body {
 
   .question {
     padding: 20px;
+    font-size: 26px;
   }
 
   .q-btn {
-    padding: 10px 20px;
+    font-size: 24px;
   }
 
   .done-container {
@@ -755,12 +832,12 @@ body {
   }
 
   .question {
-    font-size: 25px;
+    font-size: 26px;
   }
 
   .q-btn {
-    font-size: 22px;
-    margin: 10px 5%;
+    font-size: 24px;
+    margin: 20px 5%;
     padding: 12px 20px;
   }
 
@@ -806,11 +883,11 @@ body {
   align-items: center;
   margin: auto;
   margin-bottom: 0;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
+  color: gold;
+  font-size: 24px;
+  font-weight: 700;
   z-index: 4;
-  padding: 20px;
+  padding: 26px;
   border-radius: 5px;
   background-color: rgb(67 140 185);
   box-shadow:
@@ -821,7 +898,7 @@ body {
 }
 
 .card-score {
-  font-size: 32px;
+  animation: hue2 5s infinite linear;
   color: gold;
 }
 
@@ -860,16 +937,24 @@ body {
 
 .table-title {
   color: gold;
+  width: fit-content;
   text-align: center;
-  font-weight: 600;
-  margin: 20px 0 10px;
+  font-weight: 900;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin: 6px auto;
   text-decoration: underline;
+}
+
+.tt {
+  animation: hue2 5s infinite linear;
 }
 
 .row {
   display: flex;
+  position: relative;
   justify-content: space-between;
-  margin: 3px 0;
+  margin: 6px 0;
   padding: 10px 15px;
   border-radius: 5px;
   background-color: rgb(67 140 185);
@@ -877,6 +962,20 @@ body {
     0 -0.25rem 1.5rem #005991 inset,
     0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
     0 0.25rem 0.5rem 0 #005991 inset;
+}
+
+.row:hover {
+  bottom: 2px;
+  background-color: gold;
+  box-shadow: none
+}
+
+.row:hover .place{
+  color: #005991;
+}
+
+.row:hover .numbers{
+  color: #005991;
 }
 
 .front-row {
@@ -887,20 +986,20 @@ body {
 
 .name {
   color: #000;
-  font-weight: 500;
+  font-weight: 700;
   margin-left: 5%;
 }
 
 .place {
   color: gold;
   animation: hue2 5s infinite linear;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .numbers {
   color: gold;
   animation: hue2 5s infinite linear;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @keyframes hue2 {
@@ -913,40 +1012,59 @@ body {
   }
 }
 
+@media (min-width: 400px) {
+  .scorecard {
+    font-size: 30px;
+    padding: 25px 30px;
+  }
+
+  .leaderboard-page {
+    font-size: 26px;
+  }
+
+  .table-title {
+    font-size: 26px;
+    margin: 20px auto 10px;
+  }
+}
+
 @media (min-width: 600px) {
   .table {
-    width: 60vw;
+    width: 75vw;
   }
 
   .numbers {
     margin: 0 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .table {
+    width: 65vw;
   }
 }
 
 @media (min-width: 1000px) {
   .table {
-    width: 50vw;
-  }
-
-  .numbers {
-    margin: 0 10px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .leaderboard-page {
-    font-size: 24px;
+    width: 55vw;
   }
 
   .scorecard {
     padding: 30px 60px;
   }
+}
 
+@media (min-width: 1200px) {
+  
+
+  .table {
+    width: 45vw;
+  }
+}
+
+@media (min-width: 1600px) {
   .table {
     width: 40vw;
   }
-
-  .numbers {
-    margin: 0 10px;
-  }
 }
+

@@ -55,7 +55,7 @@ function Navbar() {
                         <div>Leaderboard</div>
                         </div>
                     </Link>
-                    <Link href="/profile">
+                    <Link href="/welcome">
                         <div className="menu-item" onClick={() => setIsOpen(false)}>
                         <AccountCircleTwoToneIcon />
                         <div>Profile</div>

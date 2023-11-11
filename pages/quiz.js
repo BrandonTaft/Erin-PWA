@@ -40,7 +40,7 @@ function StartQuiz() {
       {!started && !quizFinished &&
         <div className="middle-quiz">
           <div className="quiz-img">
-            <Image src={logo} alt="Logo" />
+            <Image src={logo} alt="are you smarter than erin logo" />
           </div>
           {questions.length > 0 ? (
             <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>

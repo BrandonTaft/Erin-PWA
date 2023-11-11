@@ -1,7 +1,7 @@
 {
-  "name": "quizwiz",
+  "name": "areyousmarterthanerin",
   "version": "1.0.0",
-  "description": "Hottest trivia app on the scene",
+  "description": "Hottest insurance tracking trivia app on the scene",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",

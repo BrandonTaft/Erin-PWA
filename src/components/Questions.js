@@ -69,11 +69,11 @@ export function Questions({ started, setStarted, setQuizFinished, questions, set
                 </div>
 
                 {correctAnswer != null ? (
-                    <div className="button-group">
-                        <button onClick={() => checkAnswer(0)} className="q-btn">{answers[0]}</button>
-                        <button onClick={() => checkAnswer(1)} className="q-btn">{answers[1]}</button>
-                        <button onClick={() => checkAnswer(2)} className="q-btn">{answers[2]}</button>
-                        <button onClick={() => checkAnswer(3)} className="q-btn">{answers[3]}</button>
+                    <div className="div-group">
+                        <div onClick={() => checkAnswer(0)} className="q-btn">{answers[0]}</div>
+                        <div onClick={() => checkAnswer(1)} className="q-btn">{answers[1]}</div>
+                        <div onClick={() => checkAnswer(2)} className="q-btn">{answers[2]}</div>
+                        <div onClick={() => checkAnswer(3)} className="q-btn">{answers[3]}</div>
                     </div>
                 ) : null}
             </div>
