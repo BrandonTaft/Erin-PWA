@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import erin from '../public/images/erin.svg'
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import FaceIcon from '@mui/icons-material/Face';
@@ -15,18 +15,19 @@ import AttractionsIcon from '@mui/icons-material/Attractions';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import InfiniteScroll from "../src/components/InfiniteScroll";
+import { SideBoard } from '../src/components/SideBoard';
 
 function SelectionPage() {
     const [leaderboard, setLeaderboard] = useState([]);
     const [error, setError] = useState(false)
-
+   
     useEffect(() => {
         fetch('https://polar-dawn-36653.herokuapp.com/api/highscore')
             .then(response => response.json())
             .then(result => {
                 setLeaderboard(result)
             });
-    })
+    },[])
 
     return (
         <>
@@ -223,25 +224,15 @@ function SelectionPage() {
                 <Image
                     alt="cartoon erin"
                     src={erin}
-                    width={360}
-                    height={360}
+                    width={420}
+                    height={420}
                     priority={true}
                 />
             </div>
-            <div className='leaders'>
-
-                <h1>
-                    TOP 10
-                </h1>
-                {leaderboard.slice(0, 10).map((score, index) => (
-                    <li className='side-board' key={index}>
-                        <div className='home-place'>{index + 1}.</div>
-                        <div className="home-name">{score.username}</div>
-                        <div className="home-score">{score.score}</div>
-                    </li>
-                )
-                )}
-            </div>
+            <SideBoard 
+                leaderboard={leaderboard}
+                setLeaderboard={setLeaderboard}
+            />
         </>
     )
 }

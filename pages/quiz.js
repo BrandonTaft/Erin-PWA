@@ -1,20 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/router';
+import { Timer } from "../src/components/Timer";
 import Image from 'next/legacy/image';
 import logo from '../public/images/logo.svg';
 import dynamic from 'next/dynamic';
+import { Questions } from "../src/components/Questions";
 
 const Finished = dynamic(() =>
   import('../src/components/Finished').then((mod) => mod.Finished)
 );
-const Questions = dynamic(() =>
-  import('../src/components/Questions').then((mod) => mod.Questions)
-);
+
 
 function StartQuiz() {
   const router = useRouter()
   const { cat } = router.query
-  const [started, setStarted] = useState(false)
+  // const timerRef = useRef(0)
+  const [started, setStarted] = useState(false);
+  // const [time, setTime] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [quizFinished, setQuizFinished] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
@@ -25,6 +27,23 @@ function StartQuiz() {
     getQuestions(cat);
   }, []);
 
+ 
+  useEffect(() => {
+    if (quizFinished) {
+     
+      fetch("https://polar-dawn-36653.herokuapp.com/api/submit", {
+        method: 'POST',
+        origin: '*',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ "username": wizardName, "score": finalScore * 166 })
+      })
+        .then(response => response.json())
+        .catch(error => console.log('error', error));
+    }
+  }, [quizFinished])
+
   function getQuestions(cat) {
     setWizardName(localStorage.getItem('name'))
     fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
@@ -34,6 +53,16 @@ function StartQuiz() {
       })
       .catch(error => console.log("error", error));
   }
+
+  // const trackTime = () => {
+  //   let intervalId
+  //       if (started) {
+  //           intervalId = setInterval(() => setTime(time + 1), 10);
+  //       }
+        
+       
+  //       return () => clearInterval(intervalId);
+  // }
 
   return (
     <div className="quiz-page">
@@ -47,21 +76,26 @@ function StartQuiz() {
           ) : <button className="quiz-start-btn">START QUIZ</button>}
         </div>
       }
-      
+
       {started &&
-        <Questions 
-          started={started}
-          setStarted={setStarted}
-          questions={questions}
-          setQuizFinished={setQuizFinished}
-          setFinalScore={setFinalScore} wizardName={wizardName}
-        />
-      }
-      
-      {quizFinished &&
-        <Finished finalScore={finalScore} />
+        <div className="question-section">
+          <Questions
+            started={started}
+            setStarted={setStarted}
+            questions={questions}
+            setQuizFinished={setQuizFinished}
+            setFinalScore={setFinalScore}
+          />
+         {/* <Timer track={trackTime} setTime={setTime} time={time} started={started}quizFinished={quizFinished} wizardName={wizardName} finalScore={finalScore} /> */}
+        </div>
       }
 
+      {quizFinished &&
+        <Finished
+          finalScore={finalScore * 166}
+          wizardName={wizardName}
+        />
+      }
     </div>
   );
 }

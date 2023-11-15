@@ -7,7 +7,7 @@ import globe from '../public/images/globe.svg';
 import Link from 'next/link';
 
 function Profile() {
-    const [myScore, setMyScore] = useState(null);
+    const [myScore, setMyScore] = useState(0);
     const [wizardName, setwizardName] = useState("");
     const [message, setMessage] = useState("");
     const [deleteUser, setDeleteUser] = useState(false);
@@ -15,9 +15,12 @@ function Profile() {
 
     useEffect(() => {
         let name = localStorage.getItem('name')
-        if (name != null) {
+        let score = localStorage.getItem('high_score')
+        if (name !== null) {
             setwizardName(name)
-            getuserscore(name)
+            if (score !== null) {
+                setMyScore(score)
+            }
         } else {
             if (!router.isReady) return;
             const query = router.query;
@@ -48,7 +51,7 @@ function Profile() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({userName: wizardName})
+            body: JSON.stringify({ userName: wizardName })
         }).then(response => response.json())
             .then(result => {
                 if (result.success == true) {
@@ -62,35 +65,35 @@ function Profile() {
 
     function deleteMe() {
         handleDeleteUser()
-        setDeleteUser(false)   
+        setDeleteUser(false)
     }
     return (
         <div className="profile-page">
             {message &&
-                    <div className="message">
-                        <div>
-                            {message}
-                        </div>
-                        <Image src={erin} alt="cartoon erin" layout='responsive' priority />
-                        <button className="log-btn message-btn" onClick={() => setMessage("")}>
-                            Ok
-                        </button>
+                <div className="message">
+                    <div>
+                        {message}
                     </div>
-                }
-             {deleteUser &&
-                    <div className="message">
-                        <div>
-                            Are you sure you want to delete your profile?
-                        </div>
-                        <Image src={erin} alt="cartoon erin" layout='responsive' priority />
-                        <button className="log-btn err message-btn" onClick={deleteMe}>
-                            Yes
-                        </button>
-                        <button className="log-btn message-btn" onClick={() => setDeleteUser(false)}>
-                            No
-                        </button>
+                    <Image src={erin} alt="cartoon erin" layout='responsive' />
+                    <button className="log-btn message-btn" onClick={() => setMessage("")}>
+                        Ok
+                    </button>
+                </div>
+            }
+            {deleteUser &&
+                <div className="message">
+                    <div>
+                        Are you sure you want to delete your profile?
                     </div>
-                }
+                    <Image src={erin} alt="cartoon erin" layout='responsive' />
+                    <button className="log-btn err message-btn" onClick={deleteMe}>
+                        Yes
+                    </button>
+                    <button className="log-btn message-btn" onClick={() => setDeleteUser(false)}>
+                        No
+                    </button>
+                </div>
+            }
             <div style={{ textAlign: 'center' }}>
                 <div className={`${roboto.className} ${'welcome'}`} >
                     <div className='profile-name'>
@@ -101,11 +104,11 @@ function Profile() {
                     </div>
                     <div className='divider'></div>
                     <span className={inter.className}>
-                        Welcome to the hottest trivia app in the world. Rack up as many points
+                        Welcome to the hottest insurance tracking trivia app in the world. Rack up as many points
                         as you can to place on the leaderboard.
                     </span>
                 </div>
-                
+
                 <Link className="profile-btn z-2" href="/home">
                     <span className={inter.className}>READY</span>
                 </Link>
@@ -123,7 +126,7 @@ function Profile() {
                     objectFit='scale-down'
                     priority={true}
                 />
-                <Image src={globe} alt="cartoon draing of earth" style={{ zIndex: -1 }} />
+                <Image src={globe} alt="cartoon draing of earth" style={{ zIndex: -1 }} priority={true} />
             </div>
         </div>
     )

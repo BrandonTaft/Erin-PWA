@@ -27,7 +27,7 @@ function Background() {
                         "value": ["#EAECEC", "#FFDD43", "#bb86fc"]
                     },
                     shape: {
-                        type:  "star",
+                        type: "star",
                     },
                     opacity: {
                         value: .9,
@@ -47,7 +47,7 @@ function Background() {
                         speed: {
                             min: .1,
                             max: .6
-                          },
+                        },
                         direction: "bottom",
                         random: true,
                         straight: true,
@@ -55,34 +55,34 @@ function Background() {
                     },
                     rotate: {
                         value: {
-                          min: 0,
-                          max: 360
+                            min: 0,
+                            max: 360
                         },
                         direction: "random",
                         move: true,
                         animation: {
-                          enable: true,
-                          speed: {
-                          min: 8,
-                          max: 12
+                            enable: true,
+                            speed: {
+                                min: 8,
+                                max: 12
+                            }
                         }
-                        }
-                      },
-                      roll: {
+                    },
+                    roll: {
                         darken: {
-                          enable: true,
-                          value: 30
+                            enable: true,
+                            value: 30
                         },
                         enlighten: {
-                          enable: true,
-                          value: 30
+                            enable: true,
+                            value: 30
                         },
                         enable: true,
                         speed: {
-                          min: 3,
-                          max: 17
+                            min: 3,
+                            max: 17
                         }
-                      },
+                    },
                 },
                 retina_detect: true
             }}
