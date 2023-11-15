@@ -693,10 +693,28 @@ body {
 }
 
 .stopwatch {
+  width: fit-content;
+  margin: auto;
+  padding: .25em;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4em;
+  font-size: 3em;
+  background-color: #005991;
+  border-radius: 22px;
+  box-shadow:
+    4px 4px 12px #000,
+    0 -0.25rem 1.5rem #005991 inset,
+    0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
+    0 0.25rem 0.5rem 0 #005991 inset;
+}
+
+.stopwatch div {
+  width: 1.33em;
+}
+
+.stopwatch span {
+  padding-bottom: .1em;
 }
 
 .question-container {

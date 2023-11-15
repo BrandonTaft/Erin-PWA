@@ -1,11 +1,15 @@
 import { useState, useEffect, useRef } from "react";
+import { Timer } from "./Timer";
 import { htmlDecode } from './Utils';
 
 export function Questions({
+    wizardName,
     started,
     setStarted,
+    quizFinished,
     setQuizFinished,
     questions,
+    finalScore,
     setFinalScore
 }) {
     const scoreRef = useRef(0);
@@ -24,7 +28,6 @@ export function Questions({
     async function playquiz() {
         if (counterRef.current === questions.length) {
             setFinalScore(scoreRef.current)
-            setStarted(false)
             setQuizFinished(true)
         } else {
             currentAnswers = [];
@@ -53,7 +56,7 @@ export function Questions({
         counterRef.current = counterRef.current += 1;
         playquiz();
     }
-    
+
     return (
         <>
             <div className="question-container">
@@ -68,6 +71,14 @@ export function Questions({
                         <div onClick={() => checkAnswer(3)} className="q-btn">{answers[3]}</div>
                     </div>
                 ) : null}
+                <Timer
+                    started={started}
+                    setStarted={setStarted}
+                    quizFinished={quizFinished}
+                    wizardName={wizardName}
+                    finalScore={finalScore}
+                    setFinalScore={setFinalScore}
+                />
             </div>
         </>
     )

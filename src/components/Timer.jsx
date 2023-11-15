@@ -1,29 +1,52 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
-export function Timer({ started, quizFinished, wizardName, finalScore, time, setTime }) {
-    //const [time, setTime] = useState(0);
+export function Timer({
+    started,
+    setStarted,
+    quizFinished,
+    wizardName,
+    finalScore,
+    setFinalScore
+}) {
+
+    const [time, setTime] = useState(0);
+
     useEffect(() => {
         let intervalId
         if (started) {
             intervalId = setInterval(() => setTime(time + 1), 10);
         }
-        
-        console.log(quizFinished, "fin")
         return () => clearInterval(intervalId);
     }, [started, time]);
-    
+
+    useEffect(() => {
+        if (quizFinished) {
+            setStarted(false)
+            setFinalScore(Math.round((finalScore * 166) - (time / 50)))
+            fetch("https://polar-dawn-36653.herokuapp.com/api/submit", {
+                method: 'POST',
+                origin: '*',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "username": wizardName, "score": finalScore })
+            })
+                .then(response => response.json())
+                .catch(error => console.log('error', error));
+        }
+    }, [quizFinished])
+
     const minutes = Math.floor((time % 360000) / 6000);
-
-    // Seconds calculation
     const seconds = Math.floor((time % 6000) / 100);
-
-    // Milliseconds calculation
     const milliseconds = time % 100;
+
     return (
         <div className="stopwatch">
-            {minutes.toString().padStart(2, "0")}:
-            {seconds.toString().padStart(2, "0")}:
-            {milliseconds.toString().padStart(2, "0")}
+           <div>{minutes.toString().padStart(2, "0")}</div>
+           <span>:</span>
+            <div>{seconds.toString().padStart(2, "0")}</div>
+            <span>:</span>
+            <div className="seconds">{milliseconds.toString().padStart(2, "0")}</div>
         </div>
     )
 }

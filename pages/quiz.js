@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/router';
-import { Timer } from "../src/components/Timer";
 import Image from 'next/legacy/image';
 import logo from '../public/images/logo.svg';
 import dynamic from 'next/dynamic';
@@ -10,39 +9,18 @@ const Finished = dynamic(() =>
   import('../src/components/Finished').then((mod) => mod.Finished)
 );
 
-
-function StartQuiz() {
+function Quiz() {
   const router = useRouter()
   const { cat } = router.query
-  // const timerRef = useRef(0)
+  const [wizardName, setWizardName] = useState("");
   const [started, setStarted] = useState(false);
-  // const [time, setTime] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [quizFinished, setQuizFinished] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
-  const [wizardName, setWizardName] = useState("");
-
 
   useEffect(() => {
     getQuestions(cat);
   }, []);
-
- 
-  useEffect(() => {
-    if (quizFinished) {
-     
-      fetch("https://polar-dawn-36653.herokuapp.com/api/submit", {
-        method: 'POST',
-        origin: '*',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ "username": wizardName, "score": finalScore * 166 })
-      })
-        .then(response => response.json())
-        .catch(error => console.log('error', error));
-    }
-  }, [quizFinished])
 
   function getQuestions(cat) {
     setWizardName(localStorage.getItem('name'))
@@ -53,16 +31,6 @@ function StartQuiz() {
       })
       .catch(error => console.log("error", error));
   }
-
-  // const trackTime = () => {
-  //   let intervalId
-  //       if (started) {
-  //           intervalId = setInterval(() => setTime(time + 1), 10);
-  //       }
-        
-       
-  //       return () => clearInterval(intervalId);
-  // }
 
   return (
     <div className="quiz-page">
@@ -80,19 +48,21 @@ function StartQuiz() {
       {started &&
         <div className="question-section">
           <Questions
+            wizardName={wizardName}
             started={started}
             setStarted={setStarted}
             questions={questions}
+            quizFinished={quizFinished}
             setQuizFinished={setQuizFinished}
+            finalScore={finalScore}
             setFinalScore={setFinalScore}
           />
-         {/* <Timer track={trackTime} setTime={setTime} time={time} started={started}quizFinished={quizFinished} wizardName={wizardName} finalScore={finalScore} /> */}
         </div>
       }
 
       {quizFinished &&
         <Finished
-          finalScore={finalScore * 166}
+          finalScore={finalScore}
           wizardName={wizardName}
         />
       }
@@ -100,4 +70,4 @@ function StartQuiz() {
   );
 }
 
-export default StartQuiz;
+export default Quiz;
