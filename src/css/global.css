@@ -70,7 +70,7 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out 0.4s;
   text-decoration: none;
-  padding: 1px;
+  padding: 5px;
   margin-top: 1em;
   align-items: center;
   justify-content: space-evenly;
