@@ -2,6 +2,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { useRouter } from 'next/router';
 import useOnOutsideClick from "./useOnOutsideClick";
 import Link from 'next/link';
+import CancelIcon from '@mui/icons-material/Cancel';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import EmojiEventsTwoToneIcon from '@mui/icons-material/EmojiEventsTwoTone';
 import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
@@ -39,10 +40,12 @@ function Navbar() {
                 <div className={isOpen ? "patty active ignore" : "patty"}></div>
                 <div className={isOpen ? "patty active ignore" : "patty"}></div>
                 <div className={isOpen ? "patty active ignore" : "patty"}></div>
-                {/* <MenuIcon className="ignore" onClick={() => setIsOpen(!isOpen)}/> */}
             </div>
             {isOpen &&
                 <div className="menu" ref={menuRef}>
+                    <div className="menu-item cancel" onClick={() => setIsOpen(!isOpen)}>
+                        <CancelIcon />
+                    </div>
                     <Link href="/home" >
                         <div className="menu-item" onClick={() => setIsOpen(false)}>
                         <HomeTwoToneIcon />
