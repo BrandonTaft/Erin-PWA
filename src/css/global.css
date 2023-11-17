@@ -792,10 +792,6 @@ body {
   width: 200px;
   height: 300px;
    margin: 0 auto;
- /* background-image: url('../../public/images/trophy.svg'); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }
 
 .final-btn {
@@ -892,10 +888,17 @@ margin-bottom: 0;
     padding: 12px 20px;
   }
 
-  /* .finished-img {
+  .done-container h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+  }
+
+  .finished-img {
+    height: unset;
     width: 25vw;
     margin: 0 auto;
-  } */
+  }
 }
 
 @media (min-width: 1200px) {
@@ -911,10 +914,10 @@ margin-bottom: 0;
     width: 50vw;
   }
 
-  /* .finished-img {
+  .finished-img {
     width: 20vw;
     margin: 0 auto;
-  } */
+  }
 }
 
 @media (min-width: 1400px) {
