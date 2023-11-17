@@ -60,7 +60,16 @@ export function Questions({
     return (
         <>
             <div className="question-container">
+            <Timer
+                    started={started}
+                    setStarted={setStarted}
+                    quizFinished={quizFinished}
+                    wizardName={wizardName}
+                    finalScore={finalScore}
+                    setFinalScore={setFinalScore}
+                />
                 <div className="question">
+               
                     {currentQuestion}
                 </div>
                 {correctAnswer != null ? (
@@ -71,14 +80,6 @@ export function Questions({
                         <div onClick={() => checkAnswer(3)} className="q-btn">{answers[3]}</div>
                     </div>
                 ) : null}
-                <Timer
-                    started={started}
-                    setStarted={setStarted}
-                    quizFinished={quizFinished}
-                    wizardName={wizardName}
-                    finalScore={finalScore}
-                    setFinalScore={setFinalScore}
-                />
             </div>
         </>
     )
