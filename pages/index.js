@@ -83,7 +83,7 @@ function Login() {
             {/* <div className="" onClick={handleGuestLogin}>
                         Login as guest
                     </div> */}
-            <div className="icon-container">
+            {/* <div className="icon-container">
                 <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
                     <Image src='/icons/google.webp' alt="Login With Google" height={40} width={40} />
                     <div className=''>
@@ -96,7 +96,7 @@ function Login() {
                         Login With Facebook
                     </div>
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 };

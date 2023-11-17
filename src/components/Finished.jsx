@@ -18,7 +18,7 @@ export function Finished({ finalScore, wizardName }) {
         LEADERBOARD
       </Link>
       <div className="finished-img">
-        <Image src={trophy} alt="are you smarter than erin logo" priority={true} />
+        <Image src={trophy} alt="are you smarter than erin logo" priority />
       </div>
 
     </div>
