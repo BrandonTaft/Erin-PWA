@@ -21,6 +21,7 @@ export function Timer({
 
     useEffect(() => {
         if (quizFinished) {
+            console.log("FINAL", finalScore)
             setStarted(false)
             setFinalScore(Math.round((finalScore * 166) - (time / 50)))
             fetch("https://polar-dawn-36653.herokuapp.com/api/submit", {
@@ -29,7 +30,7 @@ export function Timer({
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "username": wizardName, "score": finalScore })
+                body: JSON.stringify({ "username": wizardName, "score": Math.round((finalScore * 166) - (time / 50))})
             })
                 .then(response => response.json())
                 .catch(error => console.log('error', error));
