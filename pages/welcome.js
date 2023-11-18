@@ -98,7 +98,7 @@ function Profile() {
                     </button>
                 </div>
             }
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center', marginTop:'1em' }}>
                 <div className={`${roboto.className} ${'welcome'}`} >
                     <div className='profile-name'>
                         HELLO {wizardName.toUpperCase()}
@@ -132,7 +132,7 @@ function Profile() {
                     objectFit='scale-down'
                    
                 />
-                <Image src={globe} alt="cartoon draing of earth" style={{ zIndex: -1 }} priority />
+                <Image src={globe} alt="cartoon drawing of earth" style={{ zIndex: -1 }} priority />
             </div>
         </div>
     )
