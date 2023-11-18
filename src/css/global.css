@@ -353,7 +353,7 @@ body {
   position: relative;
   margin: 0 auto;
   width: 90vw;
-  margin: 2em auto 0;
+  margin: 2em auto auto;
 }
 
 .floating {
@@ -386,7 +386,7 @@ body {
 
   .fill {
     width: 65vw;
-    margin: 1em auto;
+    margin: 1em auto auto;
   }
 }
 
@@ -422,7 +422,7 @@ body {
 
   .fill {
     width: 40vh;
-    margin: 1em auto 0;
+    margin: 1em auto auto;
   }
 }
 

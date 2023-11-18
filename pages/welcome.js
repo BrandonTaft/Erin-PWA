@@ -98,7 +98,7 @@ function Profile() {
                     </button>
                 </div>
             }
-            <div style={{ textAlign: 'center', marginTop:'1em' }}>
+            <div style={{ textAlign: 'center', marginTop:'auto' }}>
                 <div className={`${roboto.className} ${'welcome'}`} >
                     <div className='profile-name'>
                         HELLO {wizardName.toUpperCase()}
