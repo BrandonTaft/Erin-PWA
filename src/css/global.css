@@ -178,6 +178,8 @@ body {
 
 /****************** NAVBAR ********************/
 .iconBar {
+  position: relative;
+  z-index: 1111;
   width: fit-content;
   margin-top: 2%;
   margin-left: 2%;
@@ -715,6 +717,11 @@ body {
 }
 
 .question-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -974,6 +981,10 @@ margin-bottom: 0;
   .question-container {
     text-align: center;
     width: 60vw;
+  }
+
+  .stopwatch {
+    font-size: 26px;
   }
 }
 

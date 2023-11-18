@@ -10,11 +10,12 @@ const Finished = dynamic(() =>
 );
 
 function Quiz() {
-  const router = useRouter()
-  const { cat } = router.query
+  const questions = useRef([]);
+  const router = useRouter();
+  const { cat } = router.query;
   const [wizardName, setWizardName] = useState("");
   const [started, setStarted] = useState(false);
-  const [questions, setQuestions] = useState([]);
+  // const [questions, setQuestions] = useState([]);
   const [quizFinished, setQuizFinished] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
 
@@ -23,11 +24,13 @@ function Quiz() {
   }, []);
 
   function getQuestions(cat) {
+    console.log("TEST")
     setWizardName(localStorage.getItem('name'))
     fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
       .then(response => response.json())
       .then(result => {
-        setQuestions([...result]);
+        // setQuestions([...result]);
+       questions.current = [...result]
       })
       .catch(error => console.log("error", error));
   }
@@ -39,9 +42,10 @@ function Quiz() {
           <div className="quiz-img">
             <Image src={logo} alt="are you smarter than erin logo" />
           </div>
-          {questions.length > 0 ? (
+          {/* {questions.current.length > 0 ? (
             <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>
-          ) : <button className="quiz-start-btn">START QUIZ</button>}
+          ) : <button className="quiz-start-btn">START UIZ</button>} */}
+          <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>
         </div>
       }
 
@@ -51,7 +55,7 @@ function Quiz() {
             wizardName={wizardName}
             started={started}
             setStarted={setStarted}
-            questions={questions}
+            questions={questions.current}
             quizFinished={quizFinished}
             setQuizFinished={setQuizFinished}
             finalScore={finalScore}
