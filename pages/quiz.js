@@ -3,11 +3,17 @@ import { useRouter } from 'next/router';
 import Image from 'next/legacy/image';
 import logo from '../public/images/logo.svg';
 import dynamic from 'next/dynamic';
-import { Questions } from "../src/components/Questions";
+
+const Questions = dynamic(() =>
+  import('../src/components/Questions'), {
+    ssr: false,
+  });
 
 const Finished = dynamic(() =>
-  import('../src/components/Finished').then((mod) => mod.Finished)
-);
+  import('../src/components/Finished'), {
+    loading:()=><p>…Loading</p>,
+    ssr: false,
+  });
 
 function Quiz() {
   const questions = useRef([]);
@@ -15,7 +21,6 @@ function Quiz() {
   const { cat } = router.query;
   const [wizardName, setWizardName] = useState("");
   const [started, setStarted] = useState(false);
-  // const [questions, setQuestions] = useState([]);
   const [quizFinished, setQuizFinished] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
 
@@ -24,12 +29,10 @@ function Quiz() {
   }, []);
 
   function getQuestions(cat) {
-    console.log("TEST")
     setWizardName(localStorage.getItem('name'))
     fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
       .then(response => response.json())
       .then(result => {
-        // setQuestions([...result]);
        questions.current = [...result]
       })
       .catch(error => console.log("error", error));
@@ -42,9 +45,6 @@ function Quiz() {
           <div className="quiz-img">
             <Image src={logo} alt="are you smarter than erin logo" />
           </div>
-          {/* {questions.current.length > 0 ? (
-            <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>
-          ) : <button className="quiz-start-btn">START UIZ</button>} */}
           <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>
         </div>
       }

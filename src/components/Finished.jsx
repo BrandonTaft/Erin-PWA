@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/legacy/image';
 import trophy from '../../public/images/trophy.svg';
 
-export function Finished({ finalScore, wizardName }) {
+ function Finished({ finalScore, wizardName }) {
   return (
 
     <div className="done-container">
@@ -24,3 +24,5 @@ export function Finished({ finalScore, wizardName }) {
     </div>
   )
 }
+
+export default Finished;

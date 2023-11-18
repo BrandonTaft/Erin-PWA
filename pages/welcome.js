@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Image from 'next/legacy/image';
-import { inter, roboto } from '../src/components/Layout'
+import { inter, roboto } from '../src/components/Layout';
 import erin from '../public/images/erin.svg'
 import globe from '../public/images/globe.svg';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import PersonRemoveRoundedIcon from '@mui/icons-material/PersonRemoveRounded';
+import PlayCircleFilledRoundedIcon from '@mui/icons-material/PlayCircleFilledRounded';
+
+const Alert = dynamic(() =>
+    import('../src/components/Alert'), {
+    ssr: false,
+});
+
 
 function Profile() {
     const [myScore, setMyScore] = useState(0);
@@ -51,7 +60,7 @@ function Profile() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ userName: wizardName })
+            body: JSON.stringify({ username: wizardName })
         }).then(response => response.json())
             .then(result => {
                 if (result.success == true) {
@@ -70,16 +79,11 @@ function Profile() {
     return (
         <div className="profile-page">
             {message &&
-                <div className="message">
-                    <div>
-                        {message}
-                    </div>
-                    <Image src={erin} alt="cartoon erin" layout='responsive' />
-                    <button className="log-btn message-btn" onClick={() => setMessage("")}>
-                        Ok
-                    </button>
-                </div>
-            }
+                    <Alert
+                        message={message}
+                        setMessage={setMessage}
+                    />
+                }
             {deleteUser &&
                 <div className="message">
                     <div>
@@ -108,15 +112,17 @@ function Profile() {
                         as you can to place on the leaderboard.
                     </span>
                 </div>
-
+            <div className='pro-btn-container'>
                 <Link className="profile-btn z-2" href="/home">
-                    <span className={inter.className}>READY</span>
+                    <PlayCircleFilledRoundedIcon />
+                    <span className={inter.className}>PLAY</span>
                 </Link>
 
                 <div className="profile-btn z-2" onClick={() => setDeleteUser(true)}>
+                    <PersonRemoveRoundedIcon />
                     <span className={inter.className}>DELETE</span>
                 </div>
-
+                </div>
             </div>
             <div className="fill z-2">
                 <Image
@@ -124,9 +130,9 @@ function Profile() {
                     src={erin}
                     layout='fill'
                     objectFit='scale-down'
-                    priority={true}
+                   
                 />
-                <Image src={globe} alt="cartoon draing of earth" style={{ zIndex: -1 }} priority={true} />
+                <Image src={globe} alt="cartoon draing of earth" style={{ zIndex: -1 }} priority />
             </div>
         </div>
     )

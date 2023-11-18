@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 import logo from '../public/images/logo.svg';
-import erin from '../public/images/erin.svg';
+import dynamic from 'next/dynamic';
 
-function Register(props) {
+const Alert = dynamic(() =>
+    import('../src/components/Alert'), {
+    ssr: false,
+});
+
+function Register() {
+    const router = useRouter();
     const [user, setUser] = useState({});
     const [message, setMessage] = useState('');
-    const router = useRouter();
+
     const handleRegisterChange = (e) => {
         setUser({
             ...user,
@@ -41,23 +47,18 @@ function Register(props) {
 
     return (
         <div className='login'>
-                <div className="erin">
-                    <Image src={logo} alt="are you smarter than erin Logo" priority={true}/>
-                </div>
+            <div className="erin">
+                <Image src={logo} alt="are you smarter than erin Logo" priority={true} />
+            </div>
             <h2>REGISTER</h2>
             <div className="login-Container">
                 <input className="credentials" type="text" name="username" onChange={handleRegisterChange} placeholder="User name" />
                 <input className="credentials" type="password" name="password" onChange={handleRegisterChange} placeholder="Password" />
                 {message &&
-                    <div className="message">
-                        <div>
-                            {message}
-                        </div>
-                        <Image src={erin} alt='cartoon Erin' layout='responsive'/>
-                        <button className="log-btn message-btn" onClick={() => setMessage("")}>
-                            Ok
-                        </button>
-                    </div>
+                    <Alert
+                        message={message}
+                        setMessage={setMessage}
+                    />
                 }
                 <div className="log-btn reg-btn" onClick={handleRegisterButton}>
                     Register

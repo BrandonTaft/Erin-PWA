@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function Timer({
+ function Timer({
     started,
     setStarted,
     quizFinished,
@@ -21,7 +21,6 @@ export function Timer({
 
     useEffect(() => {
         if (quizFinished) {
-            console.log("FINAL", finalScore)
             setStarted(false)
             setFinalScore(Math.round((finalScore * 166) - (time / 50)))
             fetch("https://polar-dawn-36653.herokuapp.com/api/submit", {
@@ -51,3 +50,5 @@ export function Timer({
         </div>
     )
 }
+
+export default Timer

@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { Timer } from "./Timer";
+import Timer from "./Timer";
 import { htmlDecode } from './Utils';
 
-export function Questions({
+ function Questions({
     wizardName,
     started,
     setStarted,
@@ -84,3 +84,5 @@ export function Questions({
         </>
     )
 }
+
+export default Questions
