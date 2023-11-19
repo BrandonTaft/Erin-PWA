@@ -6,7 +6,7 @@ import erin from '../public/images/erin.svg'
 import globe from '../public/images/globe.svg';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import PersonRemoveRoundedIcon from '@mui/icons-material/PersonRemoveRounded';
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import PlayCircleFilledRoundedIcon from '@mui/icons-material/PlayCircleFilledRounded';
 
 const Alert = dynamic(() =>
@@ -119,7 +119,7 @@ function Profile() {
                 </Link>
 
                 <div className="profile-btn z-2" onClick={() => setDeleteUser(true)}>
-                    <PersonRemoveRoundedIcon />
+                    <PersonRoundedIcon />
                     <span className={inter.className}>DELETE</span>
                 </div>
                 </div>

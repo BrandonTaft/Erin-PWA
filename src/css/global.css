@@ -18,9 +18,10 @@ body {
 
 /****************** LOGIN AND REGISTER *******************/
 .login {
-  margin: auto;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
   text-align: center;
   align-items: center;
 }
@@ -326,7 +327,7 @@ body {
 
 .profile-btn {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   cursor: pointer;
  align-items: center;
   margin: 0 2em;
@@ -340,12 +341,12 @@ body {
     0 -0.25rem 1.5rem #005991 inset,
     0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
     0 0.25rem 0.5rem 0 #005991 inset;
-  min-width: 25vw;
-  padding: 5px;
+  min-width: 30vw;
+  padding: 5px 8px;
 }
 
 .profile-btn svg {
-  font-size: 24px;
+  font-size: 2em;
 }
 
 .fill {
@@ -412,7 +413,7 @@ body {
 
 @media (min-width: 400px) and (max-height: 800px) {
   .welcome {
-    margin: .5em 10px;
+    margin: .75em 10px;
     font-size: 20px;
   }
 
@@ -442,9 +443,7 @@ body {
     font-size: 22px
   }
 
-  .profile-btn svg {
-    font-size: 30px;
-  }
+  
 
 }
 
@@ -479,6 +478,13 @@ body {
 
   .fill {
     width: 40vh;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 801px) {
+  .profile-btn {
+    min-width: 15vw;
+    font-size: 24px
   }
 }
 
@@ -882,7 +888,8 @@ body {
 
 .done-container {
   margin: auto;
-  padding: 6%;
+  padding: 5%;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -918,7 +925,7 @@ body {
 margin-bottom: 0;
 }
 
-.done-container h2 {
+.done-container h1 {
   color: #fff;
   text-align: center;
 }
@@ -959,7 +966,7 @@ margin-bottom: 0;
 
   .done-container {
     margin: auto;
-    padding: 0 4%;
+    padding: 0 8%;
   }
 
   .final-btn {

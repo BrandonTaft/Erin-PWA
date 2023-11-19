@@ -7,12 +7,12 @@ import trophy from '../../public/images/trophy.svg';
 
     <div className="done-container">
 
-      <h2 className='done-name'>
-        {wizardName.toUpperCase()} YOUR SCORE IS
-      </h2>
-      <h2 className='done-score-container'>
+      <h1 className='done-name'>
+        YOUR SCORE IS
+      </h1>
+      <h1 className='done-score-container'>
         <span className="done-score">{finalScore}</span>
-      </h2>
+      </h1>
 
       <Link className="final-btn" href='/leaderboard'>
         LEADERBOARD
