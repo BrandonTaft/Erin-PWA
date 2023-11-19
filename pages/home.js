@@ -46,7 +46,7 @@ function SelectionPage() {
                             query: { cat: 'ERIN' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
                             <div>ERIN</div>
                             <FaceIcon />
                         </div>
@@ -59,7 +59,7 @@ function SelectionPage() {
                             query: { cat: '11' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>FLOOD</div>
                             <WaterIcon />
@@ -74,7 +74,7 @@ function SelectionPage() {
                             query: { cat: '22' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>WIND</div>
                             <AirIcon />
@@ -89,7 +89,7 @@ function SelectionPage() {
                             query: { cat: '12' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>CONDO</div>
                             <div>MASTER</div>
@@ -105,7 +105,7 @@ function SelectionPage() {
                             query: { cat: '29' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>VERIFY</div>
                             <ContactEmergencyIcon />
@@ -120,7 +120,7 @@ function SelectionPage() {
                             query: { cat: '20' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>LPI</div>
                             <WarningIcon />
@@ -135,7 +135,7 @@ function SelectionPage() {
                             query: { cat: '17' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>HAZARD</div>
                             <LocalFireDepartmentIcon />
@@ -149,7 +149,7 @@ function SelectionPage() {
                             query: { cat: '27' },
                         }}
                     >
-                        <div className="item-icon m-auto">
+                        <div className="item-icon">
 
                             <div>PAYMENTS</div>
                             <CreditCardIcon />
