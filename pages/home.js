@@ -158,6 +158,7 @@ function SelectionPage() {
                     </Link>
                 </div>
             </InfiniteScroll>
+            <div className='hole'></div>
             <div className='leader-img'>
                 <Image
                     alt="cartoon erin"

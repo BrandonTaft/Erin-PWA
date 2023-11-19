@@ -32,7 +32,6 @@ function InfiniteScroll(props) {
                 <div>{props.children}</div>
                 <div>{props.children}</div>
             </div>
-            <div className='hole'></div>
         </div>
     );
 };
