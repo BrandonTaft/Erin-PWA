@@ -74,8 +74,8 @@ body {
   display: flex;
   color: white;
   border-radius: 10px;
-  font-size: 18px;
-  width: 14em;
+  font-size: 16px;
+  width: 13em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out 0.4s;
   text-decoration: none;
@@ -151,7 +151,7 @@ body {
   }
 
   .passport-btn {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -165,7 +165,7 @@ body {
   }
 
   .passport-btn {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -179,7 +179,7 @@ body {
   }
 
   .passport-btn {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -279,12 +279,9 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  flex-grow: 1;
-  justify-content: center;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 .welcome {
