@@ -13,9 +13,9 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="app" />
         <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
       </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }

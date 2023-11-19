@@ -6,14 +6,14 @@ import dynamic from 'next/dynamic';
 
 const Questions = dynamic(() =>
   import('../src/components/Questions'), {
-    ssr: false,
-  });
+  ssr: false,
+});
 
 const Finished = dynamic(() =>
   import('../src/components/Finished'), {
-    loading:()=><p>…Loading</p>,
-    ssr: false,
-  });
+  loading: () => <p>…Loading</p>,
+  ssr: false,
+});
 
 function Quiz() {
   const questions = useRef([]);
@@ -25,7 +25,7 @@ function Quiz() {
   const [finalScore, setFinalScore] = useState(0);
 
   useEffect(() => {
-    getQuestions(cat);
+    getQuestions(cat)
   }, []);
 
   function getQuestions(cat) {
@@ -33,10 +33,10 @@ function Quiz() {
     fetch(`https://polar-dawn-36653.herokuapp.com/quiz/${cat}`)
       .then(response => response.json())
       .then(result => {
-       questions.current = [...result]
+        questions.current = [...result]
       })
       .catch(error => console.log("error", error));
-  }
+  };
 
   return (
     <div className="quiz-page">
@@ -48,7 +48,6 @@ function Quiz() {
           <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>
         </div>
       }
-
       {started &&
         <div className="question-section">
           <Questions
@@ -63,7 +62,6 @@ function Quiz() {
           />
         </div>
       }
-
       {quizFinished &&
         <Finished
           finalScore={finalScore}

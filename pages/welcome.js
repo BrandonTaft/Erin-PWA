@@ -103,7 +103,7 @@ function Profile() {
                     <div className='profile-name'>
                         HELLO {wizardName.toUpperCase()}
                     </div>
-                    <div className='profile-name'>
+                    <div className='profile-name bottom'>
                         YOUR HIGH SCORE IS {myScore}
                     </div>
                     <div className='divider'></div>
