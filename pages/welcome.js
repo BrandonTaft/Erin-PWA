@@ -14,7 +14,6 @@ const Alert = dynamic(() =>
     ssr: false,
 });
 
-
 function Profile() {
     const [myScore, setMyScore] = useState(0);
     const [wizardName, setwizardName] = useState("");
@@ -23,8 +22,8 @@ function Profile() {
     const router = useRouter();
 
     useEffect(() => {
-        let name = localStorage.getItem('name')
-        let score = localStorage.getItem('high_score')
+        let name = localStorage.getItem('name');
+        let score = localStorage.getItem('high_score');
         if (name !== null) {
             setwizardName(name)
             if (score !== null) {
@@ -70,12 +69,12 @@ function Profile() {
                     setMessage(result.message)
                 }
             })
-    }
+    };
 
     function deleteMe() {
         handleDeleteUser()
         setDeleteUser(false)
-    }
+    };
     return (
         <div className="profile-page">
             {message &&
@@ -129,8 +128,7 @@ function Profile() {
                     alt="cartoon erin"
                     src={erin}
                     layout='fill'
-                    objectFit='scale-down'
-                   
+                    objectFit='scale-down'  
                 />
                 <Image src={globe} alt="cartoon drawing of earth" style={{ zIndex: -1 }} priority />
             </div>
