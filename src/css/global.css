@@ -560,7 +560,7 @@ body {
 .infinite-scroll-loop-outer::before {
   border-radius: 50%;
   height: 10%;
-  width: calc(var(--width) * 1.5);
+  width: calc(var(--width) * 1.75);
   max-width: 90vw;
   margin: auto;
   content: "";
@@ -605,7 +605,7 @@ body {
   height: var(--width);
   margin: 1em auto;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   box-shadow: inset -25px -15px 40px rgb(0 0 0 / 74%);
   background-image: url('../../public/images/logo-icon.svg');
@@ -706,6 +706,10 @@ body {
     --width: 250px;
     top: 5%;
   }
+
+  .grid-item {
+    font-size: 24px;
+  }
 }
 
 
@@ -798,7 +802,7 @@ body {
 }
 
 .quiz-img {
-  width: 65vw;
+  width: 225px;
   margin: 0 auto;
 }
 
@@ -967,14 +971,11 @@ body {
 
 @media (min-width: 400px) {
   .quiz-img {
-    width: 60vw;
+    width: 300px;
   }
 }
 
 @media (min-width: 600px) {
-  .quiz-img {
-    width: 40vw;
-  }
 
   .quiz-start-btn {
     margin: 2% auto;
@@ -1006,7 +1007,7 @@ body {
 
 @media (min-width: 1000px) {
   .quiz-img {
-    width: 30vw;
+    width: 350px;
   }
 
   .quiz-start-btn {
@@ -1034,22 +1035,21 @@ body {
     text-align: center;
   }
 
-  .finished-img {
-    height: unset;
-    width: 25vw;
-    margin: 0 auto;
-  }
-
   .stopwatch {
     font-size: 24px;
   }
 }
 
-@media (min-width: 1200px) {
-  .quiz-img {
-    width: 25vw;
+@media (min-width: 1000px) and (min-height:800px){ 
+  .finished-img {
+    height: 400px;
+    width: 300px;
+    margin: 0 auto;
   }
+}
 
+@media (min-width: 1200px) {
+  
   .quiz-start-btn {
     font-size: 24px;
   }
@@ -1058,15 +1058,12 @@ body {
     width: 50vw;
   }
 
-  .finished-img {
-    width: 20vw;
-    margin: 0 auto;
-  }
+  
 }
 
 @media (min-width: 1400px) {
   .quiz-img {
-    width: 22vw;
+    width: 400px;
   }
 
   .question {
@@ -1183,6 +1180,12 @@ body {
     0 -0.25rem 1.5rem #005991 inset,
     0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
     0 0.25rem 0.5rem 0 #005991 inset;
+}
+
+.row.loader {
+  margin: auto;
+  height: 300px;
+  padding: 5%;
 }
 
 .row:hover {

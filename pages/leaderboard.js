@@ -18,6 +18,7 @@ function Leaderboard(props) {
             <Background />
             <ScoreCard />
             <div className='table-title'><span className='tt'>LEADERBOARD</span></div>
+           {leaderboard.length ?
             <div className='table'>
                 {leaderboard.map((score, index) => (
                     <div className='row' key={index}>
@@ -31,6 +32,11 @@ function Leaderboard(props) {
                     </div>
                 ))}
             </div>
+            : 
+            <div className='row loader'>
+                <h1>LOADING......</h1>
+            </div>
+            }
         </div>
     )
 };

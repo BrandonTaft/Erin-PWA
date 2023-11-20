@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Image from 'next/legacy/image';
 import { inter, roboto } from '../src/components/Layout';
-import erin from '../public/images/erin.svg'
+import erin from '../public/images/erin.svg';
 import globe from '../public/images/globe.svg';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
