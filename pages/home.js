@@ -18,15 +18,6 @@ function SelectionPage() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("load",function() {
-            setTimeout(function(){
-                // This hides the address bar:
-                window.scrollTo(0, 1);
-            }, 0);
-        });
-    })
-
-    useEffect(() => {
         fetch('https://polar-dawn-36653.herokuapp.com/api/highscore')
             .then(response => response.json())
             .then(result => {
