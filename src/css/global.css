@@ -608,10 +608,14 @@ body {
   font-size: 22px;
   font-weight: 500;
   box-shadow: inset -25px -15px 40px rgb(0 0 0 / 74%);
-  background-image: url('../../public/images/logo-icon.svg');
+  /* background-image: url('../../public/images/logo-icon.svg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.grid-item img {
+  z-index: -100;
 }
 
 .grid-item a {

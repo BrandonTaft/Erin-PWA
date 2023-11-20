@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import erin from '../public/images/erin.svg';
+import icon from '../public/images/logo-icon.svg';
 import FaceIcon from '@mui/icons-material/Face';
 import WaterIcon from '@mui/icons-material/Water';
 import AirIcon from '@mui/icons-material/Air';
@@ -12,6 +13,7 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import InfiniteScroll from "../src/components/InfiniteScroll";
 import { SideBoard } from '../src/components/SideBoard';
+
 
 function SelectionPage() {
     const [leaderboard, setLeaderboard] = useState([]);
@@ -39,7 +41,13 @@ function SelectionPage() {
                 </div>
             }
             <InfiniteScroll >
-                <div className="grid-item bouncing five">
+                <div className="grid-item bouncing">
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             pathname: '/quiz',
@@ -53,6 +61,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
@@ -68,6 +82,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
@@ -83,6 +103,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
@@ -99,6 +125,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
@@ -114,6 +146,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
@@ -129,6 +167,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
@@ -143,6 +187,12 @@ function SelectionPage() {
                     </Link>
                 </div>
                 <div className="grid-item bouncing" onClick={() => setError(true)}>
+                    <Image
+                        src={icon}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <Link
                         href={{
                             // pathname: '/quiz',
