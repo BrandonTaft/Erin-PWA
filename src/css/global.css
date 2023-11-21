@@ -734,7 +734,7 @@ body {
   }
 
   .leaders h1 {
-    color: #3473c3;
+    color: #121212;
     font-size: 30px;
     text-align: center;
     text-decoration: underline;
@@ -751,7 +751,7 @@ body {
   }
 
   .home-place {
-    color: #3473c3;
+    color: #121212;
     width: 10%;
     text-align: end;
   }
@@ -765,7 +765,7 @@ body {
   }
 
   .home-score {
-    color: #3473c3;
+    color: #121212;
     text-align: end;
     padding-right: 2%;
   }
