@@ -47,6 +47,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -66,6 +67,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -87,6 +89,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -108,6 +111,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -130,6 +134,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -151,6 +156,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -172,6 +178,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
@@ -192,6 +199,7 @@ function SelectionPage() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        alt='assurant logo'
                     />
                     <Link
                         href={{
