@@ -235,7 +235,7 @@ body {
   padding: 6px 16px 6px 6px;
   color: #005991;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   border: solid 2px #fff;
 }
@@ -247,9 +247,8 @@ body {
 }
 
 .menu-item:hover {
-  color: gold;
+  color: #fff;
   background-color: #005991;
-  border-color: gold;
 }
 
 .cancel:hover {
@@ -257,7 +256,7 @@ body {
 }
 
 .menu svg {
-  color: gold;
+  
   font-size: 36px;
   margin-right: 10px;
 }
@@ -619,8 +618,8 @@ body {
 }
 
 .grid-item a {
-  background-color: #fff;
-  border: #000 solid 5px;
+  background-color: #005991;
+  
   min-width: 60%;
   padding: 5% 0 0;
   border-radius: 10px;
@@ -628,14 +627,14 @@ body {
 }
 
 .item-icon {
-  color: #000;
+  color: #fff;
   font-weight: 900;
   /* text-shadow: 2px 0px 3px #5a5959, 3px 0px 3px #000; */
 }
 
 .grid-item svg {
   font-size: 2em;
-  color: #005991;
+  color: #fff;
   /* background-color: #fff; */
   background-color: transparent;
   border-radius: 8px;
@@ -691,8 +690,6 @@ body {
 
   .grid-item a {
     padding: 5% 1% 0;
-    border-radius: 10px;
-    box-shadow: 5px 2px 10px #000;
   }
 }
 
@@ -800,9 +797,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: #005991 solid 10px;
   border-radius: 20px;
-  background-color: #005991;
 }
 
 .quiz-img {
@@ -812,15 +807,15 @@ body {
 
 .quiz-start-btn {
   width: fit-content;
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 900;
   padding: 2px 8px;
-  background-color: gold;
-  color: #005991;
+  background-color: #005991;
+  color: #fff;
   border-style: none;
   border-radius: 8px;
   cursor: pointer;
-  margin: 5% auto;
+  margin: 10% auto;
   box-shadow: 3px 2px 6px #000;
 }
 
@@ -871,7 +866,7 @@ body {
 }
 
 .question {
-  color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -882,9 +877,9 @@ body {
   border-radius: 10px;
   padding: 5px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   margin: 12px auto;
-  background-image: linear-gradient(-180deg, #7595ba 0%, #005991 100%);
+  background-image: linear-gradient(-180deg, #005991 0%, #005991 100%);
   box-shadow:
     4px 4px 12px #000,
     0 -0.25rem 1.5rem #005991 inset,
@@ -902,17 +897,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
+  color: #fff;
   font-size: 19px;
   min-height: 50px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 10px;
   border-style: none;
   margin: 10px 5%;
   padding: 5px;
   text-align: center;
   cursor: pointer;
-  background-image: linear-gradient(-180deg, #7595ba 0%, #005991 100%);
+  background-image: linear-gradient(-180deg, #005991 0%, #005991 100%);
   box-shadow:
     4px 4px 12px #000,
     0 -0.25rem 1.5rem #005991 inset,
@@ -980,12 +975,6 @@ body {
 }
 
 @media (min-width: 600px) {
-
-  .quiz-start-btn {
-    margin: 2% auto;
-    font-size: 20px;
-  }
-
   .question-container {
     width: 70vw;
   }
@@ -1015,7 +1004,8 @@ body {
   }
 
   .quiz-start-btn {
-    font-size: 22px;
+    font-size: 26px;
+    margin: 10% auto;
   }
 
   .question-container {
@@ -1055,7 +1045,7 @@ body {
 @media (min-width: 1200px) {
   
   .quiz-start-btn {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .question-container {
@@ -1100,7 +1090,7 @@ body {
   z-index: 4;
   padding: 26px;
   border-radius: 5px;
-  background-color: rgb(67 140 185);
+  background-color: #005991;
   box-shadow:
     3px 2px 7px #000,
     0 -0.25rem 1.5rem #005991 inset,
@@ -1179,7 +1169,7 @@ body {
   margin: 6px 0;
   padding: 10px 15px;
   border-radius: 5px;
-  background-color: rgb(67 140 185);
+  background-color: #005991;
   box-shadow:
     0 -0.25rem 1.5rem #005991 inset,
     0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
@@ -1198,6 +1188,11 @@ body {
   box-shadow: none
 }
 
+.row:hover .name {
+  color: #005991;
+}
+
+
 .row:hover .place {
   color: #005991;
 }
@@ -1213,7 +1208,7 @@ body {
 }
 
 .name {
-  color: #000;
+  color: #fff;
   font-weight: 700;
   margin-left: 5%;
 }
