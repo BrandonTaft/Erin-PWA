@@ -33,7 +33,7 @@ function Leaderboard(props) {
                 ))}
             </div>
             : 
-            <div className='row loader'>
+            <div className='loader'>
                 <h1>LOADING...</h1>
             </div>
             }

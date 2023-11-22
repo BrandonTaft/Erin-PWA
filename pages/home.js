@@ -122,7 +122,6 @@ function SelectionPage() {
                         <div className="item-icon">
 
                             <div>CONDO</div>
-                            <div>MASTER</div>
                             <ApartmentIcon />
 
                         </div>
