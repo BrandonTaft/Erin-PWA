@@ -1187,12 +1187,18 @@ body {
   margin: auto;
   height: 300px;
   padding: 5%;
+  color: #fff;
 }
 
 .row:hover {
   bottom: 2px;
   background-color: gold;
   box-shadow: none
+}
+
+.row.loader:hover {
+  bottom: 0px;
+  background-color: #005991;
 }
 
 .row:hover .name {
