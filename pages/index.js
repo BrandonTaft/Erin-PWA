@@ -103,13 +103,13 @@ function Login() {
             </div>
             <div className="icon-container">
                 <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
-                    <Image src='/icons/google.webp' alt="Login With Google" height={40} width={40} />
+                    <Image src='/icons/google.webp' alt="Google logo" height={40} width={40} />
                     <div className=''>
                         Login With Google
                     </div>
                 </a>
                 <a id="facebook-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/facebook">
-                    <Image src='/icons/facebook.webp' alt="Login With Facebook" height={40} width={40} />
+                    <Image src='/icons/facebook.webp' alt="Facebook logo" height={40} width={40} />
                     <div className=''>
                         Login With Facebook
                     </div>

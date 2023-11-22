@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import erin from '../public/images/erin.svg';
 import icon from '../public/images/logo-icon.svg';
 import FaceIcon from '@mui/icons-material/Face';
@@ -220,8 +220,8 @@ function SelectionPage() {
                 <Image
                     alt="cartoon erin"
                     src={erin}
-                    width={420}
-                    height={420}
+                    width={360}
+                    height={360}
                     priority={true}
                 />
             </div>
