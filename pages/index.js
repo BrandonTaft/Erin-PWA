@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
-import logo from '../public/images/logo.svg';
+import logo from '../public/images/newlogo.svg';
 import dynamic from 'next/dynamic';
 
 const Alert = dynamic(() =>
@@ -76,7 +76,7 @@ function Login() {
     }
 
     return (
-        <div className='login'>
+        <div className='login-page'>
             <div className="erin">
                 <Image src={logo} alt="are you smarter than erin Logo" priority={true} />
             </div>
@@ -93,8 +93,10 @@ function Login() {
                     <div className="log-btn" onClick={handleLoginButton}>
                         LOGIN
                     </div>
-                    <a href="/register" className="log-btn">
+                    <a href="/register">
+                    <div className="log-btn">
                         REGISTER
+                    </div>
                     </a>
                 </div>
             </div>
@@ -102,15 +104,15 @@ function Login() {
                 Login as guest
             </div>
             <div className="icon-container">
-                <a id="google-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
+                <a className="google passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/google">
                     <Image src='/icons/google.webp' alt="Google logo" height={40} width={40} />
-                    <div className=''>
+                    <div>
                         Login With Google
                     </div>
                 </a>
-                <a id="facebook-btn" className="passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/facebook">
+                <a className="facebook passport-btn" href="https://polar-dawn-36653.herokuapp.com/auth/facebook">
                     <Image src='/icons/facebook.webp' alt="Facebook logo" height={40} width={40} />
-                    <div className=''>
+                    <div>
                         Login With Facebook
                     </div>
                 </a>

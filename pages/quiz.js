@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/router';
 import Image from 'next/legacy/image';
-import logo from '../public/images/logo.svg';
+import logo from '../public/images/newlogo.svg';
 import dynamic from 'next/dynamic';
 
 const Questions = dynamic(() =>
@@ -9,8 +9,8 @@ const Questions = dynamic(() =>
   ssr: false,
 });
 
-const Finished = dynamic(() =>
-  import('../src/components/Finished'), {
+const LeaderBoard = dynamic(() =>
+  import('./leaderboard'), {
   loading: () => <p>…Loading</p>,
   ssr: false,
 });
@@ -63,10 +63,7 @@ function Quiz() {
         </div>
       }
       {quizFinished &&
-        <Finished
-          finalScore={finalScore}
-          wizardName={wizardName}
-        />
+       <LeaderBoard finalScore={finalScore} />
       }
     </div>
   );

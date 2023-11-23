@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ScoreCard from '../src/components/Scorecard';
 import Background from '../src/components/Background';
 
-function Leaderboard(props) {
+function Leaderboard({finalScore}) {
     const [leaderboard, setLeaderboard] = useState([]);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function Leaderboard(props) {
     return (
         <div className='leaderboard-page '>
             <Background />
-            <ScoreCard />
+            <ScoreCard finalScore={finalScore}/>
             <div className='table-title'><span className='tt'>LEADERBOARD</span></div>
            {leaderboard.length ?
             <div className='table'>

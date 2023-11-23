@@ -15,7 +15,7 @@ body {
 }
 
 /****************** LOGIN AND REGISTER *******************/
-.login {
+.login-page {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -25,20 +25,19 @@ body {
 }
 
 .erin {
-  width: 40vh;
+  width: 280px;
 }
 
 .login-Container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .credentials {
-  width: 12em;
+  width: 250px;
   border-radius: 10px;
-  border: 2px solid;
+  border-style: solid;
   padding: 5px;
   font-size: 20px;
   margin: 10px;
@@ -46,23 +45,22 @@ body {
 
 .log-btn-box {
   display: flex;
-
 }
 
 .log-btn {
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 17px;
   padding: 6px 0;
   color: #fff;
   width: 7em;
   cursor: pointer;
   margin: 8px;
   background-color: #005991;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: rgba(0, 89, 145, 0.35) 0px 5px 10px;
 }
 
 .guest-btn {
-  font-size: 20px;
+  font-size: 19px;
   color: blue;
   text-decoration: underline;
   cursor: pointer;
@@ -72,35 +70,33 @@ body {
   display: flex;
   color: white;
   border-radius: 10px;
-  font-size: 16px;
-  width: 13em;
+  font-size: 18px;
+  width: 250px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out 0.4s;
   text-decoration: none;
-  padding: 3px;
-  margin-top: 1em;
+  padding: 3px 10px;
+  margin-top: .8em;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
-#google-btn {
+.passport-btn div {
+  margin-left: 20px;
+}
+
+.google {
   background-color: #c23825;
+  margin-top: .75em;
 }
 
-#facebook-btn {
+.facebook {
   background-color: #304a7d;
-}
-
-#github-btn {
-  background-color: #343a41;
+  margin-top: 1em;
 }
 
 .reg-btn {
-  width: 10em;
-}
-
-.register-btn {
-  margin-top: 2em;
+  width: 9em;
 }
 
 .message {
@@ -111,7 +107,6 @@ body {
   transform: translate(-50%, -50%);
   width: 300px;
   background-color: rgba(0, 0, 0, 90%);
-  /* Just adjust the color or opacity to make the text pop! */
   box-shadow: rgb(0 0 0 / 20%) 0px 11px 15px -7px,
     rgb(0 0 0 / 14%) 0px 24px 38px 3px, rgb(0 0 0 / 12%) 0px 9px 46px 8px;
   padding: 20px;
@@ -128,59 +123,14 @@ body {
 }
 
 .message-btn {
-  background-color: #fff;
-  color: #1f1a41;
-  font-weight: 600;
-}
-
-@media (max-width: 400px) and (min-height: 800px) {
-  .erin {
-    width: 80vw;
-  }
+  box-shadow: none;
 }
 
 @media (min-width: 400px) {
   .credentials {
-    width: 15em;
-  }
-
-  .log-btn {
-    font-size: 18px;
-  }
-
-  .passport-btn {
-    font-size: 18px;
+    width: 300px;
   }
 }
-
-@media (min-width: 768px) and (min-height:800px) {
-  .credentials {
-    width: 17em;
-  }
-
-  .log-btn {
-    font-size: 20px;
-  }
-
-  .passport-btn {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1200px) and (min-height:800px) {
-  .credentials {
-    width: 18em;
-  }
-
-  .log-btn {
-    font-size: 22px;
-  }
-
-  .passport-btn {
-    font-size: 22px;
-  }
-}
-
 
 /****************** NAVBAR ********************/
 .iconBar {
@@ -235,16 +185,9 @@ body {
   padding: 6px 16px 6px 6px;
   color: #000;
   font-size: 26px;
-  font-weight: 700;
   cursor: pointer;
   border-top: solid 2px #fff;
   border-bottom: solid 2px #fff;
-}
-
-@media (max-height: 800px) {
-  .menu-item {
-    font-size: 24px;
-  }
 }
 
 .menu-item:hover {
@@ -252,13 +195,13 @@ body {
   background-color: #005991;
 }
 
-.cancel:hover {
-  border-color: #fff;
+.menu-item:hover svg{
+  color: #fff;
 }
 
 .menu svg {
-  
-  font-size: 36px;
+  color: #005991;
+font-size: 36px;
   margin-right: 10px;
 }
 
@@ -271,47 +214,27 @@ body {
   color: #fff !important;
 }
 
-@media (min-width: 600px) {
-  .burger {
-    border-width: 6px;
-  }
-
-  .patty {
-    width: 40px;
-    height: 6px;
-    margin: 6px;
-  }
-
-}
-
-@media (min-width: 1200px) {
-  .iconBar {
-    width: fit-content;
-    margin-top: 1%;
-    margin-left: 1%;
-  }
-}
-
 /*************PROFILE PAGE****************/
 .profile-page {
   display: flex;
   flex-direction: column;
- position: absolute;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
 }
 
 .welcome {
-  margin: 2em 10px;
+  margin: 0 auto 16px;
+  width: 80vw;
   color: #fff;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   background-color: #005991;
   border-radius: 22px;
-  padding: .75em;
+  padding: 10px 8px;
   box-shadow:
     4px 4px 12px #000,
     0 -0.25rem 1.5rem #005991 inset,
@@ -324,7 +247,7 @@ body {
   font-weight: 900;
   color: gold;
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .divider {
@@ -339,37 +262,29 @@ body {
   justify-content: center;
 }
 
-
 .profile-btn {
   display: flex;
   justify-content: space-evenly;
-  cursor: pointer;
   align-items: center;
-  margin: 0 1em;
-  font-size: 18px;
-  font-weight: 600;
   border-radius: 10px;
-  color: gold;
+  font-size: 17px;
+  padding: 6px 0;
+  color: #fff;
+  width: 7em;
+  cursor: pointer;
+  margin: 8px;
   background-color: #005991;
-  box-shadow:
-    4px 4px 12px #000,
-    0 -0.25rem 1.5rem #005991 inset,
-    0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
-    0 0.25rem 0.5rem 0 #005991 inset;
-  width: 120px;
-  padding: 5px 12px;
+  box-shadow: rgba(0, 89, 145, 0.35) 0px 5px 10px;
 }
 
 .profile-btn svg {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .fill {
   display: flex;
   position: relative;
   margin: 0 auto;
-  width: 75%;
-  margin: 2em auto auto;
   width: 250px;
 }
 
@@ -391,120 +306,27 @@ body {
   }
 }
 
-
-
-@media (min-height:800px) {
+@media (min-width: 400px) {
   .welcome {
+    max-width: 70vh;
     font-size: 20px;
+    padding: 16px;
   }
 
-  .profile-btn {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 400px) and (min-height: 801px) {
-  .welcome {
+  .profile-name {
     font-size: 22px;
-    max-width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .profile-name {
-    font-size: 24px;
+  .pro-btn-container {
+    margin-bottom: 1em;
   }
-
-  .profile-btn {
-    font-size: 18px;
-  }
-
-.fill {
-  width: 300px;
-}
 }
 
-@media (min-width: 600px) and (min-height: 801px) {
-  .profile-name {
-    font-size: 26px;
-  }
-
+@media (min-width: 1000px) {
   .welcome {
-    font-size: 24px;
-  }
-
-  .profile-btn {
-    margin: 0 2em;
-  }
-
-}
-
-@media (min-width: 800px) and (min-height: 801px) {
-
-
-  .welcome {
-    width: 60vw;
-  }
-
-  .divider {
-    margin: 16px auto;
-  }
-}
-
-@media (min-width: 1000px) and (min-height: 801px) {
-  .profile-name {
-    font-size: 28px;
-  }
-
-  .welcome {
-    font-size: 26px;
-  }
-
-  .profile-btn {
-    font-size: 20px
-  }
-
-  .fill {
-    width: 350px;
-  }
-}
-
-@media (min-width: 1400px) and (min-height: 801px) {
-  .profile-name {
-    font-size: 30px;
-  }
-
-  .welcome {
-    width: 65vh;
-  }
-}
-
-@media (max-width: 400px) and (max-height: 800px) {
-  .welcome {
-    margin: 0 10px 1em;
-    font-size: 18px;
-  }
-
-  .profile-name {
-    font-size: 18px;
-  }
-
-  .profile-btn {
-    font-size: 16px;
-    margin: 0 1em;
-  }
-
-  .fill {
-    width: 250px;
-    margin: 1em auto auto;
-  }
-}
-
-
-@media (min-width: 400px) and (max-height: 800px) {
-  .welcome {
-    margin: .75em 10px;
-    font-size: 20px;
+    max-width: 70vh;
+    font-size: 22px;
+    padding: 26px 16px;
   }
 
   .profile-name {
@@ -512,43 +334,38 @@ body {
   }
 
   .profile-btn {
-    font-size: 16px;
-    margin: 1em 1em 0;
+    width: 8em;
+    font-size: 18px;
   }
 
-  .fill {
-    width: 250px;
+  .profile-btn svg {
+    font-size: 2em;
   }
 }
 
-@media (min-width: 600px) and (max-height: 800px) {
+@media (min-width: 1000px) and (min-height: 800px) {
   .welcome {
-    width: 70vw;
-    margin: 0em auto 1em;
+    font-size: 24px;
+    padding: 26px;
   }
 
   .profile-name {
-    font-size: 24px;
+    font-size: 26px;
   }
 
-}
-
-
-@media (min-width: 800px) and (max-height: 800px) {
-  .welcome {
-    width: 55vw;
+  .fill {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    margin: 1em auto;
+    width: 300px;
   }
 
-}
-
-@media (min-width: 1200px) and (max-height: 800px) {
-  .welcome {
-    width: 40vw;
+  .pro-btn-container {
+    margin: 1em;
   }
-
 }
-
-
 
 /****************** HOME ********************/
 
@@ -613,9 +430,9 @@ body {
   cursor: pointer;
   font-size: 20px;
   font-weight: 500;
-  box-shadow: 
-  
-  inset -25px -15px 40px rgb(0 0 0 / 74%);
+  box-shadow:
+
+    inset -25px -10px 50px rgb(0 0 0 / 74%);
 }
 
 .grid-item img {
@@ -625,16 +442,15 @@ body {
 .grid-item::before {
   content: "";
   position: absolute;
-  box-shadow: 
-  4px 2px 10px #000,
-  inset -25px -15px 40px rgb(0 0 0 / 74%);
+  box-shadow:
+    inset -25px -15px 50px rgb(0 0 0 / 74%);
   border-radius: 50%;
   width: var(--width);
   height: var(--width);
 }
 
 .grid-item a {
-  background-color: #024875; 
+  background-color: #024875;
   background-color: rgba(0, 0, 0, 90%);
   min-width: 60%;
   padding: 8% 1% 5%;
@@ -735,7 +551,7 @@ body {
     cursor: pointer;
     border-radius: 10px;
     width: 360px;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
   }
 
@@ -750,6 +566,12 @@ body {
   .side-board {
     display: flex;
     width: 100%;
+    border: #fff solid 3px;
+  }
+
+  .side-board:hover {
+    border: #005991 solid 3px;
+    border-radius: 10px;
   }
 
   .leaders div {
@@ -930,55 +752,6 @@ body {
   bottom: 2px;
 }
 
-.done-container {
-  margin: auto;
-  padding: 5%;
-  padding-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 20px;
-  background-color: #005991;
-}
-
-.finished-img {
-  width: 200px;
-  height: 300px;
-  margin: 0 auto;
-}
-
-.final-btn {
-  width: fit-content;
-  font-size: 20px;
-  font-weight: 800;
-  padding: 2px 8px;
-  background-color: gold;
-  color: #005991;
-  border-style: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 0 auto;
-  box-shadow: 3px 2px 6px #000;
-}
-
-.done-score-container {
-  margin-top: 0;
-}
-
-.done-name {
-  margin-bottom: 0;
-}
-
-.done-container h1 {
-  color: #fff;
-  text-align: center;
-}
-
-.done-score {
-  color: gold;
-  font-weight: 700;
-}
-
 @media (min-width: 400px) {
   .quiz-img {
     width: 300px;
@@ -997,15 +770,6 @@ body {
 
   .q-btn {
     font-size: 20px;
-  }
-
-  .done-container {
-    margin: auto;
-    padding: 0 8%;
-  }
-
-  .final-btn {
-    margin: 0 auto;
   }
 }
 
@@ -1034,36 +798,15 @@ body {
     margin: 20px 10%;
   }
 
-  .done-container h2 {
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
-  }
-
   .stopwatch {
     font-size: 24px;
   }
 }
 
-@media (min-width: 1000px) and (min-height:800px){ 
-  .finished-img {
-    height: 400px;
-    width: 300px;
-    margin: 0 auto;
-  }
-}
-
 @media (min-width: 1200px) {
-  
-  .quiz-start-btn {
-    font-size: 32px;
-  }
-
   .question-container {
     width: 50vw;
   }
-
-  
 }
 
 @media (min-width: 1400px) {

@@ -97,7 +97,7 @@ function Profile() {
                     </button>
                 </div>
             }
-            <div style={{ textAlign: 'center', marginTop:'auto' }}>
+            
                 <div className={`${roboto.className} ${'welcome'}`} >
                     <div className='profile-name'>
                         HELLO {wizardName.toUpperCase()}
@@ -122,7 +122,7 @@ function Profile() {
                     <span className={inter.className}>DELETE</span>
                 </div>
                 </div>
-            </div>
+            
             <div className="fill z-2">
                 <Image
                     alt="cartoon erin"

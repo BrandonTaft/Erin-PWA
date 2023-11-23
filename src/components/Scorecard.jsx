@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ScoreCard() {
+function ScoreCard({finalScore}) {
     const [myScore, setMyScore] = useState(null)
     const [wizardName, setwizardName] = useState("")
 
@@ -20,10 +20,21 @@ function ScoreCard() {
 
     return (
         <div className="scorecard">
+            {finalScore ?
+            <>
+            <div>YOUR SCORE</div>
+            <div className="card-score">      
+                  {finalScore}
+            </div>
+            </>
+            :
+            <>
             <div>YOUR HIGH SCORE</div>
             <div className="card-score">      
-                    {myScore}
+                  {myScore}
             </div>
+            </>
+}
         </div>
     )
 }

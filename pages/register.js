@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
-import logo from '../public/images/logo.svg';
+import logo from '../public/images/newlogo.svg';
 import dynamic from 'next/dynamic';
 
 const Alert = dynamic(() =>
@@ -46,7 +46,7 @@ function Register() {
     };
 
     return (
-        <div className='login'>
+        <div className='login-page'>
             <div className="erin">
                 <Image src={logo} alt="are you smarter than erin Logo" priority={true} />
             </div>
