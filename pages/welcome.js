@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { inter, roboto } from '../src/components/Layout';
-import erin from '../public/images/erin.svg';
-import globe from '../public/images/globe.svg';
+import erin from '../public/images/erin.webp';
+import globe from '../public/images/globe.webp';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
@@ -107,8 +107,8 @@ function Profile() {
                     </div>
                     <div className='divider'></div>
                     <span className={inter.className}>
-                        Welcome to the hottest insurance tracking trivia app in the world. Rack up as many points
-                        as you can to place on the leaderboard.
+                        Welcome to the hottest insurance tracking trivia app in the world. Score as high
+                        as you can to place on top of the leaderboard.
                     </span>
                 </div>
             <div className='pro-btn-container'>
@@ -127,10 +127,18 @@ function Profile() {
                 <Image
                     alt="cartoon erin"
                     src={erin}
-                    layout='fill'
-                    objectFit='scale-down'  
+                     fill={true}
+                     placeholder="blur"
+                     sizes="(max-width: 1000px) 250px, (max-width: 1001px) 300px"
+                     priority
                 />
-                <Image src={globe} alt="cartoon drawing of earth" style={{ zIndex: -1 }} priority />
+                <Image src={globe}
+                 alt="cartoon drawing of earth" 
+                 style={{ zIndex: -1, borderRadius:'50%'}} 
+                 fill={true} 
+                 placeholder="blur"
+                 sizes="(max-width: 1000px) 250px, (max-width: 1001px) 300px"
+                 priority />
             </div>
         </div>
     )

@@ -33,10 +33,12 @@ function Leaderboard({finalScore}) {
                 ))}
             </div>
             : 
-            <div className='loader'>
-                <h1>LOADING...</h1>
+            <div className='leaderboard-loader'>
+                <h3>LOADING</h3>
+                <div class="loader"></div>
             </div>
             }
+            
         </div>
     )
 };

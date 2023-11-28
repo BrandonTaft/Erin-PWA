@@ -14,6 +14,21 @@ body {
   font-weight: 600;
 }
 
+.loader {
+  border: 12px solid #005991; /* Light grey */
+  border-top: 12px solid #fff; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /****************** LOGIN AND REGISTER *******************/
 .login-page {
   display: flex;
@@ -25,6 +40,8 @@ body {
 }
 
 .erin {
+  position: relative;
+  height: 280px;
   width: 280px;
 }
 
@@ -234,7 +251,7 @@ font-size: 36px;
   text-align: center;
   background-color: #005991;
   border-radius: 22px;
-  padding: 10px 8px;
+  padding: 16px;
   box-shadow:
     4px 4px 12px #000,
     0 -0.25rem 1.5rem #005991 inset,
@@ -286,6 +303,7 @@ font-size: 36px;
   position: relative;
   margin: 0 auto;
   width: 250px;
+  height: 250px;
 }
 
 .floating {
@@ -310,7 +328,6 @@ font-size: 36px;
   .welcome {
     max-width: 70vh;
     font-size: 20px;
-    padding: 16px;
   }
 
   .profile-name {
@@ -324,13 +341,12 @@ font-size: 36px;
 
 @media (min-width: 1000px) {
   .welcome {
-    max-width: 70vh;
-    font-size: 22px;
+    font-size: 24px;
     padding: 26px 16px;
   }
 
   .profile-name {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .profile-btn {
@@ -343,7 +359,7 @@ font-size: 36px;
   }
 }
 
-@media (min-width: 1000px) and (min-height: 800px) {
+@media (min-width: 600px) and (min-height: 800px) {
   .welcome {
     font-size: 24px;
     padding: 26px;
@@ -360,6 +376,7 @@ font-size: 36px;
     width: 75%;
     margin: 1em auto;
     width: 300px;
+    height: 300px;
   }
 
   .pro-btn-container {
@@ -887,7 +904,7 @@ font-size: 36px;
   overflow: auto;
   margin: auto;
   margin-top: 0;
-  filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 12px black);
 }
 
 @media (max-height:800px) and (max-width:600px) {
@@ -926,7 +943,7 @@ font-size: 36px;
     0 0.25rem 0.5rem 0 #005991 inset;
 }
 
-.loader {
+.leaderboard-loader {
   margin: auto;
   height: 300px;
   padding: 5%;
