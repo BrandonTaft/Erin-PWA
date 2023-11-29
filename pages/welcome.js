@@ -133,7 +133,6 @@ function Profile() {
                         color: 'transparent',
                         borderRadius:'50%',
                     }}
-                    placeholder="blur"
                     priority={true}
                 />
                 <Image src={globe} alt="Cartoon earth"
@@ -146,7 +145,6 @@ function Profile() {
                         borderRadius:'50%',
                         zIndex:'-1'
                     }}
-                    placeholder="blur"
                     priority={true}
                 />
             </div>

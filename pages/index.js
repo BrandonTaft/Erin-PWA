@@ -85,11 +85,8 @@ function Login() {
                         width: '100%',
                         inset: 0,
                         color: 'transparent',
-                        borderTopLeftRadius: '50%',
-                        borderTopRightRadius: '50%',
                         backgroundColor:'transparent'
                     }}
-                    placeholder="blur"
                     priority={true}
                 />
             </div>

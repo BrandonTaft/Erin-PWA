@@ -54,7 +54,6 @@ function Quiz() {
                         borderTopRightRadius: '50%',
                         backgroundColor:'transparent'
                     }}
-                    placeholder="blur"
                     priority={true}
                 />
           </div>
