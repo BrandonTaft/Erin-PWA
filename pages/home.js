@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
-import erin from '../public/images/erin.svg';
-import icon from '../public/images/logo-icon.svg';
+import Image from 'next/image';
+import erin from '../public/images/erin.webp';
+import icon from '../public/images/logo-icon.webp';
 import FaceIcon from '@mui/icons-material/Face';
 import WaterIcon from '@mui/icons-material/Water';
 import AirIcon from '@mui/icons-material/Air';
@@ -12,12 +12,17 @@ import WarningIcon from '@mui/icons-material/Warning';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import InfiniteScroll from "../src/components/InfiniteScroll";
-import { SideBoard } from '../src/components/SideBoard';
+import dynamic from 'next/dynamic';
+
+const SideBoard = dynamic(() =>
+  import('../src/components/SideBoard').then((mod) => mod.SideBoard)
+);
 
 
 function SelectionPage() {
     const [leaderboard, setLeaderboard] = useState([]);
     const [error, setError] = useState(false);
+    const [bgColor, setBgColor] = useState("#ec9e10");
 
     useEffect(() => {
         fetch('https://polar-dawn-36653.herokuapp.com/api/highscore')
@@ -34,20 +39,40 @@ function SelectionPage() {
                     <div className='err-message'>
                         I am still working on that!
                     </div>
-                    <Image src={erin} alt='cartoon erin' layout='responsive' priority={true} />
+                    <Image src={erin} alt="Cartoon Erin"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
+                    />
                     <button className="log-btn err message-btn" onClick={() => setError(false)}>
                         Ok
                     </button>
                 </div>
             }
             <InfiniteScroll >
-                <div className="grid-item bouncing">
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                >
                     <Image
+
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -61,13 +86,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -83,13 +118,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -105,13 +150,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -127,13 +182,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -149,13 +214,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -171,13 +246,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -192,13 +277,23 @@ function SelectionPage() {
                         </div>
                     </Link>
                 </div>
-                <div className="grid-item bouncing" onClick={() => setError(true)}>
+                <div
+                    className="grid-item bouncing"
+                    style={{ backgroundColor: bgColor }}
+                    onClick={() => setError(true)}
+                >
                     <Image
                         src={icon}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt='assurant logo'
+                        alt="Assurant logo"
+                        style={{
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        onLoad={(img) => setBgColor("#fff")}
+                        priority={true}
                     />
                     <Link
                         href={{
@@ -226,7 +321,6 @@ function SelectionPage() {
             </div>
             <SideBoard
                 leaderboard={leaderboard}
-                setLeaderboard={setLeaderboard}
             />
         </>
     )

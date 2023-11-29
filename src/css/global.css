@@ -43,6 +43,7 @@ body {
   position: relative;
   height: 280px;
   width: 280px;
+  
 }
 
 .login-Container {
@@ -141,6 +142,7 @@ body {
 
 .message-btn {
   box-shadow: none;
+  font-weight: 700;
 }
 
 @media (min-width: 400px) {
@@ -651,7 +653,9 @@ font-size: 36px;
 }
 
 .quiz-img {
-  width: 225px;
+  position: relative;
+  width: 280px;
+  height: 280px;
   margin: 0 auto;
 }
 
@@ -772,6 +776,7 @@ font-size: 36px;
 @media (min-width: 400px) {
   .quiz-img {
     width: 300px;
+    height: 300px;
   }
 }
 
@@ -793,6 +798,7 @@ font-size: 36px;
 @media (min-width: 1000px) {
   .quiz-img {
     width: 350px;
+    height: 350px;
   }
 
   .quiz-start-btn {
@@ -829,6 +835,7 @@ font-size: 36px;
 @media (min-width: 1400px) {
   .quiz-img {
     width: 400px;
+    height: 400px;
   }
 
   .question {

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/router';
-import Image from 'next/legacy/image';
-import logo from '../public/images/newlogo.svg';
+import Image from 'next/image';
+import logo from '../public/images/newlogo.webp';
 import dynamic from 'next/dynamic';
 
 const Questions = dynamic(() =>
@@ -43,7 +43,20 @@ function Quiz() {
       {!started && !quizFinished &&
         <div className="middle-quiz">
           <div className="quiz-img">
-            <Image src={logo} alt="are you smarter than erin logo" />
+          <Image src={logo} alt="are you smarter than erin Logo"
+                    style={{
+                        position: 'absolute',
+                        height: '100%',
+                        width: '100%',
+                        inset: 0,
+                        color: 'transparent',
+                        borderTopLeftRadius: '50%',
+                        borderTopRightRadius: '50%',
+                        backgroundColor:'transparent'
+                    }}
+                    placeholder="blur"
+                    priority={true}
+                />
           </div>
           <button className="quiz-start-btn" onClick={() => setStarted(true)}>START QUIZ</button>
         </div>

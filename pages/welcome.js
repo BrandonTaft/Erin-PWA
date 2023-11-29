@@ -124,21 +124,31 @@ function Profile() {
                 </div>
             
             <div className="fill z-2">
-                <Image
-                    alt="cartoon erin"
-                    src={erin}
-                     fill={true}
-                     placeholder="blur"
-                     sizes="(max-width: 1000px) 250px, (max-width: 1001px) 300px"
-                     priority
+            <Image src={erin} alt="Cartoon Erin"
+                    style={{
+                        position: 'absolute',
+                        height: '100%',
+                        width: '100%',
+                        inset: 0,
+                        color: 'transparent',
+                        borderRadius:'50%',
+                    }}
+                    placeholder="blur"
+                    priority={true}
                 />
-                <Image src={globe}
-                 alt="cartoon drawing of earth" 
-                 style={{ zIndex: -1, borderRadius:'50%'}} 
-                 fill={true} 
-                 placeholder="blur"
-                 sizes="(max-width: 1000px) 250px, (max-width: 1001px) 300px"
-                 priority />
+                <Image src={globe} alt="Cartoon earth"
+                    style={{
+                        position: 'absolute',
+                        height: '100%',
+                        width: '100%',
+                        inset: 0,
+                        color: 'transparent',
+                        borderRadius:'50%',
+                        zIndex:'-1'
+                    }}
+                    placeholder="blur"
+                    priority={true}
+                />
             </div>
         </div>
     )

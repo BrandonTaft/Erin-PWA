@@ -48,10 +48,20 @@ function Register() {
     return (
         <div className='login-page'>
             <div className="erin">
-            <Image src={logo} alt="are you smarter than erin Logo" fill={true}
-                     placeholder="blur"
-                     sizes="(min-width: 280px) 280px"
-                      priority={true} />
+                <Image src={logo} alt="are you smarter than erin Logo"
+                    style={{
+                        position: 'absolute',
+                        height: '100%',
+                        width: '100%',
+                        inset: 0,
+                        color: 'transparent',
+                        borderTopLeftRadius: '50%',
+                        borderTopRightRadius: '50%',
+                        backgroundColor:'transparent'
+                    }}
+                    placeholder="blur"
+                    priority={true}
+                />
             </div>
             <h2>REGISTER</h2>
             <div className="login-Container">

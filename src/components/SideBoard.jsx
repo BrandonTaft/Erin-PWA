@@ -1,5 +1,5 @@
 
-export const SideBoard = ({ leaderboard }) => {
+export function SideBoard ({ leaderboard }) {
     return (
         <div className='leaders'>
             <h1>
