@@ -244,10 +244,11 @@ function Home() {
                     style={{ backgroundColor: bgColor }}
                     onClick={() => setError(true)}
                 >
-                    <Image
+                   <Image
                         src={icon}
                         alt="Assurant logo"
                         style={{
+                            position: 'absolute',
                             height: '100%',
                             width: '100%',
                             inset: 0,
