@@ -14,9 +14,14 @@ body {
   font-weight: 600;
 }
 
+.loading {
+  position: relative;
+  top: 30px;
+}
+
 .loader {
-  border: 12px solid #005991; /* Light grey */
-  border-top: 12px solid #fff; /* Blue */
+  border: 12px solid #fff; /* Light grey */
+  border-top: 12px solid #005991; /* Blue */
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -449,9 +454,6 @@ font-size: 36px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 500;
-  box-shadow:
-
-    inset -25px -10px 50px rgb(0 0 0 / 74%);
 }
 
 .grid-item img {
@@ -462,7 +464,7 @@ font-size: 36px;
   content: "";
   position: absolute;
   box-shadow:
-    inset -25px -15px 50px rgb(0 0 0 / 74%);
+    inset -25px -15px 50px rgba(0, 0, 0, 0.66);
   border-radius: 50%;
   width: var(--width);
   height: var(--width);
@@ -561,6 +563,7 @@ font-size: 36px;
   .leaders {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     color: white;
     top: 50%;
@@ -574,9 +577,8 @@ font-size: 36px;
     font-weight: 800;
   }
 
-  .leaders h1 {
-    color: #aa00b5;
-    font-size: 26px;
+  .leaders h2 {
+    color: #000;
     text-align: center;
     text-decoration: underline;
     margin-bottom: 10px;
@@ -627,7 +629,9 @@ font-size: 36px;
     border-radius: 10px;
   }
 
-
+.side-loader.loader {
+  margin-top: 60px;
+}
 
 
 }
@@ -897,7 +901,7 @@ font-size: 36px;
   left: 0;
   right: 0;
   flex-direction: column;
-  justify-content: center;
+ 
   height: 100vh;
   font-size: 22px;
   cursor: default;
@@ -911,7 +915,7 @@ font-size: 36px;
   overflow: auto;
   margin: auto;
   margin-top: 0;
-  filter: drop-shadow(2px 4px 12px black);
+  
 }
 
 @media (max-height:800px) and (max-width:600px) {
@@ -952,9 +956,7 @@ font-size: 36px;
 
 .leaderboard-loader {
   margin: auto;
-  height: 300px;
-  padding: 5%;
-  color: #000;
+  
 }
 
 .row:hover {

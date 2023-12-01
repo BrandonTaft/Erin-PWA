@@ -12,14 +12,8 @@ import WarningIcon from '@mui/icons-material/Warning';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import InfiniteScroll from "../src/components/InfiniteScroll";
-import dynamic from 'next/dynamic';
 
-const SideBoard = dynamic(() =>
-  import('../src/components/SideBoard').then((mod) => mod.SideBoard)
-);
-
-
-function SelectionPage() {
+function Home() {
     const [leaderboard, setLeaderboard] = useState([]);
     const [error, setError] = useState(false);
     const [bgColor, setBgColor] = useState("#ec9e10");
@@ -319,11 +313,32 @@ function SelectionPage() {
                     priority={true}
                 />
             </div>
-            <SideBoard
-                leaderboard={leaderboard}
-            />
+
+            <div className='leaders'>
+                {leaderboard.length ?
+                    <>
+                        <h2>
+                            TOP 10
+                        </h2>
+                        {leaderboard.slice(0, 10).map((score, index) => (
+                            <li className='side-board' key={index}>
+                                <div className='home-place'>{index + 1}.</div>
+                                <div className="home-name">{score.username}</div>
+                                <div className="home-score">{score.score}</div>
+                            </li>
+                        )
+                        )}
+                    </>
+                    :
+                    <div className='leaderboard-loader'>
+                        <div className="side-loader loader"></div>
+                    </div>
+                }
+
+            </div>
+
         </>
     )
 }
 
-export default SelectionPage
+export default Home

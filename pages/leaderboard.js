@@ -18,8 +18,10 @@ function Leaderboard({finalScore}) {
             <Background />
             <ScoreCard finalScore={finalScore}/>
             <div className='table-title'><span className='tt'>LEADERBOARD</span></div>
-           {leaderboard.length ?
+           
             <div className='table'>
+            {leaderboard.length ?
+            <>
                 {leaderboard.map((score, index) => (
                     <div className='row' key={index}>
                         <div className='front-row'>
@@ -31,13 +33,16 @@ function Leaderboard({finalScore}) {
                         </div>
                     </div>
                 ))}
-            </div>
-            : 
+                </>
+                : 
             <div className='leaderboard-loader'>
-                <h3>LOADING</h3>
-                <div class="loader"></div>
+                <div className="loader"></div>
             </div>
-            }
+            
+}
+            </div>
+            
+            
             
         </div>
     )

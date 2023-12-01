@@ -15,7 +15,7 @@ const Alert = dynamic(() =>
 });
 
 function Profile() {
-    const [myScore, setMyScore] = useState(0);
+    const [myScore, setMyScore] = useState('000');
     const [wizardName, setwizardName] = useState("");
     const [message, setMessage] = useState("");
     const [deleteUser, setDeleteUser] = useState(false);

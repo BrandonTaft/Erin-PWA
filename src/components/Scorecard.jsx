@@ -23,15 +23,15 @@ function ScoreCard({finalScore}) {
             {finalScore ?
             <>
             <div>YOUR SCORE</div>
-            <div className="card-score">      
-                  {finalScore}
+            <div className="card-score">   
+                { finalScore ? finalScore : '000' }
             </div>
             </>
             :
             <>
             <div>YOUR HIGH SCORE</div>
             <div className="card-score">      
-                  {myScore}
+            { myScore ? myScore : '000' }
             </div>
             </>
 }
