@@ -78,17 +78,25 @@ function Profile() {
     return (
         <div className="profile-page">
             {message &&
-                    <Alert
-                        message={message}
-                        setMessage={setMessage}
-                    />
-                }
+                <Alert
+                    message={message}
+                    setMessage={setMessage}
+                />
+            }
             {deleteUser &&
                 <div className="message">
                     <div>
                         Are you sure you want to delete your profile?
                     </div>
-                    <Image src={erin} alt="cartoon erin" layout='responsive' />
+                    <Image src={erin} alt="Cartoon Erin"
+                        style={{
+                            height: '100%',
+                            width: '100%',
+                            inset: 0,
+                            color: 'transparent'
+                        }}
+                        priority={true}
+                    />
                     <button className="log-btn err message-btn" onClick={deleteMe}>
                         Yes
                     </button>
@@ -97,20 +105,20 @@ function Profile() {
                     </button>
                 </div>
             }
-            
-                <div className={`${roboto.className} ${'welcome'}`} >
-                    <div className='profile-name'>
-                        HELLO {wizardName.toUpperCase()}
-                    </div>
-                    <div className='profile-name bottom'>
-                        YOUR HIGH SCORE IS {myScore}
-                    </div>
-                    <div className='divider'></div>
-                    <span className={inter.className}>
-                        Welcome to the hottest insurance tracking trivia app in the world. Score as high
-                        as you can to place on top of the leaderboard.
-                    </span>
+
+            <div className={`${roboto.className} ${'welcome'}`} >
+                <div className='profile-name'>
+                    HELLO {wizardName.toUpperCase()}
                 </div>
+                <div className='profile-name bottom'>
+                    YOUR HIGH SCORE IS {myScore}
+                </div>
+                <div className='divider'></div>
+                <span className={inter.className}>
+                    Welcome to the hottest insurance tracking trivia app in the world. Score as high
+                    as you can to place on top of the leaderboard.
+                </span>
+            </div>
             <div className='pro-btn-container'>
                 <Link className="profile-btn z-2" href="/home">
                     <PlayCircleFilledRoundedIcon />
@@ -121,17 +129,17 @@ function Profile() {
                     <PersonRoundedIcon />
                     <span className={inter.className}>DELETE</span>
                 </div>
-                </div>
-            
+            </div>
+
             <div className="fill z-2">
-            <Image src={erin} alt="Cartoon Erin"
+                <Image src={erin} alt="Cartoon Erin"
                     style={{
                         position: 'absolute',
                         height: '100%',
                         width: '100%',
                         inset: 0,
                         color: 'transparent',
-                        borderRadius:'50%',
+                        borderRadius: '50%',
                     }}
                     priority={true}
                 />
@@ -142,8 +150,8 @@ function Profile() {
                         width: '100%',
                         inset: 0,
                         color: 'transparent',
-                        borderRadius:'50%',
-                        zIndex:'-1'
+                        borderRadius: '50%',
+                        zIndex: '-1'
                     }}
                     priority={true}
                 />

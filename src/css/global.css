@@ -313,6 +313,10 @@ font-size: 36px;
   height: 250px;
 }
 
+.message.delete-user img {
+  position: relative;
+}
+
 .floating {
   animation: floating 2s ease-in-out infinite;
 }

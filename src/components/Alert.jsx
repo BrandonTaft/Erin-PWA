@@ -9,8 +9,7 @@ export default function Alert({ message, setMessage }) {
                     {message}
                 </div>
                 <Image src={erin} alt="Cartoon Erin"
-                    style={{
-                        position: 'absolute',
+                    style={{            
                         height: '100%',
                         width: '100%',
                         inset: 0,

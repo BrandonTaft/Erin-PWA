@@ -35,7 +35,6 @@ function Home() {
                     </div>
                     <Image src={erin} alt="Cartoon Erin"
                         style={{
-                            position: 'absolute',
                             height: '100%',
                             width: '100%',
                             inset: 0,
@@ -249,7 +248,6 @@ function Home() {
                         src={icon}
                         alt="Assurant logo"
                         style={{
-                            position: 'absolute',
                             height: '100%',
                             width: '100%',
                             inset: 0,
