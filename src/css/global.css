@@ -421,8 +421,7 @@ font-size: 36px;
 }
 
 .infinite-scroll-loop-outer::after {
-  /* top: 9%; */
-  bottom: 81%;
+  top: 9%;
   box-shadow: inset 0px -20px 0px 0px #ffffff78;
 }
 
@@ -523,7 +522,6 @@ font-size: 36px;
 @media (min-width: 700px) and (max-height: 800px) {
   .infinite-scroll-loop-outer::after {
     top: 1%;
-    bottom: 89%;
   }
 
   .infinite-scroll-loop-outer::after,
@@ -539,8 +537,7 @@ font-size: 36px;
 
 @media (min-width: 700px) and (min-height: 801px) {
   .infinite-scroll-loop-outer::after {
-    /* top: 1%; */
-    bottom: 89%;
+    top: 1%;
   }
 
   .infinite-scroll-loop-outer::after,
