@@ -250,11 +250,11 @@ font-size: 36px;
 }
 
 .welcome {
-  margin: 0 auto 12px;
+  margin: auto;
   width: 80vw;
   color: #fff;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
   background-color: #005991;
   border-radius: 22px;
@@ -271,7 +271,7 @@ font-size: 36px;
   font-weight: 900;
   color: gold;
   margin: 0;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .divider {
@@ -296,7 +296,7 @@ font-size: 36px;
   color: #fff;
   width: 7em;
   cursor: pointer;
-  margin: 8px;
+  margin: 16px 8px 8px;
   background-color: #005991;
   box-shadow: rgba(0, 89, 145, 0.35) 0px 5px 10px;
 }
@@ -334,11 +334,11 @@ font-size: 36px;
 @media (min-width: 400px) {
   .welcome {
     max-width: 70vh;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .profile-name {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .pro-btn-container {
@@ -348,17 +348,17 @@ font-size: 36px;
 
 @media (min-width: 1000px) {
   .welcome {
-    font-size: 24px;
+    font-size: 20px;
     padding: 26px 16px;
   }
 
   .profile-name {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .profile-btn {
     width: 8em;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .profile-btn svg {
